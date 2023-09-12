@@ -1,4 +1,7 @@
+docs/_build/
+docs/venv/
 
-*.Zip
+# For Altium Designer files
+History/
+__Previews
 *.$$$
-*.SchDocPreview
