@@ -174,13 +174,13 @@ GenerateClassCluster=0
 DocumentUniqueId=FIBUDKJB
 
 [Document9]
-DocumentPath=Schematics\08_FPGA.SchDoc
+DocumentPath=Schematics\08_BB_Processor.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=7
+AnnotateOrder=-1
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -188,7 +188,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=CMFYULKU
+DocumentUniqueId=ABDJDAPY
 
 [Document10]
 DocumentPath=Schematics\09_Misc.SchDoc
@@ -395,23 +395,6 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document22]
-DocumentPath=Schematics\11_Temp1.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=ABDJDAPY
-
-[Document23]
 DocumentPath=Schematics\12_Temp2.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -428,7 +411,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=IOMSQHIO
 
-[Document24]
+[Document23]
 DocumentPath=Schematics\13_Temp3.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -445,7 +428,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=QFLLXGYK
 
-[Document25]
+[Document24]
 DocumentPath=PCB\LimeSDR-Micro_1v0.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -462,7 +445,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=COIIMVQC
 
-[Document26]
+[Document25]
 DocumentPath=LimeMicroAltiumLib\LimeMicroAltiumLib.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -479,7 +462,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document27]
+[Document26]
 DocumentPath=LimeMicroAltiumLib\LimeMicroAltiumLib.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
