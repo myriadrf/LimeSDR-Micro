@@ -1,0 +1,7 @@
+Change Component Footprint: Designator=C10 Old Footprint=CAP0805_FEEDTHROUGH New Footprint=CAP0603_FEEDTHROUGH
+Change Component Footprint: Designator=C100 Old Footprint=CAP0805_FEEDTHROUGH New Footprint=CAP0603_FEEDTHROUGH
+Change Component Footprint: Designator=C102 Old Footprint=CAP0805_FEEDTHROUGH New Footprint=CAP0603_FEEDTHROUGH
+Change Component Footprint: Designator=C117 Old Footprint=CAP0805_FEEDTHROUGH New Footprint=CAP0603_FEEDTHROUGH
+Change Component Footprint: Designator=C121 Old Footprint=CAP0805_FEEDTHROUGH New Footprint=CAP0603_FEEDTHROUGH
+Change Component Footprint: Designator=C129 Old Footprint=CAP0805_FEEDTHROUGH New Footprint=CAP0603_FEEDTHROUGH
+Added Member To Class: ClassName=11_Clock Member=Component X6 U.FL/MMCX
