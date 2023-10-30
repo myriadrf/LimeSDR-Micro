@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=GND Pin=IC19-5
+Added Pin To Net: NetName=VCC1P8 Pin=IC19-6
+Added Pin To Net: NetName=VCC1P8 Pin=IC19-15
+Added Pin To Net: NetName=VCC1P8 Pin=IC19-16
+Added Member To Class: ClassName=11_Clock Member=Component X6 U.FL/MMCX

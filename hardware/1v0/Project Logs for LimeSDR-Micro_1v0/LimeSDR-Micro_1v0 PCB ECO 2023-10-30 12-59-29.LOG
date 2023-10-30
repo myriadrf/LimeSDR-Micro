@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=LA_SPI_SCLK_LS Pin=IC17-2
+Removed Pin From Net: NetName=LA_SPI_MISO_LS Pin=IC17-3
+Removed Pin From Net: NetName=GND Pin=IC17-5
+Removed Pin From Net: NetName=LA_SPI_MISO Pin=IC17-10
+Removed Pin From Net: NetName=LA_SPI_SCLK Pin=IC17-11
+Removed Pin From Net: NetName=VCC1P8 Pin=IC17-16
+Added Pin To Net: NetName=LA_SPI_MISO_LS Pin=IC17-2
+Added Pin To Net: NetName=LA_SPI_SCLK_LS Pin=IC17-3
+Added Pin To Net: NetName=VCC1P8 Pin=IC17-5
+Added Pin To Net: NetName=LA_SPI_SCLK Pin=IC17-10
+Added Pin To Net: NetName=LA_SPI_MISO Pin=IC17-11
+Added Pin To Net: NetName=GND Pin=IC17-16
+Added Member To Class: ClassName=11_Clock Member=Component X6 U.FL/MMCX

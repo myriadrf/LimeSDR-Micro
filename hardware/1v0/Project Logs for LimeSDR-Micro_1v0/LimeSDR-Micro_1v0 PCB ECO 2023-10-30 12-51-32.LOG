@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=LA_SPI_LMS_SS_LS Pin=IC19-1
+Removed Pin From Net: NetName=LA_SPI_ADF_SS_LS Pin=IC19-2
+Removed Pin From Net: NetName=GNSS_TXD_LS Pin=IC19-3
+Removed Pin From Net: NetName=GNSS_RXD_LS Pin=IC19-4
+Removed Pin From Net: NetName=VCC1P8 Pin=IC19-5
+Removed Pin From Net: NetName=GND Pin=IC19-6
+Removed Pin From Net: NetName=GNSS_RXD Pin=IC19-9
+Removed Pin From Net: NetName=GNSS_TXD Pin=IC19-10
+Removed Pin From Net: NetName=LA_SPI_ADF_SS Pin=IC19-11
+Removed Pin From Net: NetName=LA_SPI_LMS_SS Pin=IC19-12
+Removed Pin From Net: NetName=VCC1P8 Pin=IC19-15
+Removed Pin From Net: NetName=VCC1P8 Pin=IC19-16
+Added Pin To Net: NetName=GNSS_TXD_LS Pin=IC19-2
+Added Pin To Net: NetName=GNSS_RXD_LS Pin=IC19-3
+Added Pin To Net: NetName=LA_SPI_LMS_SS_LS Pin=IC19-4
+Added Pin To Net: NetName=LA_SPI_LMS_SS Pin=IC19-9
+Added Pin To Net: NetName=GNSS_RXD Pin=IC19-10
+Added Pin To Net: NetName=GNSS_TXD Pin=IC19-11
+Added Pin To Net: NetName=LA_SPI_ADF_SS Pin=IC19-12
+Added Member To Class: ClassName=11_Clock Member=Component X6 U.FL/MMCX
