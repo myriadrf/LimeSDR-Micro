@@ -1,5 +1,0 @@
-Added Pin To Net: NetName=NetR45_1 Pin=IC6-A7
-Added Pin To Net: NetName=NetR50_1 Pin=IC6-A9
-Change Net Name : Old Net Name=NetR45_1 New Net Name=LA_TX_I_P
-Change Net Name : Old Net Name=NetR50_1 New Net Name=LA_TX_Q_P
-Added Member To Class: ClassName=11_Clock Member=Component X6 U.FL/MMCX
