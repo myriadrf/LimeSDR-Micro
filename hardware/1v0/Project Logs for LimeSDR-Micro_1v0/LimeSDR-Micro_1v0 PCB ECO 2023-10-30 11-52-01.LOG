@@ -1,9 +1,0 @@
-Removed Pin From Net: NetName=LA_LED1_LS Pin=IC22-3
-Removed Pin From Net: NetName=LA_LED2_LS Pin=IC22-4
-Removed Pin From Net: NetName=LA_LED2 Pin=IC22-9
-Removed Pin From Net: NetName=LA_LED1 Pin=IC22-10
-Added Pin To Net: NetName=LA_LED2_LS Pin=IC22-3
-Added Pin To Net: NetName=LA_LED1_LS Pin=IC22-4
-Added Pin To Net: NetName=LA_LED1 Pin=IC22-9
-Added Pin To Net: NetName=LA_LED2 Pin=IC22-10
-Added Member To Class: ClassName=11_Clock Member=Component X6 U.FL/MMCX
