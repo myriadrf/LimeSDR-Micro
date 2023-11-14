@@ -395,7 +395,7 @@ GenerateClassCluster=0
 DocumentUniqueId=XNCKCINT
 
 [Document22]
-DocumentPath=Schematics\10_Misc.SchDoc
+DocumentPath=Schematics\09_Misc.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -409,10 +409,10 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=SLUFKHHC
+DocumentUniqueId=
 
 [Document23]
-DocumentPath=Schematics\11_Clock.SchDoc
+DocumentPath=Schematics\10_Clock.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -426,10 +426,10 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=IOMSQHIO
+DocumentUniqueId=
 
 [Document24]
-DocumentPath=Schematics\12_Power.SchDoc
+DocumentPath=Schematics\11_Power.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -443,7 +443,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=RASHJTGE
+DocumentUniqueId=
 
 [Document25]
 DocumentPath=PCB\LimeSDR-Micro_1v0.PcbDoc
