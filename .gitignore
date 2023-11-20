@@ -3,6 +3,8 @@ docs/venv/
 
 # For Altium Designer files
 History/
+Schematics/__Previews
 __Previews
 *.$$$
 *.PrjPcb.Zip
+*.log
