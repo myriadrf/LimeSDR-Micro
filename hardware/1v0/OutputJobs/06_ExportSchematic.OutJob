@@ -48,7 +48,7 @@ PageOptions1=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintS
 Configuration1_Name1=OutputConfigurationParameter1
 Configuration1_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType2=Schematic Print
-OutputName2=01_BlockDiagram.SchDoc
+OutputName2=01_BlockDiagram
 OutputCategory2=Documentation
 OutputDocumentPath2=01_Block_Diagram.SchDoc
 OutputVariantName2=
@@ -62,7 +62,7 @@ PageOptions2=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintS
 Configuration2_Name1=OutputConfigurationParameter1
 Configuration2_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType3=Schematic Print
-OutputName3=02_PowerDiagram.SchDoc
+OutputName3=02_PowerDiagram
 OutputCategory3=Documentation
 OutputDocumentPath3=02_Power_Diagram.SchDoc
 OutputVariantName3=
@@ -76,7 +76,7 @@ PageOptions3=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintS
 Configuration3_Name1=OutputConfigurationParameter1
 Configuration3_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType4=Schematic Print
-OutputName4=03_ClockDiagram.SchDoc
+OutputName4=03_ClockDiagram
 OutputCategory4=Documentation
 OutputDocumentPath4=03_Clock_Diagram.SchDoc
 OutputVariantName4=
@@ -90,7 +90,7 @@ PageOptions4=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintS
 Configuration4_Name1=OutputConfigurationParameter1
 Configuration4_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType5=Schematic Print
-OutputName5=04_RF_Diagram.SchDoc
+OutputName5=04_RF_Diagram
 OutputCategory5=Documentation
 OutputDocumentPath5=04_RF_Diagram.SchDoc
 OutputVariantName5=
@@ -104,7 +104,7 @@ PageOptions5=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintS
 Configuration5_Name1=OutputConfigurationParameter1
 Configuration5_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType6=Schematic Print
-OutputName6=05_LMS7002M_Misc.SchDoc
+OutputName6=05_LMS7002M_Misc
 OutputCategory6=Documentation
 OutputDocumentPath6=05_LMS7002M_Misc.SchDoc
 OutputVariantName6=
@@ -118,7 +118,7 @@ PageOptions6=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintS
 Configuration6_Name1=OutputConfigurationParameter1
 Configuration6_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType7=Schematic Print
-OutputName7=06_LMS7002M_RF.SchDoc
+OutputName7=06_LMS7002M_RF
 OutputCategory7=Documentation
 OutputDocumentPath7=06_LMS7002M_RF.SchDoc
 OutputVariantName7=
@@ -132,7 +132,7 @@ PageOptions7=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintS
 Configuration7_Name1=OutputConfigurationParameter1
 Configuration7_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType8=Schematic Print
-OutputName8=07_LMS7002M_Power.SchDoc
+OutputName8=07_LMS7002M_Power
 OutputCategory8=Documentation
 OutputDocumentPath8=07_LMS7002M_Power.SchDoc
 OutputVariantName8=
@@ -146,9 +146,9 @@ PageOptions8=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintS
 Configuration8_Name1=OutputConfigurationParameter1
 Configuration8_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType9=Schematic Print
-OutputName9=08_FPGA.SchDoc
+OutputName9=08_FPGA
 OutputCategory9=Documentation
-OutputDocumentPath9=08_FPGA.SchDoc
+OutputDocumentPath9=08_BB_Processor.SchDoc
 OutputVariantName9=
 OutputEnabled9=1
 OutputEnabled9_OutputMedium1=0
@@ -160,7 +160,7 @@ PageOptions9=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintS
 Configuration9_Name1=OutputConfigurationParameter1
 Configuration9_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType10=Schematic Print
-OutputName10=09_USB3_0_FIFO.SchDoc
+OutputName10=09_USB3_0_FIFO
 OutputCategory10=Documentation
 OutputDocumentPath10=09_Misc.SchDoc
 OutputVariantName10=
@@ -174,9 +174,9 @@ PageOptions10=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|Print
 Configuration10_Name1=OutputConfigurationParameter1
 Configuration10_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType11=Schematic Print
-OutputName11=10_Misc.SchDoc
+OutputName11=10_Misc
 OutputCategory11=Documentation
-OutputDocumentPath11=10_Power.SchDoc
+OutputDocumentPath11=10_Clock.SchDoc
 OutputVariantName11=
 OutputEnabled11=1
 OutputEnabled11_OutputMedium1=0
@@ -187,9 +187,23 @@ OutputDefault11=0
 PageOptions11=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=0|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=1|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A3|PaperIndex=8
 Configuration11_Name1=OutputConfigurationParameter1
 Configuration11_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
+OutputType12=Schematic Print
+OutputName12=11_Power
+OutputCategory12=Documentation
+OutputDocumentPath12=11_Power.SchDoc
+OutputVariantName12=
+OutputEnabled12=1
+OutputEnabled12_OutputMedium1=0
+OutputEnabled12_OutputMedium2=11
+OutputEnabled12_OutputMedium3=0
+OutputEnabled12_OutputMedium4=0
+OutputDefault12=0
+PageOptions12=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=0|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=1|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A3|PaperIndex=8
+Configuration12_Name1=OutputConfigurationParameter1
+Configuration12_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 
 [PublishSettings]
-OutputFilePath2=d:\LimePCBs\LimeSDR-Micro\GIT\hardware\1v0\Project Outputs for LimeSDR-Micro_1v0\LimeSDR-XTRX_1v1_Schematic_r0.PDF
+OutputFilePath2=D:\Projektai\Lime Microsystems\LimeSDR-Micro\github\hardware\1v0\Project Outputs for LimeSDR-Micro_1v0\LimeSDR-Micro_1v0_Schematic_r0.PDF
 ReleaseManaged2=1
 OutputBasePath2=Project Outputs for LimeSDR-Micro_1v0
 OutputPathMedia2=
@@ -268,7 +282,7 @@ WmvVideoCodecName4=Windows Media Video V7
 WmvQuality4=80
 
 [GeneratedFilesSettings]
-RelativeOutputPath2=d:\LimePCBs\LimeSDR-Micro\GIT\hardware\1v0\Project Outputs for LimeSDR-Micro_1v0\LimeSDR-XTRX_1v1_Schematic_r0.PDF
+RelativeOutputPath2=D:\Projektai\Lime Microsystems\LimeSDR-Micro\github\hardware\1v0\Project Outputs for LimeSDR-Micro_1v0\LimeSDR-Micro_1v0_Schematic_r0.PDF
 OpenOutputs2=1
 RelativeOutputPath3=
 OpenOutputs3=1
