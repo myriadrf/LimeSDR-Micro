@@ -15,7 +15,7 @@ LifeCycleDefinitionGUID=
 RevisionNamingSchemeGUID=
 
 [OutputGroup1]
-Name=05_ExportSchematic.OutJob
+Name=06_ExportSchematic.OutJob
 Description=
 TargetOutputMedium=PDF
 VariantName=[No Variations]
@@ -146,7 +146,7 @@ PageOptions8=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintS
 Configuration8_Name1=OutputConfigurationParameter1
 Configuration8_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType9=Schematic Print
-OutputName9=08_FPGA
+OutputName9=08_BB_Processor
 OutputCategory9=Documentation
 OutputDocumentPath9=08_BB_Processor.SchDoc
 OutputVariantName9=
@@ -160,7 +160,7 @@ PageOptions9=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintS
 Configuration9_Name1=OutputConfigurationParameter1
 Configuration9_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType10=Schematic Print
-OutputName10=09_USB3_0_FIFO
+OutputName10=09_Misc.
 OutputCategory10=Documentation
 OutputDocumentPath10=09_Misc.SchDoc
 OutputVariantName10=
@@ -174,7 +174,7 @@ PageOptions10=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|Print
 Configuration10_Name1=OutputConfigurationParameter1
 Configuration10_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType11=Schematic Print
-OutputName11=10_Misc
+OutputName11=10_Clock
 OutputCategory11=Documentation
 OutputDocumentPath11=10_Clock.SchDoc
 OutputVariantName11=
