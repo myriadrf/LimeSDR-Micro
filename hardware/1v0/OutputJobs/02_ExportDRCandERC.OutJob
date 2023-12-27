@@ -15,7 +15,7 @@ LifeCycleDefinitionGUID=
 RevisionNamingSchemeGUID=
 
 [OutputGroup1]
-Name=Job Group
+Name=02_ExportDRCandERC.OutJob
 Description=
 TargetOutputMedium=Folder Structure
 VariantName=[No Variations]
@@ -36,7 +36,7 @@ OutputMedium4_Type=Multimedia
 OutputType1=Design Rules Check
 OutputName1=Design Rules Check
 OutputCategory1=Validation
-OutputDocumentPath1=LimeSDR-XTRX_1v1.PcbDoc
+OutputDocumentPath1=
 OutputVariantName1=
 OutputEnabled1=1
 OutputEnabled1_OutputMedium1=0
@@ -65,7 +65,7 @@ Configuration2_Item1=ERCClassColumnOrder=0|ERCClassColumnSort=0|ERCClassColumnVi
 [PublishSettings]
 OutputFilePath2=
 ReleaseManaged2=1
-OutputBasePath2=Project Outputs for LimeSDR-XTRX_1v1
+OutputBasePath2=Project Outputs for LimeSDR-Micro_1v0
 OutputPathMedia2=
 OutputPathMediaValue2=
 OutputPathOutputer2=[Output Type]
@@ -90,9 +90,9 @@ ShowComponentParameters2=1
 GlobalBookmarks2=0
 PDFACompliance2=Disabled
 PDFVersion2=Default
-OutputFilePath3=E:\Saniok\Lime Micro\Lime PCBs\LimeSDR-XTRX_1v0\Altium Designer design files1\Project Outputs for LimeSDR-XTRX_1v0\
+OutputFilePath3=d:\LimePCBs\LimeSDR-Micro\GIT\hardware\1v0\Project Outputs for LimeSDR-Micro_1v0\
 ReleaseManaged3=1
-OutputBasePath3=Project Outputs for LimeSDR-XTRX_1v1
+OutputBasePath3=Project Outputs for LimeSDR-Micro_1v0
 OutputPathMedia3=
 OutputPathMediaValue3=
 OutputPathOutputer3=[Output Type]
@@ -105,7 +105,7 @@ OutputFileNameSpecial3=
 OpenOutput3=1
 OutputFilePath4=
 ReleaseManaged4=1
-OutputBasePath4=Project Outputs for LimeSDR-XTRX_1v1
+OutputBasePath4=Project Outputs for LimeSDR-Micro_1v0
 OutputPathMedia4=
 OutputPathMediaValue4=
 OutputPathOutputer4=[Output Type]
@@ -144,7 +144,7 @@ WmvQuality4=80
 [GeneratedFilesSettings]
 RelativeOutputPath2=
 OpenOutputs2=1
-RelativeOutputPath3=E:\Saniok\Lime Micro\Lime PCBs\LimeSDR-XTRX_1v0\Altium Designer design files1\Project Outputs for LimeSDR-XTRX_1v0\
+RelativeOutputPath3=d:\LimePCBs\LimeSDR-Micro\GIT\hardware\1v0\Project Outputs for LimeSDR-Micro_1v0\
 OpenOutputs3=1
 AddToProject3=1
 TimestampFolder3=0
