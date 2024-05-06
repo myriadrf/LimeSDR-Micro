@@ -446,6 +446,23 @@ GenerateClassCluster=0
 DocumentUniqueId=RASHJTGE
 
 [Document25]
+DocumentPath=Schematics\12_Temp.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=RJIPJQKH
+
+[Document26]
 DocumentPath=PCB\LimeSDR-Micro_M.2_1v0.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
