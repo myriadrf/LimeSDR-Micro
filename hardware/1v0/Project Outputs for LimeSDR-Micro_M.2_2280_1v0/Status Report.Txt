@@ -1,14 +1,15 @@
 Project Outputs Generation Report
 ---------------------------------
-Start Output Generation At 12:53:11 On 2024-05-21
+Start Output Generation At 14:20:19 On 2024-05-22
 
-Output: Bill of Materials
-Type  : BOM
-From  : Variant [[No Variations]] of Project [LimeSDR-Micro_M.2_2280_1v0.PrjPcb]
-   Generated File[LimeSDR-Micro_M.2_2280_1v0_BOMr0.xls]
+Output: Generates pick and place files
+Type  : Pick Place
+From  : Variant [[No Variations]] of PCB Document [LimeSDR-Micro_M.2_2280_1v0.PcbDoc]
+   Generated File[Pick Place for LimeSDR-Micro_M.2_2280_1v0.txt]
+   Generated File[Pick Place for LimeSDR-Micro_M.2_2280_1v0.csv]
 
 
-Files Generated   : 1
+Files Generated   : 2
 Documents Printed : 0
 
-Finished Output Generation At 12:59:44 On 2024-05-21
+Finished Output Generation At 14:20:24 On 2024-05-22

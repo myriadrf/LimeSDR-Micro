@@ -15,7 +15,7 @@ LifeCycleDefinitionGUID=
 RevisionNamingSchemeGUID=
 
 [OutputGroup1]
-Name=04_ExportPCBspecs.OutJob
+Name=05_ExportPCBspecs.OutJob
 Description=
 TargetOutputMedium=PDF
 VariantName=[No Variations]
@@ -65,7 +65,7 @@ OutputEnabled2_OutputMedium4=0
 OutputDefault2=0
 PageOptions2=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
 Configuration2_Name1=OutputConfigurationParameter1
-Configuration2_Item1=DesignatorDisplayMode=Physical|PrintArea=SpecificArea|PrintAreaLowerLeftCornerY=30767717|PrintAreaLowerLeftCornerX=31112205|PrintAreaUpperRightCornerY=67755906|PrintAreaUpperRightCornerX=65669291|Record=PcbPrintView
+Configuration2_Item1=DesignatorDisplayMode=Physical|PrintArea=SpecificArea|PrintAreaLowerLeftCornerY=10875984|PrintAreaLowerLeftCornerX=35413386|PrintAreaUpperRightCornerY=42775591|PrintAreaUpperRightCornerX=78169291|Record=PcbPrintView
 Configuration2_Name2=OutputConfigurationParameter2
 Configuration2_Item2=IncludeBoardCutouts=False|IncludeBottomLayerComponents=True|IncludeMultiLayerComponents=True|IncludeTopLayerComponents=True|IncludeViewports=True|Index=0|Mirror=False|Name=Mechanical 1 Drawing|PadNumberFontSize=14|Record=PcbPrintOut|ShowHoles=False|ShowPadNets=False|ShowPadNumbers=False|SubstituteFonts=False
 Configuration2_Name3=OutputConfigurationParameter3
