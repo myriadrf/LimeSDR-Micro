@@ -73,7 +73,7 @@ Configuration2_Item3=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full
 PcbPrintPreferences2=
 
 [PublishSettings]
-OutputFilePath2=d:\LimePCBs\LimeSDR-Micro\GIT\hardware\1v0\Project Outputs for LimeSDR-Micro_1v0\LimeSDR-XTRX_1v1_PCBspecs_r0.PDF
+OutputFilePath2=d:\LimePCBs\LimeSDR-Micro\GIT\hardware\1v0\Project Outputs for LimeSDR-Micro_1v0\LimeSDR-Micro_1v0_PCBspecs_r0.PDF
 ReleaseManaged2=1
 OutputBasePath2=Project Outputs for LimeSDR-Micro_1v0
 OutputPathMedia2=
@@ -81,7 +81,7 @@ OutputPathMediaValue2=
 OutputPathOutputer2=[Output Type]
 OutputPathOutputerPrefix2=
 OutputPathOutputerValue2=
-OutputFileName2=LimeSDR-Micro_1v0_PCBspecs_r0.PDF
+OutputFileName2=LimeSDR-Micro_1v0_PCBspecs_r1.PDF
 OutputFileNameMulti2=
 UseOutputNameForMulti2=0
 OutputFileNameSpecial2=
@@ -152,7 +152,7 @@ WmvVideoCodecName4=Windows Media Video V7
 WmvQuality4=80
 
 [GeneratedFilesSettings]
-RelativeOutputPath2=d:\LimePCBs\LimeSDR-Micro\GIT\hardware\1v0\Project Outputs for LimeSDR-Micro_1v0\LimeSDR-XTRX_1v1_PCBspecs_r0.PDF
+RelativeOutputPath2=d:\LimePCBs\LimeSDR-Micro\GIT\hardware\1v0\Project Outputs for LimeSDR-Micro_1v0\LimeSDR-Micro_1v0_PCBspecs_r0.PDF
 OpenOutputs2=1
 RelativeOutputPath3=E:\Saniok\Lime Micro\Lime PCBs\LMS7002M_UltimateEVB_1v1\Altium Designer design files\Project Outputs for LMS7002_DevBoard_1v0\Generate Files\
 OpenOutputs3=1

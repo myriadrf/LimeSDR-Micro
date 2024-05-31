@@ -1,4 +1,12 @@
 Changes:
 
+LimeSDR-Micro_1v0(_DB)_DFMr1:
+	- C123 changed P/N fixed from 33nF to 3.3 nF;
+	- R80 value changed from 5R to 5R1 to match P/N;
+	- R2, R4, R16, R18, R27, R33, R36, R41, R43, R48, R50, R57 part description updated;
+	- Output jobs updated;
+	- New schematic generated;
+	- BOM updated with fixes;
+
 LimeSDR-Micro_1v0(_DB)_DFMr0:
  - Initial version
