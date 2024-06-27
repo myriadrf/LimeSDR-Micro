@@ -8,7 +8,7 @@ LimeSDR-Micro_1v1(_DB)_DFMr0:
 	- SMB_CLK_CTRL pull-up resistor R215 added;
 	- R214 0R added to GNSS_RXD
 	- PCIE_CLK_OUT bypass R134 (NF by default) added;
-	- BOM vesion 0R resistor R139 removed;
+	- BOM vesion 0R resistor R144 removed;
 	- - LMS_MCLK1 0R resistor R144 added;
 	- R15 made NF
 	- LMS EEPROM pull-ups R53, R54 changed to 3.3kR
