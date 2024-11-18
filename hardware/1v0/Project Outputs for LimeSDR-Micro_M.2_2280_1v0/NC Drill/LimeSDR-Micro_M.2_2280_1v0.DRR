@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: LimeSDR-Micro_M.2_2280_1v0.PcbDoc   2024-05-22  14:20:08
+NCDrill File Report For: LimeSDR-Micro_M.2_2280_1v0.PcbDoc   2024-11-18  12:46:47
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top to Bottom
@@ -7,21 +7,21 @@ ASCII RoundHoles File : LimeSDR-Micro_M.2_2280_1v0.TXT
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
-T1      0.2mm (8mil)                                              Round             741       PTH        0.00mm (0.00inch)
+T1      0.2mm (8mil)                                              Round             737       PTH        0.00mm (0.00inch)
 T2      0.65mm (26mil)                                            Round             18        PTH        0.00mm (0.00inch)
 T3      3.5mm (138mil)                                            Round             1         PTH        0.00mm (0.00inch)
 T4      0.8mm (31mil)                                             Round             8         NPTH       0.00mm (0.00inch)
 ----------------------------------------------------------------------------------------------------------------------------------
-Totals                                                                              768
+Totals                                                                              764
 Layer Pair : L5 to Bottom
 ASCII RoundHoles File : LimeSDR-Micro_M.2_2280_1v0.TX1
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
-T1      0.2mm (8mil)                                              Round             74        PTH        0.00mm (0.00inch)
+T1      0.2mm (8mil)                                              Round             105       PTH        0.00mm (0.00inch)
 ----------------------------------------------------------------------------------------------------------------------------------
-Totals                                                                              74
+Totals                                                                              105
 ----------------------------------------------------------------------------------------------------------------------------------
-Totals                                                                              842
+Totals                                                                              869
 
-Total Processing Time (hh:mm:ss) : 00:00:00
+Total Processing Time (hh:mm:ss) : 00:00:01

@@ -1,4 +1,11 @@
 Changes:
+LimeSDR-Micro_M.2_2280_1v0(_DB)_DFMr2:
+	- Clock buffer and topology rearranged (page 10);
+	- Voltage reference updated (page 11);
+	- Switching regulator I2C (SDA selection using port expander) communication updated;
+	- Clock circuit voltage selection 0R uptated;
+	- Added 3.3V bypass from M.2 interface for two regulators (page 11);
+	- New DFM files generated.
 
 LimeSDR-Micro_M.2_2280_1v0(_DB)_DFMr1:
 	- C123 changed P/N fixed from 33nF to 3.3 nF;
