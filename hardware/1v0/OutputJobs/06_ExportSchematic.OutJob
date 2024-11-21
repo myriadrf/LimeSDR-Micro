@@ -160,7 +160,7 @@ PageOptions9=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintS
 Configuration9_Name1=OutputConfigurationParameter1
 Configuration9_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType10=Schematic Print
-OutputName10=09_Misc.
+OutputName10=09_Misc
 OutputCategory10=Documentation
 OutputDocumentPath10=09_Misc.SchDoc
 OutputVariantName10=
@@ -228,6 +228,8 @@ MarkPortsId2=1
 GenerateTOC2=1
 ShowComponentParameters2=1
 GlobalBookmarks2=0
+PDFACompliance2=Disabled
+PDFVersion2=Default
 OutputFilePath3=
 ReleaseManaged3=1
 OutputBasePath3=Project Outputs for LimeSDR-Micro_M.2_2280_1v0
