@@ -1,0 +1,30 @@
+Changes:
+LimeSDR-Micro_1v0(_DB)_DFMr0:
+	- Created from LimeSDR-Micro_1v1(_DB)_DFMr0
+	- Clock circuit redesigned
+	- New DFM files generated.
+	
+LimeSDR-Micro_1v1(_DB)_DFMr0:
+	- Switching regulator I2C SDA switch added;
+	- R197, R211 became NF
+	- R199, R210 changed to RC0201FR-07100KL
+	- R134 added and NF by default
+	- R162 became FIT
+	- SMB_CLK_CTRL pull-up resistor R215 added;
+	- R214 0R added to GNSS_RXD
+	- PCIE_CLK_OUT bypass R134 (NF by default) added;
+	- BOM vesion 0R resistor R144 removed;
+	- - LMS_MCLK1 0R resistor R144 added;
+	- R15 made NF
+	- LMS EEPROM pull-ups R53, R54 changed to 3.3kR
+	- I2C pull-ups R140, R141, R148, R149 changed to 3.3k
+	- New DFM files generated.
+
+LimeSDR-Micro_1v0(_DB)_DFMr1:
+	- C123 changed P/N fixed from 33nF to 3.3 nF;
+	- R80 value changed from 5R to 5R1 to match P/N;
+	- R2, R4, R16, R18, R27, R33, R36, R41, R43, R48, R50, R57 part description updated;
+	- Output jobs updated;
+	- New schematic generated;
+	- BOM updated with fixes;
+

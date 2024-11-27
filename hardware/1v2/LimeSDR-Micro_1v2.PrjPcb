@@ -462,6 +462,130 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XNCKCINT
 
+[GeneratedDocument1]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\NC Drill\LimeSDR-Micro_1v2.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument3]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.G1
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.G2
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.G3
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.G4
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.G5
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.G6
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.GBO
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.GBP
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.GBS
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.GM1
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.GM6
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.GM14
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.GM15
+DItemRevisionGUID=
+
+[GeneratedDocument17]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.GPB
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.GPT
+DItemRevisionGUID=
+
+[GeneratedDocument19]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument20]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument21]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.GTP
+DItemRevisionGUID=
+
+[GeneratedDocument22]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument23]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\DRC\LimeSDR-Micro_1v2.html
+DItemRevisionGUID=
+
+[GeneratedDocument24]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\ERC\LimeSDR-Micro_1v2.html
+DItemRevisionGUID=
+
+[GeneratedDocument25]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\NC Drill\LimeSDR-Micro_1v2.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument26]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.REP
+DItemRevisionGUID=
+
+[GeneratedDocument27]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Gerber\LimeSDR-Micro_1v2.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument28]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\NC Drill\LimeSDR-Micro_1v2.TX1
+DItemRevisionGUID=
+
+[GeneratedDocument29]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\NC Drill\LimeSDR-Micro_1v2.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument30]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Pick Place\Pick Place for LimeSDR-Micro_1v2.csv
+DItemRevisionGUID=
+
+[GeneratedDocument31]
+DocumentPath=Project Outputs for LimeSDR-Micro_1v2\Pick Place\Pick Place for LimeSDR-Micro_1v2.txt
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Default Configuration
 ParameterCount=0
@@ -1126,6 +1250,36 @@ OutputName11=Export STEP
 OutputDocumentPath11=
 OutputVariantName11=
 OutputDefault11=0
+OutputType12=Ansoft Neutral
+OutputName12=Ansoft Neutral (AutoPCB)
+OutputDocumentPath12=
+OutputVariantName12=
+OutputDefault12=0
+OutputType13=HyperLynx
+OutputName13=HyperLynx (AutoPCB)
+OutputDocumentPath13=
+OutputVariantName13=
+OutputDefault13=0
+OutputType14=Orcad v7 Capture Design
+OutputName14=Orcad v7 Capture Design (AutoSCH)
+OutputDocumentPath14=
+OutputVariantName14=
+OutputDefault14=0
+OutputType15=P-CAD ASCII
+OutputName15=P-CAD ASCII (AutoPCB)
+OutputDocumentPath15=
+OutputVariantName15=
+OutputDefault15=0
+OutputType16=P-CAD V16 Schematic Design
+OutputName16=P-CAD V16 Schematic Design (AutoSCH)
+OutputDocumentPath16=
+OutputVariantName16=
+OutputDefault16=0
+OutputType17=SiSoft
+OutputName17=SiSoft (AutoPCB)
+OutputDocumentPath17=
+OutputVariantName17=
+OutputDefault17=0
 
 [OutputGroup10]
 Name=PostProcess Outputs
