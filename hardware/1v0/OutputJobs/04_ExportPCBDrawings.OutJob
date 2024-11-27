@@ -127,7 +127,7 @@ Configuration4_Item5=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full
 PcbPrintPreferences4=
 
 [PublishSettings]
-OutputFilePath2=d:\LimePCBs\LimeSDR-Micro_M2\GIT\LimeSDR-Micro_M.2\hardware\1v0\Project Outputs for LimeSDR-Micro_M.2_2280_1v0\LimeSDR-Micro_M.2_2280_1v0_PCB_Drawings_r1.PDF
+OutputFilePath2=d:\LimePCBs\LimeSDR-Micro_M2\GIT\LimeSDR-Micro_M.2\hardware\1v0\Project Outputs for LimeSDR-Micro_M.2_2280_1v0\LimeSDR-Micro_M.2_2280_1v0_PCB_Drawings_r2.PDF
 ReleaseManaged2=1
 OutputBasePath2=Project Outputs for LimeSDR-Micro_M.2_2280_1v0
 OutputPathMedia2=
@@ -135,7 +135,7 @@ OutputPathMediaValue2=
 OutputPathOutputer2=[Output Type]
 OutputPathOutputerPrefix2=
 OutputPathOutputerValue2=
-OutputFileName2=LimeSDR-Micro_M.2_2280_1v0_PCB_Drawings_r2.PDF
+OutputFileName2=LimeSDR-Micro_M.2_2280_1v0_PCB_Drawings_r3.PDF
 OutputFileNameMulti2=
 UseOutputNameForMulti2=0
 OutputFileNameSpecial2=
@@ -152,6 +152,8 @@ MarkPortsId2=1
 GenerateTOC2=1
 ShowComponentParameters2=1
 GlobalBookmarks2=0
+PDFACompliance2=Disabled
+PDFVersion2=Default
 OutputFilePath3=
 ReleaseManaged3=1
 OutputBasePath3=Project Outputs for LimeSDR-Micro_M.2_2280_1v0
@@ -204,7 +206,7 @@ WmvVideoCodecName4=Windows Media Video V7
 WmvQuality4=80
 
 [GeneratedFilesSettings]
-RelativeOutputPath2=d:\LimePCBs\LimeSDR-Micro_M2\GIT\LimeSDR-Micro_M.2\hardware\1v0\Project Outputs for LimeSDR-Micro_M.2_2280_1v0\LimeSDR-Micro_M.2_2280_1v0_PCB_Drawings_r1.PDF
+RelativeOutputPath2=d:\LimePCBs\LimeSDR-Micro_M2\GIT\LimeSDR-Micro_M.2\hardware\1v0\Project Outputs for LimeSDR-Micro_M.2_2280_1v0\LimeSDR-Micro_M.2_2280_1v0_PCB_Drawings_r2.PDF
 OpenOutputs2=1
 RelativeOutputPath3=
 OpenOutputs3=1

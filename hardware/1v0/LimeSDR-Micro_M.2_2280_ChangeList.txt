@@ -1,4 +1,9 @@
 Changes:
+LimeSDR-Micro_M.2_2280_1v0(_DB)_DFMr3:
+	- Connectors reannotated;
+	- GPIO connector changed from 8-pin throughole to part
+	- Fresh DFM files generated.
+
 LimeSDR-Micro_M.2_2280_1v0(_DB)_DFMr2:
 	- Clock buffer and topology rearranged (page 10);
 	- Voltage reference updated (page 11);
