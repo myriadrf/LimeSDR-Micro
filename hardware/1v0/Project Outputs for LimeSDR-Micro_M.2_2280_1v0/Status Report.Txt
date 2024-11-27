@@ -1,0 +1,14 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 13:45:57 On 2024-11-27
+
+Output: Bill of Materials
+Type  : BOM
+From  : Variant [[No Variations]] of Project [LimeSDR-Micro_M.2_2280_1v0.PrjPcb]
+   Generated File[LimeSDR-Micro_M.2_2280_1v0_BOMr3.xls]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 13:50:39 On 2024-11-27
