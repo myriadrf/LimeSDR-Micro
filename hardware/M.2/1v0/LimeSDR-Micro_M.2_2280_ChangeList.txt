@@ -1,0 +1,27 @@
+Changes:
+LimeSDR-Micro_M.2_2280_1v0(_DB)_DFMr3:
+	- Connectors reannotated;
+	- GPIO connector changed from 8-pin throughole to part
+	- Fresh DFM files generated.
+
+LimeSDR-Micro_M.2_2280_1v0(_DB)_DFMr2:
+	- Clock buffer and topology rearranged (page 10);
+	- Voltage reference updated (page 11);
+	- Switching regulator I2C (SDA selection using port expander) communication updated;
+	- Clock circuit voltage selection 0R uptated;
+	- Added 3.3V bypass from M.2 interface for two regulators (page 11);
+	- New DFM files generated.
+
+LimeSDR-Micro_M.2_2280_1v0(_DB)_DFMr1:
+	- C123 changed P/N fixed from 33nF to 3.3 nF;
+	- R86 value changed from 5R to 5R1 to match P/N;
+	- R2, R4, R16, R18, R27, R33, R36, R41, R43, R48, R50, R57 part description updated;
+	- Stackup updated to match 0.8mm thickness;
+	- Output jobs updated;
+	- New PCB specs PDF generated;
+	- New schematic generated;
+	- BOM updated with fixes;
+	- New mechanical gerber LimeSDR-Micro_M.2_2280_1v0.GM1 generated;
+		
+LimeSDR-Micro_M.2_2280_1v0(_DB)_DFMr0:
+ - Initial version

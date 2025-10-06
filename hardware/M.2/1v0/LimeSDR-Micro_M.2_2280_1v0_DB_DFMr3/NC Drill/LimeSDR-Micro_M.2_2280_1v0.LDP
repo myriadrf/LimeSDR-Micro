@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: d:\LimePCBs\LimeSDR-Micro_M2\GIT\LimeSDR-Micro_M.2\hardware\1v0\PCB\LimeSDR-Micro_M.2_2280_1v0.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=limesdr-micro_m.2_2280_1v0.txt|DrillLayers=gtl,g1,g2,g3,g4,g5,g6,gbl
+LayersSetName=L5_Bot_Blind_Vias|DrillFile=limesdr-micro_m.2_2280_1v0.tx1|DrillLayers=g4,g5,g6,gbl
