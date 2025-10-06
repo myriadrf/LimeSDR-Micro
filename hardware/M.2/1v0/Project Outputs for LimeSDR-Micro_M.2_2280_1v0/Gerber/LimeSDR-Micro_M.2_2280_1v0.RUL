@@ -1,0 +1,6 @@
+DRC Rules Export File for PCB: d:\LimePCBs\LimeSDR-Micro_M2\GIT\LimeSDR-Micro_M.2\hardware\1v0\PCB\LimeSDR-Micro_M.2_2280_1v0.PcbDoc
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=3.94
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=3.94
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=1.97
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=Width|RuleName=Width_ClumsyConnection|Scope=Board|Minimum=3.94
