@@ -1,0 +1,12 @@
+reikia prideti draftsmana
+perasyt info apie BB proca?
+
+BB signal aprsymas ir BB lentele
+
+pamineti kad spi signalai turi level convertrius?
+
+BB proco jtag aprasymas?
+
+RFCTL M.2 GPIOs connectorius?
+
+M.2 pinoute gali kilti problemu? pin8, 28, 40, 42, 44
