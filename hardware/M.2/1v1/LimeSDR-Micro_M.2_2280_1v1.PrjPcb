@@ -479,6 +479,14 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
+[ProjectVariant1]
+UniqueID=CC2F62BA-883F-43C1-BBD8-A00E67B31A1A
+Description=Default
+AllowFabrication=0
+ParameterCount=0
+VariationCount=0
+ParamVariationCount=0
+
 [Parameter1]
 Name=SHEET_TOTAL
 Value=11
