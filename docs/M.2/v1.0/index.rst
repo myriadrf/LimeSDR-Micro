@@ -1,5 +1,5 @@
-LimeSDR Micro M.2 2280 v1.0 Board
-############################
+LimeSDR Micro M.2 2280 v1.0 
+###########################
 
 The LimeSDR Micro M.2 2280 represents a breakthrough in software-defined radio technology, delivering professional-grade RF capabilities in M.2 2280 form factor. 
 This innovative design enables seamless integration into embedded systems while maintaining the power and flexibility demanded by modern wireless applications. 
@@ -70,8 +70,8 @@ For more information on the following topics, refer to the respective documents:
 * `NXP Semiconductors LA9310X7S11AA base band processor resources <https://www.nxp.com/part/LA9310X7S11AA>`_
 
 
-Board Overview
-**************
+Overview
+********
 
 One of the key elements of LimeSDR Micro M.2 2280 board is NXP LA9310X7S11AA base band processor. 
 It’s main function is to transfer digital data between LMS7002M RF transceiver and PC through a M.2 edge connector. 
@@ -183,8 +183,8 @@ Description of board components is given in the Table 1.
   | IC30                  | IC             | Linear regulator AP7330                                                           |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+  
 
-LimeSDR Micro M.2 2280 Board Architecture
-************************************
+Detailed Information
+********************
 
 More detailed description of LimeSDR Micro M.2 2280 board components and interconnections is given in the following sections of this chapter.
 

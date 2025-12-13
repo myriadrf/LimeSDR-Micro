@@ -1,4 +1,4 @@
-LimeSDR Micro v1.2 Board
+LimeSDR Micro mPCIe v1.2
 ########################
 
 LimeSDR Micro board is small form factor mini PCIe expansion card Software Defined Radio (SDR) board. 
@@ -77,8 +77,8 @@ For more information on the following topics, refer to the respective documents:
 * `NXP Semiconductors LA9310X7S11AA base band processor resources <https://www.nxp.com/part/LA9310X7S11AA>`_
 
 
-Board Overview
-**************
+Overview
+********
 
 One of the key elements of LimeSDR Micro board is Semiconductors LA9310X7S11AA base band processor. 
 It’s main function is to transfer digital data between LMS7002M RF transceiver and PC through a mPCIe edge connector. 
@@ -186,8 +186,8 @@ Description of board components is given in the Table 1.
   | IC29                     | IC             | Linear regulator AP7330                                                                           |
   +--------------------------+----------------+---------------------------------------------------------------------------------------------------+
 
-LimeSDR Micro Board Architecture
-********************************
+Detailed Information
+******************** 
 
 More detailed description of LimeSDR Micro board components and interconnections is given in the following sections of this chapter.
 
@@ -731,8 +731,8 @@ filters. LimeSDR Micro board power distribution block diagram is presented in Fi
   
   Figure 9 LimeSDR Micro v1.2 board power distribution block diagram
 
-Differencies from LimeSDR Micro v1.1
-***********************************
+Changes from v1.1
+*****************
 
 This section covers LimeSDR Micro v1.2 board changes compared to LimeSDR Micro v1.1.
 

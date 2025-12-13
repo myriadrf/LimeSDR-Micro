@@ -1,11 +1,10 @@
-************************
-LimeSDR Micro M.2 boards
-************************
+LimeSDR Micro M.2 2280
+######################
 
 .. toctree::
    :hidden:
 
-   v1.0/index  
+   v1.0 <v1.0/index>  
 
 LimeSDR Micro M.2 2280 is 22 mm x 80 mm form factor M.2 (PCIe) expansion card Software Defined Radio (SDR) board.
 
