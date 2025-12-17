@@ -8,9 +8,11 @@ Beta hardware is provided as-is for evaluation and testing purposes only and is 
 Status
 ******
 
-LimeSDR Micro uses the Lime Suite NG driver stack and hardware support is currently in heavy development, hence not all features are fully implemented yet.
+LimeSDR Micro uses the Lime Suite NG driver stack and hardware support is currently in heavy development, hence not all features are fully implemented yet. Recent developments:
 
-The current status as of **13th December 2025** is as follows:
+* **17/12/2025**. Fixes to resolve transmit hang/fail and Tx timestamping issues, which also means that TDD operation is now possible.
+
+The current status as of **17th December 2025** is as follows:
 
 Platform Support
 ================
@@ -44,10 +46,17 @@ The sampling rate is currently hardcoded in the firmware. See the Advanced Topic
 
 Support for dynamic sampling rate configuration is planned.
 
-Sample Timestamp
-----------------
+Sample Timestamp and TDD
+------------------------
 
-Basic support has been implemented, but timestamped Tx streaming is unstable and buggy at present. This is a high priority issue, since it is required for TDD operation, and is currently being worked on.
+Receive timestamping and timestamped transmit streaming have been implemented, and TDD operation has been verified with the Amarisoft cellular stack.  
+
+However, there are limitations: transmission is done in 512 samples chunks and if less data is provided, it gets padded with zeroes. 
+
+In addition to which, the RF switches cannot be controlled based on the timer with the current board version. Hence while Tx has no data to transmit, the DAC is still connected to the antenna and is transmitting zeroes. 
+
+.. note::
+   The hardware design has been updated, so that with the next batch of boards the RF switches can be controlled based on the timer.
 
 Decimation and Interpolation
 ----------------------------
