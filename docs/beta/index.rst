@@ -131,8 +131,6 @@ If you have GNUPlot installed it will output two graphs: all received data, and 
 
    Frontend Delay Test Output
 
-Due to initial hardware state, on first run the transmitter might not transmit anything, but subsequent runs should work fine.
-
 Simple Tx, Rx and TRX
 =====================
 
