@@ -1,0 +1,332 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+        td, th {
+            padding: 0.5em;
+            text-align : left;
+        }
+        th {
+            background-color : #EEEEEE;
+        
+        }
+        th.column1, td.column1 {
+            width : 10em;
+        }
+
+        th.column2, td.column2 {
+            width : 30em;
+        }
+
+        table {
+            width : 100%;
+            font-size: 0.9em;
+        }
+
+		.header_holder {
+			Width = 100%;
+			border = 0px solid green;
+			padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+        }
+
+        .front_matter_column1 {
+			width : 5em;
+			font-weight: bold;
+        }
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+        .total_column1, .total_column {
+            font-weight : bold;
+        }
+        .total_column1 {
+            text-align : left;
+        }
+        .warning, .error {
+            color : red;
+            font-weight : bold;
+        }
+        tr.onmouseout_odd {
+            background-color : #white;
+        }
+        tr.onmouseout_even { 
+            background-color : #FAFAFA;
+        }
+        tr.onmouseover_odd, tr.onmouseover_even { 
+            background-color : #EEEEEE;
+        } 
+        a:link, a:visited, .q a:link,.q a:active,.q {
+            color: #21489e; 
+        }
+        a:link.callback, a:visited.callback { 
+            color: #21489e;
+        }
+        p.contents_level1 {
+            font-weight : bold;
+            font-size : 110%;
+            margin : 0.5em;
+        }
+        p.contents_level2 {
+            position : relative;
+            left : 20px;
+            margin : 0.5em;
+        }
+    </style><script type="text/javascript">
+        function coordToMils(coord) {
+            var number = coord / 10000;
+            
+            if (number != number.toFixed(3))
+                number = number.toFixed(3);
+            
+            return number + 'mil'
+        }
+
+        function coordToMM(coord) {
+            var number = 0.0254 * coord / 10000;
+            
+            if (number != number.toFixed(4))
+                number = number.toFixed(4);
+            
+            return number + 'mm'
+        }
+    
+        function convertCoord(coordNode, units) {
+            for (var i = 0; i < coordNode.childNodes.length; i++) {
+                coordNode.removeChild(coordNode.childNodes[i]);
+            }
+
+            var coord = coordNode.getAttribute('value');
+            if (coord != null) {
+                if (units == 'mm') {
+                    textNode = document.createTextNode(coordToMM(coord));
+                    coordNode.appendChild(textNode);
+                } else if (units == 'mil') {
+                    textNode = document.createTextNode(coordToMils(coord));
+                    coordNode.appendChild(textNode);
+                }
+            }
+        }
+    
+        function convertUnits(unitNode, units) {
+            for (var i = 0; i < unitNode.childNodes.length; i++) {
+                unitNode.removeChild(unitNode.childNodes[i]);
+            }
+        
+            textNode = document.createTextNode(units); 
+            unitNode.appendChild(textNode);
+        }
+    
+        function changeUnits(radio_input, units) {
+            if (radio_input.checked) {
+            
+                var elements = document.getElementsByName('coordinate');
+                if (elements) {
+                    for (var i = 0; i < elements.length; i++) {
+                        convertCoord(elements[i], units);
+                    }
+                }
+    
+                var elements = document.getElementsByName('units');
+                if (elements) {
+                    for (var i = 0; i < elements.length; i++) {
+                        convertUnits(elements[i], units);
+                    }
+                }
+            }
+        }
+    </script></head>
+<body onload=""><img ALT="Altium" src="
+            file://C:\Users\Public\Documents\Altium\AD19\Templates\AD_logo.png
+        "><h1>Electrical Rule Check Report</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2025-12-19</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">09:36:51</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///d:\LimePCBs\LimeSDR-Micro\GIT\hardware\M.2\1v1\Project Outputs for LimeSDR-Micro_M.2_2280_1v1\ERC\LimeSDR-Micro_M.2_2280_1v1.html" class="file"><acronym title="d:\LimePCBs\LimeSDR-Micro\GIT\hardware\M.2\1v1\Project Outputs for LimeSDR-Micro_M.2_2280_1v1\ERC\LimeSDR-Micro_M.2_2280_1v1.html">d:\LimePCBs\LimeSDR-Micro\GIT\hardware\M.2\1v1\Project Outputs for LimeSDR-Micro_M.2_2280_1v1\ERC\LimeSDR-Micro_M.2_2280_1v1.html</acronym></a></td>
+</tr>
+</table><a name="IDR3CMP0SK1X1NNDM44N55ZN0WIK1RTZ5L54UKDOHVPMBLBMKMLGXH"><table>
+<tr>
+<th class="column1">Class</th>
+<th class="column2">Document</th>
+<th class="column3">Message</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">11_Power.SchDoc</td>
+<td class="column3">GND contains IO Pin and Power Pin objects (Pin IC14-3,Pin IC18-4,Pin IC13-4,Pin IC2-4,Pin IC14-6,Pin IC4-7,Pin IC3-7,Pin IC6-B1,Pin IC6-B3,Pin IC6-B5,Pin IC6-B11,Pin IC6-B13,Pin IC6-B15,Pin IC6-C2,Pin IC6-C4,Pin IC6-C6,Pin IC6-C7,Pin IC6-C9,Pin IC6-C10,Pin IC6-C12,Pin IC6-C14,Pin IC6-D2,Pin IC6-D5,Pin IC6-D6,Pin IC6-D10,Pin IC6-D14,Pin IC6-E1,Pin IC6-E4,Pin IC6-E7,Pin IC6-E9,Pin IC6-E12,Pin IC6-E15,Pin IC4-EP,Pin IC3-EP,Pin IC6-F3,Pin IC6-F4,Pin IC6-F8,Pin IC6-F12,Pin IC6-G2,Pin IC6-G3,Pin IC6-G5,Pin IC6-G7,Pin IC6-G9,Pin IC6-G11,Pin IC6-H1,Pin IC6-H2,Pin IC6-H8,Pin IC6-H12,Pin IC6-H13,Pin IC6-H14,Pin IC6-H15,Pin IC6-J2,Pin IC6-J3,Pin IC6-J5,Pin IC6-J7,Pin IC6-J9,Pin IC6-J11,Pin IC6-J13,Pin IC6-K2,Pin IC6-K8,Pin IC6-K12,Pin IC6-L1,Pin IC6-L6,Pin IC6-L7,Pin IC6-L9,Pin IC6-L11,Pin IC6-M2,Pin X9-MOUNTING-HOLE,Pin IC6-N2,Pin IC6-N4,Pin IC6-N6,Pin X9-P1,Pin IC6-P1,Pin X9-P3,Pin IC6-P3,Pin IC6-P5,Pin X9-P21,Pin X9-P27,Pin X9-P33,Pin X9-P39,Pin X9-P45,Pin X9-P51,Pin X9-P57,Pin X9-P71,Pin X9-P73,Pin X9-P75,Pin IC13-PAD,Pin IC2-PAD)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">09_Misc.SchDoc</td>
+<td class="column3">GNSS_FIX contains IO Pin and Output Pin objects (Pin IC14-21)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">10_Clock.SchDoc</td>
+<td class="column3">LA_PPS_IN_LS contains IO Pin and Power Pin objects (Pin IC20-4,Pin IC6-K14)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">09_Misc.SchDoc</td>
+<td class="column3">LA_PPS_OUT_LS contains IO Pin and Power Pin objects (Pin IC22-4,Pin IC6-M8)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">09_Misc.SchDoc</td>
+<td class="column3">Net GNSS_ANT has no driving source (Pin ESD5-1,Pin IC11-3,Pin L1-1,Pin X5-1)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">09_Misc.SchDoc</td>
+<td class="column3">Net GNSS_HW_R has no driving source (Pin C171-1,Pin IC11-7)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">09_Misc.SchDoc</td>
+<td class="column3">Net GNSS_HW_S has no driving source (Pin C174-1,Pin IC11-8)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">09_Misc.SchDoc</td>
+<td class="column3">Net LA_I2C_SCL has no driving source (Pin IC10-1,Pin IC10-4,Pin IC13-6,Pin IC14-8,Pin IC15-6,Pin IC18-5,Pin IC26-E5,Pin IC30-E5,Pin R26-1,Pin R115-2,Pin R204-2,Pin R222-2,Pin R225-2,Pin TP2-1,Pin VT1-D)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">05_LMS7002M_Misc.SchDoc</td>
+<td class="column3">Net LMS_I2C_SCL has no driving source (Pin IC1-C27,Pin IC2-6,Pin R26-2,Pin R54-1)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">09_Misc.SchDoc</td>
+<td class="column3">Net MCP_RESET has no driving source (Pin C178-1,Pin IC14-14,Pin R139-2)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">10_Clock.SchDoc</td>
+<td class="column3">Net NetC185_2 has no driving source (Pin C185-2,Pin IC16-13)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">10_Clock.SchDoc</td>
+<td class="column3">Net NetC186_2 has no driving source (Pin C186-2,Pin IC16-14)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">10_Clock.SchDoc</td>
+<td class="column3">Net NetC192_2 has no driving source (Pin C192-2,Pin IC16-28)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">10_Clock.SchDoc</td>
+<td class="column3">Net NetC193_2 has no driving source (Pin C193-2,Pin IC16-27)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">11_Power.SchDoc</td>
+<td class="column3">Net NetC228_2 has no driving source (Pin C228-2,Pin FR45-2,Pin IC23-1,Pin IC23-6,Pin R194-1)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">11_Power.SchDoc</td>
+<td class="column3">Net NetC238_2 has no driving source (Pin C238-2,Pin FR47-2,Pin IC27-1,Pin IC27-6,Pin R201-1)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">11_Power.SchDoc</td>
+<td class="column3">Net NetC247_2 has no driving source (Pin C247-2,Pin FR48-2,Pin IC28-1,Pin IC28-6,Pin R207-1)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">11_Power.SchDoc</td>
+<td class="column3">Net NetC254_2 has no driving source (Pin C254-2,Pin FR51-2,Pin IC29-1,Pin IC29-6,Pin R217-1)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">09_Misc.SchDoc</td>
+<td class="column3">Net NetFR36_2 has no driving source (Pin FR36-2,Pin IC11-9)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">10_Clock.SchDoc</td>
+<td class="column3">Net NetIC16_31 has no driving source (Pin IC16-31,Pin R156-2)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">10_Clock.SchDoc</td>
+<td class="column3">Net NetIC18_2 has no driving source (Pin IC18-2,Pin R163-2,Pin R164-2)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">11_Power.SchDoc</td>
+<td class="column3">Net NetIC23_5 has no driving source (Pin IC23-5,Pin R196-2,Pin R199-1)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">11_Power.SchDoc</td>
+<td class="column3">Net NetIC27_5 has no driving source (Pin IC27-5,Pin R202-2,Pin R203-1)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">11_Power.SchDoc</td>
+<td class="column3">Net NetIC28_5 has no driving source (Pin IC28-5,Pin R214-2,Pin R216-1)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">11_Power.SchDoc</td>
+<td class="column3">Net NetIC29_5 has no driving source (Pin IC29-5,Pin R218-2,Pin R219-1)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">11_Power.SchDoc</td>
+<td class="column3">Net NetIC31_4 has no driving source (Pin IC31-4,Pin R223-2,Pin R224-1)</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
