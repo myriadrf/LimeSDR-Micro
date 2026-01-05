@@ -92,12 +92,6 @@ At the present time the *limesdr-micro* branch should be used.
     sudo make install
     sudo ldconfig
 
-LimeSDR Micro uses the *la9310_limesdr* driver and not the *limepcie* driver, which is for use with FPGA-based LimeSDR boards only. The driver has to be loaded manually:
-
-.. code:: bash
-
-   sudo insmod LimeSuiteNG/build/drivers/linux/la9310_limesdr/la9310_limesdr-0.1.0/la9310_limesdr.ko
-
 Basic Test
 ==========
 
@@ -204,7 +198,7 @@ Built firmware file will be placed in :code:`LimeSDR-Micro_FW/build/Release/la93
 
 The driver loads firmware from :code:`/lib/firmware/la9310.bin` location, so either overwrite it, or replace it with a symlink to your custom firmware build.
 
-In order to load new firmware, it will be neccessary to restart the system and reinsert the driver module.
+In order to load new firmware, it will be neccessary to restart the system.
 
 .. note::
    This is just a temporary situation until dynamic sampling rate configuration is implemented, along with support also for dynamic firmware loading.
