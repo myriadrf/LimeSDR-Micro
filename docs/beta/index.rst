@@ -10,6 +10,7 @@ Status
 
 LimeSDR Micro uses the Lime Suite NG driver stack and hardware support is currently in heavy development, hence not all features are fully implemented yet. Recent developments:
 
+* **01/01/2026**. Kernel module automatically loaded at boot and no longer requires manual insertion.
 * **17/12/2025**. Fixes to resolve transmit hang/fail and Tx timestamping issues, which also means that TDD operation is now possible.
 
 The current status as of **17th December 2025** is as follows:
