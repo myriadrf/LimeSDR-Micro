@@ -1,15 +1,17 @@
 Project Outputs Generation Report
 ---------------------------------
-Start Output Generation At 10:59:59 On 2025-12-19
+Start Output Generation At 10:14:49 On 2026-01-07
 
-Output: Generates pick and place files
-Type  : Pick Place
+Output: Gerber Files
+Type  : Gerber
 From  : Variant [[No Variations]] of PCB Document [LimeSDR-Micro_mPCIe_1v3.PcbDoc]
-   Generated File[Pick Place for LimeSDR-Micro_mPCIe_1v3.txt]
-   Generated File[Pick Place for LimeSDR-Micro_mPCIe_1v3.csv]
+   Generated File[LimeSDR-Micro_mPCIe_1v3.GBO]
+   Generated File[LimeSDR-Micro_mPCIe_1v3.RUL]
+   Generated File[LimeSDR-Micro_mPCIe_1v3.EXTREP]
+   Generated File[LimeSDR-Micro_mPCIe_1v3.REP]
 
 
-Files Generated   : 2
+Files Generated   : 4
 Documents Printed : 0
 
-Finished Output Generation At 11:00:04 On 2025-12-19
+Finished Output Generation At 10:14:50 On 2026-01-07
