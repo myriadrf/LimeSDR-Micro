@@ -1,11 +1,11 @@
 Project Outputs Generation Report
 ---------------------------------
-Start Output Generation At 10:14:49 On 2026-01-07
+Start Output Generation At 10:32:38 On 2026-01-07
 
 Output: Gerber Files
 Type  : Gerber
 From  : Variant [[No Variations]] of PCB Document [LimeSDR-Micro_mPCIe_1v3.PcbDoc]
-   Generated File[LimeSDR-Micro_mPCIe_1v3.GBO]
+   Generated File[LimeSDR-Micro_mPCIe_1v3.G1]
    Generated File[LimeSDR-Micro_mPCIe_1v3.RUL]
    Generated File[LimeSDR-Micro_mPCIe_1v3.EXTREP]
    Generated File[LimeSDR-Micro_mPCIe_1v3.REP]
@@ -14,4 +14,4 @@ From  : Variant [[No Variations]] of PCB Document [LimeSDR-Micro_mPCIe_1v3.PcbDo
 Files Generated   : 4
 Documents Printed : 0
 
-Finished Output Generation At 10:14:50 On 2026-01-07
+Finished Output Generation At 10:32:38 On 2026-01-07
