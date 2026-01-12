@@ -86,8 +86,8 @@ D145  RECTANGULAR       216.535     216.535       0.000 FLASH     270.000
 D146  ROUNDED             7.087       7.087       0.000  LINE       0.000
 D147  ROUNDED            39.370      39.370       0.000 FLASH       0.000
 D149  RECTANGULAR        23.622      98.425       0.000 FLASH     270.000
-D150  ROUNDED             5.512       5.512       0.000  LINE       0.000
-D151  ROUNDED            15.748      15.748       0.000  LINE       0.000
+D150  ROUNDED            15.748      15.748       0.000  LINE       0.000
+D151  ROUNDED             5.512       5.512       0.000  LINE       0.000
 D152  ROUNDED            13.780      13.780       0.000  LINE       0.000
 D153  ROUNDED            19.685      19.685       0.000  LINE       0.000
 D154  ROUNDED             4.724       4.724       0.000  LINE       0.000

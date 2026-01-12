@@ -2,174 +2,20 @@
 FileName = LimeSDR-Micro_mPCIe_1v3.GBR
 AutoAperture = True
 *************************************************************
-Generating : Top Pad Master
-      File : LimeSDR-Micro_mPCIe_1v3.GPT
+Generating : L2
+      File : LimeSDR-Micro_mPCIe_1v3.G1
 
-    Adding Layer      : Top
-
-    Adding Layer      : MultiLayer
-
-
-Used DCodes :
-    D17
-    D18
-    D19
-    D20
-    D21
-    D22
-    D23
-    D24
-    D25
-    D26
-    D27
-    D28
-    D29
-    D30
-    D31
-    D32
-    D33
-    D34
-    D35
-    D36
-    D37
-    D38
-    D39
-    D40
-    D41
-    D42
-    D43
-    D44
-    D45
-    D46
-    D47
-    D48
-    D49
-    D50
-    D51
-    D52
-    D53
-    D54
-    D55
-    D56
-    D57
-    D58
-    D59
-    D60
-    D61
-    D62
-    D63
-    D64
-    D65
-    D66
-    D67
-    D68
-    D69
-    D70
-    D71
-    D72
-    D73
-    D74
-    D75
-    D76
-    D77
-    D145
-    D147
-    D148
-    D149
-    D160
-*************************************************************
-
-*************************************************************
-Generating : L6
-      File : LimeSDR-Micro_mPCIe_1v3.G5
-
-    Adding Layer      : L6
+    Adding Layer      : L2
 
     Adding Layer      : MultiLayer
 
 
 Used DCodes :
-    D10
-    D13
-    D15
-    D16
     D145
-    D151
-    D152
-    D153
-    D155
-    D158
+    D159
     D161
     D162
     D163
-*************************************************************
-
-*************************************************************
-Generating : Bottom Pad Master
-      File : LimeSDR-Micro_mPCIe_1v3.GPB
-
-    Adding Layer      : Bottom
-
-    Adding Layer      : MultiLayer
-
-
-Used DCodes :
-    D19
-    D20
-    D25
-    D35
-    D36
-    D43
-    D44
-    D65
-    D66
-    D67
-    D70
-    D71
-    D72
-    D73
-    D74
-    D76
-    D77
-    D123
-    D145
-    D147
-    D149
-    D160
-    D161
-    D167
-    D168
-    D169
-    D170
-    D171
-    D172
-    D173
-    D174
-    D175
-    D176
-    D177
-    D178
-    D179
-    D180
-    D181
-    D182
-    D183
-    D184
-    D185
-    D186
-    D187
-    D188
-    D189
-    D190
-    D191
-    D192
-    D193
-    D194
-    D195
-    D196
-    D197
-    D198
-    D199
 *************************************************************
 
 *************************************************************
@@ -190,91 +36,6 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Bottom
-      File : LimeSDR-Micro_mPCIe_1v3.GBL
-
-    Adding Layer      : Bottom
-
-    Adding Layer      : MultiLayer
-
-
-Used DCodes :
-    D10
-    D11
-    D13
-    D15
-    D16
-    D19
-    D20
-    D25
-    D35
-    D36
-    D43
-    D44
-    D65
-    D66
-    D67
-    D70
-    D71
-    D72
-    D73
-    D74
-    D76
-    D77
-    D123
-    D145
-    D146
-    D147
-    D149
-    D150
-    D151
-    D152
-    D153
-    D154
-    D158
-    D159
-    D160
-    D161
-    D162
-    D163
-    D167
-    D168
-    D169
-    D170
-    D171
-    D172
-    D173
-    D174
-    D175
-    D176
-    D177
-    D178
-    D179
-    D180
-    D181
-    D182
-    D183
-    D184
-    D185
-    D186
-    D187
-    D188
-    D189
-    D190
-    D191
-    D192
-    D193
-    D194
-    D195
-    D196
-    D197
-    D198
-    D199
-    D200
-    D201
-*************************************************************
-
-*************************************************************
 Generating : BottomOverlay
       File : LimeSDR-Micro_mPCIe_1v3.GBO
 
@@ -289,103 +50,6 @@ Used DCodes :
     D15
     D16
     D233
-*************************************************************
-
-*************************************************************
-Generating : TopPaste
-      File : LimeSDR-Micro_mPCIe_1v3.GTP
-
-    Adding Layer      : TopPaste
-
-    Adding Layer      : Top
-
-    Adding Layer      : MultiLayer
-
-
-Used DCodes :
-    D17
-    D18
-    D19
-    D20
-    D21
-    D22
-    D23
-    D24
-    D25
-    D26
-    D27
-    D28
-    D29
-    D30
-    D31
-    D32
-    D33
-    D34
-    D35
-    D36
-    D37
-    D38
-    D39
-    D40
-    D41
-    D42
-    D43
-    D44
-    D45
-    D46
-    D47
-    D48
-    D49
-    D50
-    D51
-    D52
-    D53
-    D54
-    D55
-    D56
-    D57
-    D58
-    D59
-    D60
-    D61
-    D62
-    D63
-    D64
-    D65
-    D66
-    D67
-    D68
-    D69
-    D70
-    D71
-    D72
-    D73
-    D74
-    D75
-    D76
-    D77
-*************************************************************
-
-*************************************************************
-Generating : ASM TOP
-      File : LimeSDR-Micro_mPCIe_1v3.GM15
-
-    Adding Layer      : ASM TOP
-
-
-Used DCodes :
-    D10
-    D11
-    D13
-    D15
-    D16
-    D58
-    D152
-    D158
-    D162
-    D237
-    D238
-    D239
 *************************************************************
 
 *************************************************************
@@ -486,67 +150,6 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Notes
-      File : LimeSDR-Micro_mPCIe_1v3.GM6
-
-    Adding Layer      : Notes
-
-
-Used DCodes :
-    D11
-*************************************************************
-
-*************************************************************
-Generating : L4
-      File : LimeSDR-Micro_mPCIe_1v3.G3
-
-    Adding Layer      : L4
-
-    Adding Layer      : MultiLayer
-
-
-Used DCodes :
-    D10
-    D11
-    D13
-    D15
-    D16
-    D145
-    D151
-    D152
-    D153
-    D158
-    D159
-    D161
-    D162
-    D163
-    D164
-    D166
-*************************************************************
-
-*************************************************************
-Generating : ASM BOT
-      File : LimeSDR-Micro_mPCIe_1v3.GM14
-
-    Adding Layer      : ASM BOT
-
-
-Used DCodes :
-    D10
-    D11
-    D13
-    D15
-    D58
-    D151
-    D152
-    D158
-    D162
-    D237
-    D238
-    D239
-*************************************************************
-
-*************************************************************
 Generating : BottomSolder
       File : LimeSDR-Micro_mPCIe_1v3.GBS
 
@@ -616,6 +219,446 @@ Used DCodes :
     D230
     D231
     D232
+*************************************************************
+
+*************************************************************
+Generating : Notes
+      File : LimeSDR-Micro_mPCIe_1v3.GM6
+
+    Adding Layer      : Notes
+
+
+Used DCodes :
+    D11
+*************************************************************
+
+*************************************************************
+Generating : Bottom Pad Master
+      File : LimeSDR-Micro_mPCIe_1v3.GPB
+
+    Adding Layer      : Bottom
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D19
+    D20
+    D25
+    D35
+    D36
+    D43
+    D44
+    D65
+    D66
+    D67
+    D70
+    D71
+    D72
+    D73
+    D74
+    D76
+    D77
+    D123
+    D145
+    D147
+    D149
+    D160
+    D161
+    D167
+    D168
+    D169
+    D170
+    D171
+    D172
+    D173
+    D174
+    D175
+    D176
+    D177
+    D178
+    D179
+    D180
+    D181
+    D182
+    D183
+    D184
+    D185
+    D186
+    D187
+    D188
+    D189
+    D190
+    D191
+    D192
+    D193
+    D194
+    D195
+    D196
+    D197
+    D198
+    D199
+*************************************************************
+
+*************************************************************
+Generating : L5
+      File : LimeSDR-Micro_mPCIe_1v3.G4
+
+    Adding Layer      : L5
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D145
+    D159
+    D161
+    D162
+    D163
+*************************************************************
+
+*************************************************************
+Generating : ASM TOP
+      File : LimeSDR-Micro_mPCIe_1v3.GM15
+
+    Adding Layer      : ASM TOP
+
+
+Used DCodes :
+    D10
+    D11
+    D13
+    D15
+    D16
+    D58
+    D152
+    D158
+    D162
+    D237
+    D238
+    D239
+*************************************************************
+
+*************************************************************
+Generating : Bottom
+      File : LimeSDR-Micro_mPCIe_1v3.GBL
+
+    Adding Layer      : Bottom
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D10
+    D11
+    D13
+    D15
+    D16
+    D19
+    D20
+    D25
+    D35
+    D36
+    D43
+    D44
+    D65
+    D66
+    D67
+    D70
+    D71
+    D72
+    D73
+    D74
+    D76
+    D77
+    D123
+    D145
+    D146
+    D147
+    D149
+    D150
+    D151
+    D152
+    D153
+    D154
+    D158
+    D159
+    D160
+    D161
+    D162
+    D163
+    D167
+    D168
+    D169
+    D170
+    D171
+    D172
+    D173
+    D174
+    D175
+    D176
+    D177
+    D178
+    D179
+    D180
+    D181
+    D182
+    D183
+    D184
+    D185
+    D186
+    D187
+    D188
+    D189
+    D190
+    D191
+    D192
+    D193
+    D194
+    D195
+    D196
+    D197
+    D198
+    D199
+    D200
+    D201
+*************************************************************
+
+*************************************************************
+Generating : Mechanical1
+      File : LimeSDR-Micro_mPCIe_1v3.GM1
+
+    Adding Layer      : Mechanical1
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D15
+    D16
+    D150
+    D152
+    D153
+    D157
+    D158
+    D164
+    D234
+    D235
+    D236
+*************************************************************
+
+*************************************************************
+Generating : Top Pad Master
+      File : LimeSDR-Micro_mPCIe_1v3.GPT
+
+    Adding Layer      : Top
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
+    D65
+    D66
+    D67
+    D68
+    D69
+    D70
+    D71
+    D72
+    D73
+    D74
+    D75
+    D76
+    D77
+    D145
+    D147
+    D148
+    D149
+    D160
+*************************************************************
+
+*************************************************************
+Generating : L7
+      File : LimeSDR-Micro_mPCIe_1v3.G6
+
+    Adding Layer      : L7
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D145
+    D161
+    D162
+    D163
+*************************************************************
+
+*************************************************************
+Generating : BottomPaste
+      File : LimeSDR-Micro_mPCIe_1v3.GBP
+
+    Adding Layer      : BottomPaste
+
+    Adding Layer      : Bottom
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D19
+    D20
+    D25
+    D35
+    D36
+    D43
+    D44
+    D65
+    D66
+    D67
+    D70
+    D71
+    D72
+    D73
+    D74
+    D76
+    D77
+    D123
+    D161
+    D167
+    D168
+    D169
+    D170
+    D171
+    D172
+    D173
+    D174
+    D175
+    D176
+    D177
+    D178
+    D179
+    D180
+    D181
+    D182
+    D183
+    D184
+    D185
+    D186
+    D187
+    D188
+    D189
+    D190
+    D191
+    D192
+    D193
+    D195
+    D196
+    D197
+    D198
+    D199
+*************************************************************
+
+*************************************************************
+Generating : L6
+      File : LimeSDR-Micro_mPCIe_1v3.G5
+
+    Adding Layer      : L6
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D10
+    D13
+    D15
+    D16
+    D145
+    D150
+    D152
+    D153
+    D155
+    D158
+    D161
+    D162
+    D163
+*************************************************************
+
+*************************************************************
+Generating : L4
+      File : LimeSDR-Micro_mPCIe_1v3.G3
+
+    Adding Layer      : L4
+
+    Adding Layer      : MultiLayer
+
+
+Used DCodes :
+    D10
+    D11
+    D13
+    D15
+    D16
+    D145
+    D150
+    D152
+    D153
+    D158
+    D159
+    D161
+    D162
+    D163
+    D164
+    D166
 *************************************************************
 
 *************************************************************
@@ -701,143 +744,78 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : L2
-      File : LimeSDR-Micro_mPCIe_1v3.G1
+Generating : TopPaste
+      File : LimeSDR-Micro_mPCIe_1v3.GTP
 
-    Adding Layer      : L2
+    Adding Layer      : TopPaste
 
-    Adding Layer      : MultiLayer
-
-
-Used DCodes :
-    D145
-    D159
-    D161
-    D162
-    D163
-*************************************************************
-
-*************************************************************
-Generating : L7
-      File : LimeSDR-Micro_mPCIe_1v3.G6
-
-    Adding Layer      : L7
+    Adding Layer      : Top
 
     Adding Layer      : MultiLayer
 
 
 Used DCodes :
-    D145
-    D161
-    D162
-    D163
-*************************************************************
-
-*************************************************************
-Generating : L5
-      File : LimeSDR-Micro_mPCIe_1v3.G4
-
-    Adding Layer      : L5
-
-    Adding Layer      : MultiLayer
-
-
-Used DCodes :
-    D145
-    D159
-    D161
-    D162
-    D163
-*************************************************************
-
-*************************************************************
-Generating : BottomPaste
-      File : LimeSDR-Micro_mPCIe_1v3.GBP
-
-    Adding Layer      : BottomPaste
-
-    Adding Layer      : Bottom
-
-    Adding Layer      : MultiLayer
-
-
-Used DCodes :
+    D17
+    D18
     D19
     D20
+    D21
+    D22
+    D23
+    D24
     D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
     D35
     D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
     D43
     D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
     D65
     D66
     D67
+    D68
+    D69
     D70
     D71
     D72
     D73
     D74
+    D75
     D76
     D77
-    D123
-    D161
-    D167
-    D168
-    D169
-    D170
-    D171
-    D172
-    D173
-    D174
-    D175
-    D176
-    D177
-    D178
-    D179
-    D180
-    D181
-    D182
-    D183
-    D184
-    D185
-    D186
-    D187
-    D188
-    D189
-    D190
-    D191
-    D192
-    D193
-    D195
-    D196
-    D197
-    D198
-    D199
-*************************************************************
-
-*************************************************************
-Generating : Mechanical1
-      File : LimeSDR-Micro_mPCIe_1v3.GM1
-
-    Adding Layer      : Mechanical1
-
-
-Used DCodes :
-    D10
-    D11
-    D12
-    D13
-    D15
-    D16
-    D151
-    D152
-    D153
-    D157
-    D158
-    D164
-    D234
-    D235
-    D236
 *************************************************************
 
 *************************************************************
@@ -855,7 +833,7 @@ Used DCodes :
     D15
     D16
     D145
-    D151
+    D150
     D153
     D155
     D159
@@ -864,5 +842,27 @@ Used DCodes :
     D163
     D164
     D165
+*************************************************************
+
+*************************************************************
+Generating : ASM BOT
+      File : LimeSDR-Micro_mPCIe_1v3.GM14
+
+    Adding Layer      : ASM BOT
+
+
+Used DCodes :
+    D10
+    D11
+    D13
+    D15
+    D58
+    D150
+    D152
+    D158
+    D162
+    D237
+    D238
+    D239
 *************************************************************
 

@@ -1,0 +1,8 @@
+Changes:
+LimeSDR-Micro_mPCIe_1v3(_DB)_DFMr1:
+	- Small PCB updates during manufacturer EQ;
+	- Bottom silkscreen updated, R166 moved away from the edge, vias at the origin on the edge of the board moved away from the edge, GNSS UFL cut-out removed and L3 traces under it shifted.
+	- All DFM files refreshed	
+		
+LimeSDR-Micro_mPCIe_1v3(_DB)_DFMr0:
+ - Initial version
