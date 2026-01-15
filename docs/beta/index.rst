@@ -10,6 +10,7 @@ Status
 
 LimeSDR Micro uses the Lime Suite NG driver stack and hardware support is currently in heavy development, hence not all features are fully implemented yet. Recent developments:
 
+* **15/01/2026**. Sampling rate can be changed dynamically. VSPA firmware can be reprogrammed many times without power cycling.
 * **01/01/2026**. Kernel module automatically loaded at boot and no longer requires manual insertion.
 * **17/12/2025**. Fixes to resolve transmit hang/fail and Tx timestamping issues, which also means that TDD operation is now possible.
 
@@ -43,9 +44,9 @@ Support for additional receive channels will be added in due course.
 Sampling Rate
 -------------
 
-The sampling rate is currently hardcoded in the firmware. See the Advanced Topics section for details on changing this. 
-
-Support for dynamic sampling rate configuration is planned.
+Sampling rate can be changed dynamically.
+Rx 5-160 Msps
+Tx 5-95 Msps
 
 Sample Timestamp and TDD
 ------------------------
@@ -67,7 +68,9 @@ Support for this is present in the VSPA firmware, but not yet implemented in the
 Firmware Loading
 ----------------
 
-At present the ARM M4 and VSPA firmware are loaded when the driver module is inserted. Support for dynamic firmware loading is planned, which will include loading different firmware images based on user configuration.  
+ARM M4 firmware is loaded upon first use of the LimeSDR-Micro.
+If VSPA firmware is not loaded, default firmware will be loaded upon first data streaming setup.
+VSPA firmware can be reprogrammed by: limeFLASH --target VSPA vspafirmwarefile.eld
 
 Getting Started
 ***************
