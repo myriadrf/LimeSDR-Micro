@@ -10,11 +10,13 @@ Status
 
 LimeSDR Micro uses the Lime Suite NG driver stack and hardware support is currently in heavy development, hence not all features are fully implemented yet. Recent developments:
 
-* **15/01/2026**. Sampling rate can be changed dynamically. VSPA firmware can be reprogrammed many times without power cycling.
+* **21/01/2026**. Receive DMA changed from polling to firmware interrupt driven, reducing CPU utilisation by approximately 25%.
+* **19/01/2026**. Commands added to change the reference clock source.
+* **15/01/2026**. Sampling rate can now be set dynamically. VSPA firmware can be reprogrammed many times without power cycling.
 * **01/01/2026**. Kernel module automatically loaded at boot and no longer requires manual insertion.
 * **17/12/2025**. Fixes to resolve transmit hang/fail and Tx timestamping issues, which also means that TDD operation is now possible.
 
-The current status as of **17th December 2025** is as follows:
+The current status as of **21st January 2026** is as follows:
 
 Platform Support
 ================
@@ -22,14 +24,12 @@ Platform Support
 Intel
 -----
 
-MSI capabilities detection is not yet implemented in the driver, which may result in issues on some Intel platforms.
+Some issues have been observed with older Intel platforms, whereby the system hangs at power-on and may output EFI errors. This has been resolved by updating the BIOS to the latest version, and a workaround is being investigated that would allow operation without requiring a BIOS update. 
 
 ARM
 ---
 
 Basic testing has been performed on Raspberry Pi 5 and NXP FRDM-IMX8MPLUS.
-
-Cache coherency is currently implemented using polling, which may impact performance on some ARM platforms. Work is ongoing to implement proper cache maintenance operations.
 
 General
 =======
@@ -45,8 +45,10 @@ Sampling Rate
 -------------
 
 Sampling rate can be changed dynamically.
-Rx 5-160 Msps
-Tx 5-95 Msps
+
+Rx: 5-160 Msps
+
+Tx: 5-95 Msps
 
 Sample Timestamp and TDD
 ------------------------
@@ -68,9 +70,20 @@ Support for this is present in the VSPA firmware, but not yet implemented in the
 Firmware Loading
 ----------------
 
-ARM M4 firmware is loaded upon first use of the LimeSDR-Micro.
-If VSPA firmware is not loaded, default firmware will be loaded upon first data streaming setup.
-VSPA firmware can be reprogrammed by: limeFLASH --target VSPA vspafirmwarefile.eld
+The ARM M4 firmware is loaded upon first use of the LimeSDR-Micro.
+
+If the VSPA firmware is not loaded, the default firmware will be loaded upon first data streaming setup.
+
+VSPA firmware can be reprogrammed by: 
+
+.. code-block:: bash
+   
+   limeFLASH --target VSPA vspafirmwarefile.eld
+
+Performance
+-----------
+
+While the change from polling to interrupt driven DMA has significantly reduced CPU utilisation, there is room for further optimisation and this will be addressed in future updates.
 
 Getting Started
 ***************
@@ -155,6 +168,42 @@ To act as repeater Rx->Tx:
 Advanced Topics
 ***************
 
+External Reference Clock
+========================
+
+There are two options for enabling use with an external reference clock, either ad-hoc configuration using :code:`limeConfig`, or permanent configuration by building a custom ARM M4 firmware image. Of the two the second option is the safer; both require that the clock be present, stable and not disappear.
+
+.. warning::
+   Care must be taken when using an external reference clock, since this is critical to the operation of the LimeSDR Micro PCIe subsystem, and can in turn affect the stablity of the host system if it becomes unresponsive.
+
+Ad-hoc Configuration
+--------------------
+
+To change to using a 10 MHz external reference clock:
+
+.. code:: bash
+
+   limeConfig --refclk=10e6 --refclk_source=external
+
+.. warning:: 
+   Ensure that the external reference clock is present and stable before switching to this, otherwise the device/host may not function correctly. If the external clock source disappears during operation, it is likely to result in the system hanging or rebooting.
+
+Permanent Configuration
+-----------------------
+
+It is possible to permanently configure for an external reference clock source when building a custom `ARM M4 firmware`_ image. For example:
+
+.. code:: bash
+
+   cmake ../ -DEXT_REF_CLK=10000000
+
+Built firmware file will be placed in :code:`LimeSDR-Micro_FW/build/Release/la9310.bin`.
+
+The driver loads firmware from :code:`/lib/firmware/la9310.bin` location, so either overwrite it, or replace it with a symlink to your custom firmware build.
+
+.. warning:: 
+   Ensure that the external reference clock is present and stable before powering on the LimeSDR Micro, otherwise the device/host may not function correctly. If the external clock source disappears during operation, it is likely to result in the system hanging or rebooting.
+
 Debugging
 =========
 
@@ -185,24 +234,5 @@ For example, the first run of frontendDelayTest, the app has provided the data, 
    DMA_DDR_RD    0x00000007(00000000 MB/s)
    APP_DDR_WR    0x00000207         
 
-Changing the Sampling Rate
-==========================
 
-At the time of writing, LimeSDR Micro uses a hardcoded sampling rate which is defined in the firmware. The default firmware is set to have a 30.72MHz sampling rate ~122.88MB/s. To change the sampling rate it is neccessary to recompile firmware from source, which can be found here:
-
-https://github.com/myriadrf/LimeSDR-Micro_FW
-
-The sampling rate will be half of the reference clock frequency set by cmake. E.g.: 
-
-.. code:: bash
-
-   cmake .. -DLA9310_REF_CLK_FREQ=61440000
-
-Built firmware file will be placed in :code:`LimeSDR-Micro_FW/build/Release/la9310.bin`.
-
-The driver loads firmware from :code:`/lib/firmware/la9310.bin` location, so either overwrite it, or replace it with a symlink to your custom firmware build.
-
-In order to load new firmware, it will be neccessary to restart the system.
-
-.. note::
-   This is just a temporary situation until dynamic sampling rate configuration is implemented, along with support also for dynamic firmware loading.
+.. _ARM M4 firmware: https://github.com/myriadrf/LimeSDR-Micro_FW
