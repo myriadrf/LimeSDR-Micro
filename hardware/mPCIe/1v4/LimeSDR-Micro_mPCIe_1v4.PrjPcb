@@ -28,7 +28,7 @@ DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
-OutputPath=Project Outputs for LimeSDR-Micro_mPCIe_1v4
+OutputPath=
 LogFolderPath=
 ManagedProjectGUID=17CFFD15-2CD7-499C-B470-3216F8D0D3A4
 IncludeDesignInRelease=0
@@ -568,12 +568,12 @@ Variation80=Designator=R151|UniqueId=\KJNBPGIZ|Kind=1|AlternatePart=
 ParamVariationCount=0
 
 [Parameter1]
-Name=PROJECT_VERSION
-Value=1.3
-
-[Parameter2]
 Name=SHEET_TOTAL
 Value=11
+
+[Parameter2]
+Name=PROJECT_VERSION
+Value=1.4
 
 [Configuration1]
 Name=Default Configuration
@@ -622,7 +622,7 @@ SCH_HasExpandLogicalToPhysicalSheets=-1
 SaveSettingsToOutJob=-1
 
 [Generic_EDE]
-OutputDir=Project Outputs for LimeSDR-Micro_mPCIe_1v4
+OutputDir=
 
 [OutputGroup1]
 Name=Netlist Outputs
