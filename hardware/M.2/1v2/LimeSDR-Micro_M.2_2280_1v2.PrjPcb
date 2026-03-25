@@ -28,7 +28,7 @@ DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
-OutputPath=Project Outputs for LimeSDR-Micro_M.2_2280_1v2
+OutputPath=
 LogFolderPath=
 ManagedProjectGUID=17CFFD15-2CD7-499C-B470-3216F8D0D3A4
 IncludeDesignInRelease=0
@@ -484,7 +484,7 @@ UniqueID=CC2F62BA-883F-43C1-BBD8-A00E67B31A1A
 Description=Default
 AllowFabrication=0
 ParameterCount=0
-VariationCount=105
+VariationCount=106
 Variation1=Designator=MN3|UniqueId=\PASGDSBF|Kind=0|AlternatePart= 
 Variation2=Designator=MN5|UniqueId=\VRSHDKBJ|Kind=1|AlternatePart= 
 Variation3=Designator=MN4|UniqueId=\CYTXAKES|Kind=1|AlternatePart= 
@@ -590,6 +590,7 @@ Variation102=Designator=R230|UniqueId=\FOMZGBSR|Kind=1|AlternatePart=
 Variation103=Designator=R231|UniqueId=\KLOZVHRP|Kind=1|AlternatePart= 
 Variation104=Designator=R232|UniqueId=\TCJUHFDG|Kind=1|AlternatePart= 
 Variation105=Designator=R13|UniqueId=\DQUTSPNA|Kind=1|AlternatePart= 
+Variation106=Designator=FR1|UniqueId=\SPAJMJAR|Kind=1|AlternatePart= 
 ParamVariationCount=0
 
 [Parameter1]
@@ -647,7 +648,7 @@ SCH_HasExpandLogicalToPhysicalSheets=-1
 SaveSettingsToOutJob=0
 
 [Generic_EDE]
-OutputDir=Project Outputs for LimeSDR-Micro_M.2_2280_1v2
+OutputDir=
 
 [OutputGroup1]
 Name=Netlist Outputs
