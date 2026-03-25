@@ -28,7 +28,7 @@ DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
-OutputPath=
+OutputPath=Project Outputs for LimeSDR-Micro_M.2_2280_1v2
 LogFolderPath=
 ManagedProjectGUID=17CFFD15-2CD7-499C-B470-3216F8D0D3A4
 IncludeDesignInRelease=0
@@ -484,7 +484,7 @@ UniqueID=CC2F62BA-883F-43C1-BBD8-A00E67B31A1A
 Description=Default
 AllowFabrication=0
 ParameterCount=0
-VariationCount=101
+VariationCount=104
 Variation1=Designator=MN3|UniqueId=\PASGDSBF|Kind=0|AlternatePart= 
 Variation2=Designator=MN5|UniqueId=\VRSHDKBJ|Kind=1|AlternatePart= 
 Variation3=Designator=MN4|UniqueId=\CYTXAKES|Kind=1|AlternatePart= 
@@ -586,15 +586,18 @@ Variation98=Designator=R142|UniqueId=\VCQJXSSK|Kind=1|AlternatePart=
 Variation99=Designator=R121|UniqueId=\YKIOQLCG|Kind=1|AlternatePart= 
 Variation100=Designator=JP1|UniqueId=\NBUQYRFB|Kind=1|AlternatePart= 
 Variation101=Designator=JMP1|UniqueId=\CPKXUXVL|Kind=1|AlternatePart= 
+Variation102=Designator=R230|UniqueId=\FOMZGBSR|Kind=1|AlternatePart= 
+Variation103=Designator=R231|UniqueId=\KLOZVHRP|Kind=1|AlternatePart= 
+Variation104=Designator=R232|UniqueId=\TCJUHFDG|Kind=1|AlternatePart= 
 ParamVariationCount=0
 
 [Parameter1]
-Name=SHEET_TOTAL
-Value=11
-
-[Parameter2]
 Name=PROJECT_VERSION
 Value=1.2
+
+[Parameter2]
+Name=SHEET_TOTAL
+Value=11
 
 [Configuration1]
 Name=Default Configuration
@@ -643,7 +646,7 @@ SCH_HasExpandLogicalToPhysicalSheets=-1
 SaveSettingsToOutJob=0
 
 [Generic_EDE]
-OutputDir=
+OutputDir=Project Outputs for LimeSDR-Micro_M.2_2280_1v2
 
 [OutputGroup1]
 Name=Netlist Outputs
@@ -1260,36 +1263,6 @@ OutputName11=Specctra Design PCB
 OutputDocumentPath11=
 OutputVariantName11=
 OutputDefault11=0
-OutputType12=Ansoft Neutral
-OutputName12=Ansoft Neutral (AutoPCB)
-OutputDocumentPath12=
-OutputVariantName12=
-OutputDefault12=0
-OutputType13=HyperLynx
-OutputName13=HyperLynx (AutoPCB)
-OutputDocumentPath13=
-OutputVariantName13=
-OutputDefault13=0
-OutputType14=Orcad v7 Capture Design
-OutputName14=Orcad v7 Capture Design (AutoSCH)
-OutputDocumentPath14=
-OutputVariantName14=
-OutputDefault14=0
-OutputType15=P-CAD ASCII
-OutputName15=P-CAD ASCII (AutoPCB)
-OutputDocumentPath15=
-OutputVariantName15=
-OutputDefault15=0
-OutputType16=P-CAD V16 Schematic Design
-OutputName16=P-CAD V16 Schematic Design (AutoSCH)
-OutputDocumentPath16=
-OutputVariantName16=
-OutputDefault16=0
-OutputType17=SiSoft
-OutputName17=SiSoft (AutoPCB)
-OutputDocumentPath17=
-OutputVariantName17=
-OutputDefault17=0
 
 [OutputGroup10]
 Name=PostProcess Outputs
