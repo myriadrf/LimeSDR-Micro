@@ -1,3 +1,5 @@
+.. _beta:
+
 Beta Programme
 ##############
 
