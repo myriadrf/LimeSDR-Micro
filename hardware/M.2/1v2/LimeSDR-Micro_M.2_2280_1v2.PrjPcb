@@ -28,7 +28,7 @@ DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
-OutputPath=
+OutputPath=Project Outputs for LimeSDR-Micro_M.2_2280_1v2
 LogFolderPath=
 ManagedProjectGUID=17CFFD15-2CD7-499C-B470-3216F8D0D3A4
 IncludeDesignInRelease=0
@@ -462,23 +462,6 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=COIIMVQC
 
-[Document26]
-DocumentPath=LimeSDR-Micro_M.2_2280_1v2.PCBDwf
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
 [ProjectVariant1]
 UniqueID=CC2F62BA-883F-43C1-BBD8-A00E67B31A1A
 Description=Default
@@ -648,7 +631,7 @@ SCH_HasExpandLogicalToPhysicalSheets=-1
 SaveSettingsToOutJob=0
 
 [Generic_EDE]
-OutputDir=
+OutputDir=Project Outputs for LimeSDR-Micro_M.2_2280_1v2
 
 [OutputGroup1]
 Name=Netlist Outputs
