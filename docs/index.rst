@@ -10,14 +10,14 @@ LimeSDR Micro
 
 .. tab:: LimeSDR Micro M.2
 
-   .. figure:: /images/limesdr-micro-m2-2280_ISO.jpg
+   .. figure:: /images/limesdr-micro-m2-2280-mpcie-01_jpg_gallery-lg.jpg
       :align: center
       :width: 600
 
-The LimeSDR Micro represents a breakthrough in software-defined radio technology, delivering professional-grade RF capabilities in M.2 2280 form factor. 
+The LimeSDR Micro represents a breakthrough in software-defined radio technology, delivering professional-grade RF capabilities in M.2 2280 and mPCIe form factors. 
 This innovative design enables seamless integration into embedded systems while maintaining the power and flexibility demanded by modern wireless applications. 
 Powered by the NXP LA9310 baseband processor and the Lime Microsystems LMS7002M RF transceiver, it provides a flexible and powerful platform for developing wireless systems and solutions. 
-Designed for seamless integration with a wide range of digital processors—including ASICs, general-purpose processors (GPPs), and GPUs—it supports applications across narrowband and broadband air interfaces. 
+Designed for seamless integration with a wide range of digital processors—including ASICs, general-purpose processors (GPPs), and GPUs—it supports applications across narrowband and broadband air interfaces.
 
 Specifications
 **************
@@ -57,24 +57,25 @@ RF
 Digital Interface
 =================
 
-M.2 B+M key edge connector with PCIe Gen 3 x1.
+LimeSDR Micro options:
+
+* M.2 B+M key edge connector with PCIe Gen 3 x1.
+* Mini PCIe edge connector with PCIe Gen 3 x1.
 
 Power Supply
 ============
 
-.. list-table:: 
-   :header-rows: 1
-   :stub-columns: 1
+.. table::
 
-   * - Parameter
-     - Value
-     - Notes
-   * - Input Voltage 
-     - 3.3 V DC
-     - Via M.2 connector
-   * - Maximum Power 
-     - 8 W
-     - M.2 limit
+  +-------------------+-----------+---------------+
+  |   **Parameter**   | **Value** |   **Notes**   |
+  +===================+===========+===============+
+  | **Input Voltage** | 3.3 V DC  | mPCIe and M.2 |
+  +-------------------+-----------+---------------+
+  | **Maximum Power** | 8 W       | M.2           |
+  |                   +-----------+---------------+
+  |                   | 3 W       | mPCIe         |
+  +-------------------+-----------+---------------+
 
 .. note::
    Power consumption depends on configuration.
@@ -99,13 +100,14 @@ Environmental
      - -40 °C to +85 °C
      - N/A
    * - Operating Humidity
-     - 10% to 90% RH  
-     - Non-condensing   
+     - 10% to 90% RH
+     - Non-condensing
 
 Mechanical
 ==========
 
-M.2 2280 form factor, 22 × 80 mm, <20g weight.
+* M.2 2280 form factor, 22 × 80 mm, <20g weight.
+* Mini PCIe form factor, 29.7 × 50.8 mm, <20g weight.
 
 Features
 ********
@@ -132,8 +134,8 @@ Clock system
 
 * 30.72 MHz on board VCTCXO
 * VCTCXO may be tuned by GPSDO function or external PPS reference
-* Reference clock input and output connectors (MHF4 and M.2)
-* 1PPS input and output (MHF4 and M.2) 
+* Reference clock input and output connectors 
+* 1PPS input and output 
 
 General user inputs/outputs:
 ============================
@@ -144,9 +146,9 @@ General user inputs/outputs:
 Connections
 ===========
 
-* Coaxial RF (MHF4 female) connectors
+* Coaxial RF connectors
 * BB processor JTAG connector (unpopulated)
-* M.2 B+M key edge connector
+* M.2 B+M key / mPCIe edge connector
 * RF Baseband 15-pin FPC connectors
 
 Purchasing
