@@ -33,11 +33,11 @@ RF
      - Value
      - Notes
    * - Configuration
-     - MISO (1T2R)
+     - MISO (1T2R expandable to 1T4R)
      - Full-duplex
    * - Frequency Range
      - 30 MHz – 3.8 GHz
-     - Non-continuous coverage
+     -
    * - Bandwidth
      - > 100 MHz
      - Software configurable
@@ -59,7 +59,7 @@ Digital Interface
 
 LimeSDR Micro options:
 
-* M.2 B+M key edge connector with PCIe Gen 3 x1.
+* M.2 2280 B+M key edge connector with PCIe Gen 3 x1.
 * Mini PCIe edge connector with PCIe Gen 3 x1.
 
 Power Supply
@@ -72,9 +72,9 @@ Power Supply
   +===================+===========+===============+
   | **Input Voltage** | 3.3 V DC  | mPCIe and M.2 |
   +-------------------+-----------+---------------+
-  | **Maximum Power** | 8 W       | M.2           |
+  | **Maximum Power** | TBC       | M.2           |
   |                   +-----------+---------------+
-  |                   | 3 W       | mPCIe         |
+  |                   | TBC       | mPCIe         |
   +-------------------+-----------+---------------+
 
 .. note::
@@ -112,16 +112,15 @@ Mechanical
 Features
 ********
 
-
 Devices
 =======
 
 * RF transceiver: Lime Microsystems LMS7002M
-* BB processor: NXP Semiconductors LA9310X7S11AA
+* BB processor: NXP Semiconductors LA9310S7S11AA
 
   * 157-pin LFBGA package (8mm x 8mm, 1.25mm)
-  * Core type Arm Cortex-M4.
-  * 307 MHz Operating frequency 
+  * Vector Signal Processing Accelerator up to 80 GFLOPs
+  * Arm Cortex-M4 at up to 307 MHz 
   * Integrated ADC/DAC (160 MSPS)
   * 66 kB SRAM
   * Configuration via JTAG
@@ -154,7 +153,7 @@ Connections
 Purchasing
 **********
 
-Please see the  `Lime Micro website`_ for purchasing options.
+Please see the  `Crowd Supply website`_ for purchasing options.
 
 Regulatory
 **********
@@ -176,4 +175,4 @@ RF Transmission Notice
    Operating RF transmitting equipment may require appropriate licensing. Users are responsible for ensuring compliance with local regulations. Unauthorised transmission may result in legal penalties.
 
 
-.. _Lime Micro Website: https://www.crowdsupply.com/lime-micro/limesdr-micro
+.. _Crowd Supply website: https://www.crowdsupply.com/lime-micro/limesdr-micro 
