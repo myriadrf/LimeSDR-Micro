@@ -6,7 +6,6 @@ LimeSDR Micro
 
    user/index
    reference/index
-   beta/index
 
 .. tab:: LimeSDR Micro M.2
 
@@ -15,8 +14,10 @@ LimeSDR Micro
       :width: 600
 
 The LimeSDR Micro represents a breakthrough in software-defined radio technology, delivering professional-grade RF capabilities in M.2 2280 and mPCIe form factors. 
+
 This innovative design enables seamless integration into embedded systems while maintaining the power and flexibility demanded by modern wireless applications. 
 Powered by the NXP LA9310 baseband processor and the Lime Microsystems LMS7002M RF transceiver, it provides a flexible and powerful platform for developing wireless systems and solutions. 
+
 Designed for seamless integration with a wide range of digital processors—including ASICs, general-purpose processors (GPPs), and GPUs—it supports applications across narrowband and broadband air interfaces.
 
 Specifications
