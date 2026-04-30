@@ -1,0 +1,2 @@
+It was started with RF loopback as LimeSDR-Mini, but the project was stopped.
+The LimeSDR-Micro project was done first in mPCIe size because it has the smallest area and is the most difficult to fit all the changes there.
