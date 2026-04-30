@@ -95,14 +95,17 @@ Environmental
      - Value
      - Notes
    * - Operating Temperature
-     - -40 °C to +85 °C
-     - Industrial-grade
+     - 0 °C to +85 °C
+     - Commercial-grade
    * - Storage Temperature
      - -40 °C to +85 °C
      - N/A
    * - Operating Humidity
      - 10% to 90% RH
      - Non-condensing
+
+.. note::
+   Industrial-grade operating temperature range is available upon request.
 
 Mechanical
 ==========

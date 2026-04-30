@@ -1,7 +1,7 @@
 Overview
 ########
 
-One of the key elements of LimeSDR Micro mPCIe board is NXP (`LA9310X7S11AA`_) base band processor. 
+One of the key elements of LimeSDR Micro mPCIe board is NXP (`LA9310S7S11AA`_) base band processor. 
 It’s main function is to transfer digital data between LMS7002M RF transceiver and PC through a mPCIe edge connector. 
 The block diagram for LimeSDR Micro mPCIe board is presented in the Figure 3.
 
@@ -35,7 +35,7 @@ Description of board components is given in the Table 1.
   +--------------------------+----------------+---------------------------------------------------------------------------------------------------+
   | IC1                      | RF transceiver | Lime Microsystems LMS7002M                                                                        |
   +--------------------------+----------------+---------------------------------------------------------------------------------------------------+
-  | IC6                      | BB processor   | NXP Semiconductors LA9310X7S11AA                                                                  |
+  | IC6                      | BB processor   | NXP Semiconductors LA9310S7S11AA                                                                  |
   +--------------------------+----------------+---------------------------------------------------------------------------------------------------+
   | **Miscellaneous devices**                                                                                                                     |
   +--------------------------+----------------+---------------------------------------------------------------------------------------------------+
@@ -108,4 +108,4 @@ Description of board components is given in the Table 1.
 
 A more detailed description is provided in the following sections.
 
-.. _LA9310X7S11AA: https://www.nxp.com/part/LA9310X7S11AA
+.. _LA9310S7S11AA: https://www.nxp.com/part/LA9310S7S11AA
