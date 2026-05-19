@@ -1,7 +1,7 @@
 Changelog
 #########
 
-The first production LimeSDR M.2 2280 was revision v1.0 and so this changelog starts with changes from that point.
+The first production LimeSDR Micro M.2 2280 was revision v1.0 and so this changelog starts with changes from that point.
 
 v1.1
 ****

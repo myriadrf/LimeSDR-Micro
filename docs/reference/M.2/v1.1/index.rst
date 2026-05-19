@@ -27,4 +27,4 @@ This is the Reference Manual for LimeSDR Micro M.2 2280 v1.1 hardware.
 .. figure:: /images/LimeSDR-Micro_M.2_2280_v1.1_3D_bot.png
   :width: 600
 
-  Figure 2: LimeSDR M.2 2280 v1.1 board bottom view
+  Figure 2: LimeSDR Micro M.2 2280 v1.1 board bottom view
