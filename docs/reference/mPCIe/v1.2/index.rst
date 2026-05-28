@@ -27,4 +27,4 @@ This is the Reference Manual for LimeSDR Micro mPCIe v1.2 hardware.
 .. figure:: /images/LimeSDR-Micro_v1.2_3D_bot.png
   :width: 600
 
-  Figure 2: LimeSDR mPCIe v1.2 board bottom view
+  Figure 2: LimeSDR Micro mPCIe v1.2 board bottom view

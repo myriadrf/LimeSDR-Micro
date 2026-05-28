@@ -12,7 +12,7 @@ Connector pinout and signals according to the specification is given in Table 13
    
    * - Pin
      - Mini PCIe x1 Specification
-     - LimeSDR XTRX Schematic Signal Name
+     - LimeSDR Micro Schematic Signal Name
      - Description
    * - 1
      - Wake#

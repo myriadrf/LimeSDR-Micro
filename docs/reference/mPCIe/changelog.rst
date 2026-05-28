@@ -1,12 +1,12 @@
 Changelog
 #########
 
-The first production LimeSDR mPCIe was revision v1.1 and so this changelog starts with changes from that point.
+The first production LimeSDR Micro mPCIe was revision v1.1 and so this changelog starts with changes from that point.
 
 v1.3
 ****
 
-LimeSDR-Micro mPCIe v1.3 board is designed using LimeSDR-Micro mPCIe v1.2 project as base with the schematic and PCB Layout changes described in this document.
+LimeSDR Micro mPCIe v1.3 board is designed using LimeSDR Micro mPCIe v1.2 project as base with the schematic and PCB Layout changes described in this document.
 The major changes are:
 
 * Changed GNSS power rail from VCC3P3_CLK to VCC3P3 to minimize GNSS module spurs in RF TX.
@@ -192,19 +192,19 @@ Fitted ESDs (TXA, RXA, RXB, GNSS_ANT).
 PCB Changes
 ===========
 
-LimeSDR-Micro v1.3 is based on LimeSDR-Micro v1.2 layout.
+LimeSDR Micro v1.3 is based on LimeSDR Micro v1.2 layout.
 
 PCB updated with schematic changes.
 
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_3D_top.png
   :width: 600
 
-  Figure 16: LimeSDR-Micro mPCIe v1.3 3D view (top)
+  Figure 16: LimeSDR Micro mPCIe v1.3 3D view (top)
 
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_3D_bot.png
   :width: 600
 
-  Figure 17: LimeSDR-Micro mPCIe v1.3 3D view (bottom)
+  Figure 17: LimeSDR Micro mPCIe v1.3 3D view (bottom)
 
 v1.2
 ****
@@ -340,7 +340,7 @@ Changed mPCIe pin 45 PCIE_RESERVED to LNA1_EN as shown in Figure 12.
 PCB
 ===
 
-LimeSDR-Micro v1.2 is based on LimeSDR-Micro v1.1 layout.
+LimeSDR Micro v1.2 is based on LimeSDR Micro v1.1 layout.
 
 New resulting PCB top side is shown in Figure 14 and bottom side is shown in Figure 15.
 

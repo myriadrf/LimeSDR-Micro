@@ -7,11 +7,9 @@ LimeSDR Micro
    user/index
    reference/index
 
-.. tab:: LimeSDR Micro M.2
-
-   .. figure:: /images/limesdr-micro-m2-2280-mpcie-01_jpg_gallery-lg.jpg
-      :align: center
-      :width: 600
+.. figure:: /images/limesdr-micro-m2-2280-mpcie-01_jpg_gallery-lg.jpg
+  :align: center
+  :width: 600
 
 The LimeSDR Micro represents a breakthrough in software-defined radio technology, delivering professional-grade RF capabilities in M.2 2280 and mPCIe form factors. 
 
