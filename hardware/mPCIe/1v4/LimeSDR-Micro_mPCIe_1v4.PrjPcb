@@ -484,7 +484,7 @@ UniqueID=757C1FB4-BDE7-4025-965B-47BD37D17F4E
 Description=Default
 AllowFabrication=0
 ParameterCount=0
-VariationCount=89
+VariationCount=90
 Variation1=Designator=R15|UniqueId=\SFWYMJFW|Kind=0|AlternatePart= 
 Variation2=Designator=R26|UniqueId=\GGYJJJCE|Kind=1|AlternatePart= 
 Variation3=Designator=R30|UniqueId=\UHBAYIQM|Kind=1|AlternatePart= 
@@ -574,6 +574,7 @@ Variation86=Designator=R46|UniqueId=\YOFGLQQA|Kind=1|AlternatePart=
 Variation87=Designator=C20|UniqueId=\PCMDCOIY|Kind=1|AlternatePart= 
 Variation88=Designator=R55|UniqueId=\PFTMKQQL|Kind=1|AlternatePart= 
 Variation89=Designator=C25|UniqueId=\DKHOXJIF|Kind=1|AlternatePart= 
+Variation90=Designator=FR51|UniqueId=\OWVNCAFQ|Kind=1|AlternatePart= 
 ParamVariationCount=0
 
 [Parameter1]
