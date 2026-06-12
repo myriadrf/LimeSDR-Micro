@@ -484,7 +484,7 @@ UniqueID=757C1FB4-BDE7-4025-965B-47BD37D17F4E
 Description=Default
 AllowFabrication=0
 ParameterCount=0
-VariationCount=96
+VariationCount=104
 Variation1=Designator=R15|UniqueId=\SFWYMJFW|Kind=0|AlternatePart= 
 Variation2=Designator=R26|UniqueId=\GGYJJJCE|Kind=1|AlternatePart= 
 Variation3=Designator=R30|UniqueId=\UHBAYIQM|Kind=1|AlternatePart= 
@@ -581,15 +581,23 @@ Variation93=Designator=R231|UniqueId=\VTBOPIIR|Kind=1|AlternatePart=
 Variation94=Designator=R232|UniqueId=\YCDSVWJL|Kind=1|AlternatePart= 
 Variation95=Designator=JP1|UniqueId=\VVQTOHMQ|Kind=1|AlternatePart= 
 Variation96=Designator=JMP1|UniqueId=\ROCEFFRF|Kind=1|AlternatePart= 
+Variation97=Designator=R100|UniqueId=\BALVPXTJ|Kind=1|AlternatePart= 
+Variation98=Designator=R101|UniqueId=\WDCVVBGW|Kind=1|AlternatePart= 
+Variation99=Designator=R102|UniqueId=\XJSHLMFI|Kind=1|AlternatePart= 
+Variation100=Designator=R103|UniqueId=\OPUALJEB|Kind=1|AlternatePart= 
+Variation101=Designator=R104|UniqueId=\VEFDMBXO|Kind=1|AlternatePart= 
+Variation102=Designator=R105|UniqueId=\DOUCFRGM|Kind=1|AlternatePart= 
+Variation103=Designator=R106|UniqueId=\OGILJNMY|Kind=1|AlternatePart= 
+Variation104=Designator=R107|UniqueId=\IOZPIWBN|Kind=1|AlternatePart= 
 ParamVariationCount=0
 
 [Parameter1]
-Name=SHEET_TOTAL
-Value=11
-
-[Parameter2]
 Name=PROJECT_VERSION
 Value=1.4
+
+[Parameter2]
+Name=SHEET_TOTAL
+Value=11
 
 [Configuration1]
 Name=Default Configuration
@@ -1255,36 +1263,6 @@ OutputName11=Export STEP
 OutputDocumentPath11=
 OutputVariantName11=
 OutputDefault11=0
-OutputType12=Ansoft Neutral
-OutputName12=Ansoft Neutral (AutoPCB)
-OutputDocumentPath12=
-OutputVariantName12=
-OutputDefault12=0
-OutputType13=HyperLynx
-OutputName13=HyperLynx (AutoPCB)
-OutputDocumentPath13=
-OutputVariantName13=
-OutputDefault13=0
-OutputType14=Orcad v7 Capture Design
-OutputName14=Orcad v7 Capture Design (AutoSCH)
-OutputDocumentPath14=
-OutputVariantName14=
-OutputDefault14=0
-OutputType15=P-CAD ASCII
-OutputName15=P-CAD ASCII (AutoPCB)
-OutputDocumentPath15=
-OutputVariantName15=
-OutputDefault15=0
-OutputType16=P-CAD V16 Schematic Design
-OutputName16=P-CAD V16 Schematic Design (AutoSCH)
-OutputDocumentPath16=
-OutputVariantName16=
-OutputDefault16=0
-OutputType17=SiSoft
-OutputName17=SiSoft (AutoPCB)
-OutputDocumentPath17=
-OutputVariantName17=
-OutputDefault17=0
 
 [OutputGroup10]
 Name=PostProcess Outputs
