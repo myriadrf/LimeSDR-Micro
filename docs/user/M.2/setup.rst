@@ -4,9 +4,9 @@ Hardware Setup
 Host Interface
 **************
 
-LimeSDR Micro should be plugged into a M.2 slot with B, M or B+M key on the host device. 
+LimeSDR Micro can be plugged into a M.2 slot with B or M key on the host device. 
 
-The host must provide a PCIe Gen3 x1 interface and supply power via the M.2 connector.
+The host must provide a PCIe Gen3 x1 interface and supply power (3.3 V) via the M.2 connector.
 
 Cooling
 *******
@@ -24,7 +24,7 @@ RF Connections
 .. figure:: /images/LimeSDR-Micro_M.2_2280_v1.1_components_rfcon.png
   :width: 600
   
-  Figure 4: LimeSDR Micro M.2 v1.x board top with RF connector positions
+  Figure 4: LimeSDR Micro M.2 2280 v1.x board top with RF connector positions
 
 .. table:: Table 1. RF Connectors
 
@@ -49,7 +49,7 @@ RF Connections
   +--------------+----------------+---------+--------------------+-----------------------------------------+
 
 .. note::
-  TDD control signal (PA_EN) output (J2) is only available in LimeSDR Micro M.2 v1.1.
+  TDD control signal (PA_EN) output (J2) is only available in LimeSDR Micro M.2 v1.1 and v1.2.
 
 .. warning::
    Care should be taken when connecting external RF signals to the RX inputs, to ensure that the maximum safe input power of +10 dBm is not exceeded, as this may cause permanent damage to the device.

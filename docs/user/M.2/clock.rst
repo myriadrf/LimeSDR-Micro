@@ -1,7 +1,7 @@
 Reference Clock
 ###############
 
-The LimeSDR Micro M.2 clock system is based on a high stability 30.72 MHz VCTCXO (Voltage Controlled Temperature Compensated Crystal Oscillator) which can be tuned via an external 1PPS reference signal or GPSDO function.
+The LimeSDR Micro M.2 2280 clock system is based on a high stability 30.72 MHz VCTCXO (Voltage Controlled Temperature Compensated Crystal Oscillator) which can be tuned via an external 1PPS reference signal or GPSDO function.
 
 The board provides reference clock and 1PPS input and output via M.2 connector, as well as dedicated MHF4 connectors for reference clock input (J4), output (J3) and 1PPS input/output (J5).
 
@@ -33,9 +33,8 @@ The board provides reference clock and 1PPS input and output via M.2 connector, 
 .. note::
    By default 1PPS input source is onboard GNSS receiver. To change 1PPS input source:
 
-   For LimeSDR Micro M.2 v1.1 remove R176 and populate R173 (M.2) or R179 (MHF4 J5) with zero-ohm resistor.
-   
-   For LimeSDR Micro M.2 v1.0 remove R175 and populate R172 (M.2) or R178 (MHF4 J5) with zero-ohm resistor.
+  * For LimeSDR Micro M.2 v1.1 and v1.2 remove R176 and populate R173 (M.2) or R179 (MHF4 J5) with zero-ohm resistor.   
+  * For LimeSDR Micro M.2 v1.0 remove R175 and populate R172 (M.2) or R178 (MHF4 J5) with zero-ohm resistor.
 
 .. warning::
    When using external clock references, ensure signal levels and frequencies match specifications. 
