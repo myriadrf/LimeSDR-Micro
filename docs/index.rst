@@ -1,20 +1,22 @@
-LimeSDR Micro
-#############
+Introduction
+############
 
 .. toctree::
    :hidden:
 
+   Introduction <self>
    user/index
    reference/index
+   developer/index
 
 .. figure:: /images/limesdr-micro-m2-2280-mpcie-01_jpg_gallery-lg.jpg
   :align: center
   :width: 600
 
-The LimeSDR Micro represents a breakthrough in software-defined radio technology, delivering professional-grade RF capabilities in M.2 2280 and mPCIe form factors. 
+The LimeSDR Micro represents a breakthrough in software-defined radio technology, delivering professional-grade RF capabilities in M.2 2280 and mPCIe form factors.
 
-This innovative design enables seamless integration into embedded systems while maintaining the power and flexibility demanded by modern wireless applications. 
-Powered by the NXP LA9310 baseband processor and the Lime Microsystems LMS7002M RF transceiver, it provides a flexible and powerful platform for developing wireless systems and solutions. 
+This innovative design enables seamless integration into embedded systems while maintaining the power and flexibility demanded by modern wireless applications.
+Powered by the NXP LA9310 baseband processor and the Lime Microsystems LMS7002M RF transceiver, it provides a flexible and powerful platform for developing wireless systems and solutions.
 
 Designed for seamless integration with a wide range of digital processors—including ASICs, general-purpose processors (GPPs), and GPUs—it supports applications across narrowband and broadband air interfaces.
 
@@ -24,7 +26,7 @@ Specifications
 RF
 ==
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :stub-columns: 1
 
@@ -42,10 +44,10 @@ RF
      - Software configurable
    * - Sample depth
      - 12 bit
-     - 
+     -
    * - Sample rate
      - up to 160 MSPS
-     - 
+     -
    * - Max. Safe Rx Input Power
      - 10 dBm
      - Absolute maximum
@@ -85,7 +87,7 @@ Power Supply
 Environmental
 =============
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :stub-columns: 1
 
@@ -122,7 +124,7 @@ Devices
 
   * 157-pin LFBGA package (8mm x 8mm, 1.25mm)
   * Vector Signal Processing Accelerator up to 80 GFLOPs
-  * Arm Cortex-M4 at up to 307 MHz 
+  * Arm Cortex-M4 at up to 307 MHz
   * Integrated ADC/DAC (160 MSPS)
   * 66 kB SRAM
   * Configuration via JTAG
@@ -135,8 +137,8 @@ Clock system
 
 * 30.72 MHz on board VCTCXO
 * VCTCXO may be tuned by GPSDO function or external PPS reference
-* Reference clock input and output connectors 
-* 1PPS input and output 
+* Reference clock input and output connectors
+* 1PPS input and output
 
 General user inputs/outputs:
 ============================
@@ -177,4 +179,4 @@ RF Transmission Notice
    Operating RF transmitting equipment may require appropriate licensing. Users are responsible for ensuring compliance with local regulations. Unauthorised transmission may result in legal penalties.
 
 
-.. _Crowd Supply website: https://www.crowdsupply.com/lime-micro/limesdr-micro 
+.. _Crowd Supply website: https://www.crowdsupply.com/lime-micro/limesdr-micro
