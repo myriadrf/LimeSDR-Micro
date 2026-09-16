@@ -7,6 +7,7 @@ Introduction
    Introduction <self>
    user/index
    reference/index
+   advanced/index
    developer/index
 
 .. figure:: /images/limesdr-micro-m2-2280-mpcie-01_jpg_gallery-lg.jpg
