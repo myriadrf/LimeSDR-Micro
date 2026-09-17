@@ -15,7 +15,7 @@ The resistors' location on the board is shown below.
 .. figure:: /images/LimeSDR-Micro_M.2_2280_v1.1_3D_boot_source.png
    :align: center
 
-   Figure 2: R121 and R130 resistor locations
+   Figure 1: R121 and R130 resistor locations
 
 By default, the board boots from PCIe, with R121 fitted and R130 not fitted. To boot from the I\ :sup:`2`\ C EEPROM instead, remove R121 and fit R130. Use a 10 k\ |Omega| resistor for R121 or a 3.3 k\ |Omega| resistor for R130. Both use the 0201 package size, so appropriate tools and care are required.
 

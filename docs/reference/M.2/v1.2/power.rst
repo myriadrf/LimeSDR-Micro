@@ -5,9 +5,9 @@ LimeSDR Micro M.2 board is powered via M.2 edge connector (3.3V).
 LimeSDR Micro M.2 board power delivery network consists of different power rails/voltages and 
 filters.
 
-LimeSDR Micro M.2 board power distribution block diagram is presented in Figure 10.
+LimeSDR Micro M.2 board power distribution block diagram is presented in Figure 9.
 
 .. figure:: /images/LimeSDR-Micro_M.2_v1.1_diagrams_r0_power.png
   :width: 600
 
-  Figure 10. LimeSDR Micro M.2 2280 v1.2 board power distribution block diagram
+  Figure 9. LimeSDR Micro M.2 2280 v1.2 board power distribution block diagram

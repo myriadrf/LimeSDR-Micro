@@ -5,7 +5,7 @@ LimeSDR Micro M.2 2280 v1.1 board communicates with the host system via M.2 edge
 It is configured to use PCIE-based SSD drive pinout when sloted into key M+B socket, 
 but is also compatible with key M and key B sockets. 
 
-LimeSDR Micro M.2 2280 v1.0 connector pinout and signals according to the specification is given in Table 14.
+LimeSDR Micro M.2 2280 v1.1 connector pinout and signals according to the specification is given in Table 14.
 
 .. table:: Table 14. M.2 key M+B PCIe-based SSD edge connector pinout 
 

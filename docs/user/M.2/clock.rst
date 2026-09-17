@@ -19,7 +19,7 @@ The board provides reference clock and 1PPS input and output via M.2 connector, 
      - 10-52 MHz, 1.8V - 3.3V
    * - Clock Output
      - M.2 pin 24 and MHF4 (J3)
-     - m.2 - 1.8V / MHF - 3.3V CMOS
+     - M.2 - 1.8V / MHF - 3.3V CMOS
    * - 1PPS input (not populated)
      - M.2 pin 46
      - 3.3V CMOS
@@ -33,8 +33,8 @@ The board provides reference clock and 1PPS input and output via M.2 connector, 
 .. note::
    By default 1PPS input source is onboard GNSS receiver. To change 1PPS input source:
 
-  * For LimeSDR Micro M.2 v1.1 and v1.2 remove R176 and populate R173 (M.2) or R179 (MHF4 J5) with zero-ohm resistor.   
-  * For LimeSDR Micro M.2 v1.0 remove R175 and populate R172 (M.2) or R178 (MHF4 J5) with zero-ohm resistor.
+   * For LimeSDR Micro M.2 v1.1 and v1.2 remove R176 and populate R173 (M.2) or R179 (MHF4 J5) with zero-ohm resistor.
+   * For LimeSDR Micro M.2 v1.0 remove R175 and populate R172 (M.2) or R178 (MHF4 J5) with zero-ohm resistor.
 
 .. warning::
    When using external clock references, ensure signal levels and frequencies match specifications. 

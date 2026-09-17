@@ -2,24 +2,24 @@ Hardware Setup
 ##############
 
 Host Interface
-**************
+==============
 
 LimeSDR Micro can be plugged into a M.2 slot with B or M key on the host device. 
 
 The host must provide a PCIe Gen3 x1 interface and supply power (3.3 V) via the M.2 connector.
 
 Cooling
-*******
+=======
 
 Depending on the application, host system and ambient temperature, additional cooling may be required to ensure reliable operation of the LimeSDR Micro board. This may be in the form of airflow through the host system, or a dedicated heatsink fitted to the board.
 
-When designing a cooling solution for a LimeSDR Mico M.2–based system, power dissipation should be evaluated based on the specific user configuration and use case. In general, the LimeSDR Micro M.2 cooling solution should be designed to dissipate at least 10 W of power, providing sufficient thermal margin to ensure safe and reliable operation during peak loads.
+When designing a cooling solution for a LimeSDR Micro M.2–based system, power dissipation should be evaluated based on the specific user configuration and use case. In general, the LimeSDR Micro M.2 cooling solution should be designed to dissipate at least 10 W of power, providing sufficient thermal margin to ensure safe and reliable operation during peak loads.
 
 .. note::
    In the event of errors, instability or reduced performance, check the board temperature to ensure that it is within the specified operating range.
 
 RF Connections
-**************
+==============
 
 .. figure:: /images/LimeSDR-Micro_M.2_2280_v1.1_components_rfcon.png
   :width: 600

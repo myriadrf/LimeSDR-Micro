@@ -58,8 +58,6 @@ The default boot source depends on the board's form factor and version. Default 
      - PCIe
    * - M.2 v1.0
      - PCIe
-   * - mPCIe v1.4
-     - I\ :sup:`2`\ C EEPROM
    * - mPCIe v1.3
      - PCIe
    * - mPCIe v1.2
