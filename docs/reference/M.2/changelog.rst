@@ -290,7 +290,7 @@ Fitted ESDs (TXA, RXA, RXB, GNSS_ANT)
 .. figure:: /images/LimeSDR-Micro_M.2_2280_v1.1_changes_esd4.png
   :width: 300
 
-  Figure 23. I2C secure key storage
+  Figure 23. ESD protection (TXA, RXA, RXB, GNSS_ANT)
 
 
 v1.0

@@ -1,0 +1,24 @@
+v1.0
+#####
+
+The LimeSDR Micro M.2 v1.0 board uses a pair of resistors, R117 and R126, to choose how the LA9310 boots. Only one of them should ever be fitted at a time.
+
+- **Fit R117 (default):** the LA9310 boots from PCIe.
+- **Fit R126 instead:** the LA9310 boots from the I\ :sup:`2`\ C EEPROM.
+
+.. note::
+
+   R117 connects the LA9310's ``CFG_BOOT_SRC0`` pin to the 1.8 V power rail (``VCC1P8``), while R126 connects it to ground.
+
+The resistors' location on the board is shown below.
+
+.. figure:: /images/LimeSDR-Micro_M.2_2280_v1.0_3D_boot_source.png
+   :align: center
+
+   Figure 1. R117 and R126 resistor locations
+
+By default, the board boots from PCIe, with R117 fitted and R126 not fitted. To boot from the I\ :sup:`2`\ C EEPROM instead, remove R117 and fit R126. Use a 10 k\ |Omega| resistor for R117 or a 3.3 k\ |Omega| resistor for R126. Both use the 0201 package size, so appropriate tools and care are required.
+
+.. warning::
+
+   Make any changes to R117 and R126 while the board is disconnected from the host. Carefully check that your modification does not touch any other hardware on the board. When connecting the board to the host's M.2 slot, ensure the host is powered off. Before powering on the host, check that your modification does not touch the host's hardware, especially on the bottom.

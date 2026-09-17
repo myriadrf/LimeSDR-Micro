@@ -1,7 +1,7 @@
 Board Versions
 ##############
 
-There are currently two versions of the LimeSDR Micro M.2 board: v1.0, v1.1 and v1.2.
+There are currently three versions of the LimeSDR Micro M.2 board: v1.0, v1.1 and v1.2.
 
 v1.0, v1.1 and v1.2 boards should be treated the same in terms of hardware functionality and software support. 
 

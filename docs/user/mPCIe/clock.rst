@@ -32,13 +32,10 @@ The board provides reference clock and 1PPS input and output via mPCIe connector
 
 .. note::
    By default 1PPS input source is onboard GNSS receiver. To change 1PPS input source:
-   
-   For LimeSDR Micro mPCIe v1.3 remove R169 and populate R167 (mPCIe) or R172 (U.FL J5) with zero-ohm resistor.
 
-   For LimeSDR Micro mPCIe v1.2 remove R170 and populate R168 (mPCIe) or R173 (U.FL J5) with zero-ohm resistor.
-
-   For LimeSDR Micro mPCIe v1.1 remove R173 and populate R170 (mPCIe) or R177 (U.FL J5) with zero-ohm resistor.
-    
+   * For LimeSDR Micro mPCIe v1.3 remove R169 and populate R167 (mPCIe) or R172 (U.FL J5) with zero-ohm resistor.
+   * For LimeSDR Micro mPCIe v1.2 remove R170 and populate R168 (mPCIe) or R173 (U.FL J5) with zero-ohm resistor.
+   * For LimeSDR Micro mPCIe v1.1 remove R173 and populate R170 (mPCIe) or R177 (U.FL J5) with zero-ohm resistor.
 
 .. warning::
    When using external clock references, ensure signal levels and frequencies match specifications. 

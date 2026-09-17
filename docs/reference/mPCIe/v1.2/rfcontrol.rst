@@ -31,7 +31,7 @@ network frequency ranges is listed in the Table 3.
 
 Onboard RF network switches are controlled via 2.4V logic signals. 
 This is achieved by resistor dividers connected between I2C GPIO expander (TX_SW, RX_SW2, RX_SW3) and switch 
-control pin (TX_SW_DIV, RX_SW2_DIV, RX_S3_DIV). RF network control signals are described in the Table 6.
+control pin (TX_SW_DIV, RX_SW2_DIV, RX_S3_DIV).
 
 RF network control signals are described in the Table 4.
 
