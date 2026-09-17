@@ -27,9 +27,9 @@ Updating the Bootloader
 
    .. code-block:: shell
 
-      lspci -d 1957:aabb
+      lspci -d 1957:1c12
 
-   If the DUT is detected, it will be listed in the command output, with NXP vendor ID ``1957`` and device ID ``aabb``. If no devices are listed, check the DUT's connection and seating in the host computer's M.2 connector before continuing.
+   If the DUT is detected, it will be listed in the command output, with NXP vendor ID ``1957`` and device ID ``1c12``. If no devices are listed, check the DUT's connection and seating in the host computer's M.2 connector before continuing.
 
 6. Execute the following command to flash the bootloader to the EEPROM memory:
 
