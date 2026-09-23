@@ -51,21 +51,21 @@ LA_CFG_TEST_PORT_DIS line via 1.8 -> 3.3V conversion disconnected from LA_LNA1_E
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_changes_TXCTL2.png
   :width: 600
 
-  Figure 1: Transmit control
+  Figure 2: Transmit control
 
 Changed mPCIe LA_CFG_BOOT_SRC0 net to LA_CFG_BOOT_SRC1 (TRX1/GPIO_08) (level converter TDD0_GPIO_LS->TDD0_GPIO).
 
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_changes_TDD0.png
   :width: 600
 
-  Figure 2: TDD0_GPIO
+  Figure 3: TDD0_GPIO
 
 Added U.FL connector for TDD1_GPIO (LA_PA_EN). Placed instead RX_AUX (X3) connector.
 
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_changes_PAEN.png
   :width: 600
 
-  Figure 3: TDD1_GPIO (LA_PA_EN) connector
+  Figure 4: TDD1_GPIO (LA_PA_EN) connector
 
 TDD0_GPIO (LA_TRX1) and TDD1_GPIO (LA_PA_EN) lines can operate from LA9310 timer independently. LA_TRX1 is dedicated for internal RF TX switch control and its polarity depends on selected active channel. LA_PA_EN is dedicated for external RFFE control and can always maintain same polarity.
 
@@ -77,7 +77,7 @@ LA_CFG_TEST_PORT_DIS line via 1.8 -> 3.3V conversion disconnected from LA_LNA1_E
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_changes_TXEN2.png
   :width: 600
 
-  Figure 4: LMS_TXEN control
+  Figure 5: LMS_TXEN control
 
 Baseband Processor
 ==================
@@ -89,7 +89,7 @@ Changed LA_CFG_PCIE_GEN configuration to 1: PCIe interface will allow negotiatio
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_changes_LA.png
   :width: 600
 
-  Figure 5: LA configuration
+  Figure 6: LA configuration
 
 Clock
 =====
@@ -97,7 +97,7 @@ Clock
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_diagrams_r1_clock.png
   :width: 600
 
-  Figure 6: Clock diagram
+  Figure 7: Clock diagram
 
 Removed 74LVC1G3157FZ4 analog mux for CLK_XO/XLK_IN clock mux.
 
@@ -112,7 +112,7 @@ Disabled PCIE_CLK_IN clock in path by default (0R NF).
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_changes_LMK.png
   :width: 600
 
-  Figure 7: LMK00101 clock buffer
+  Figure 8: LMK00101 clock buffer
 
 Disconnected U.FL connector J3 from EXT_PPS_IN.
 
@@ -123,13 +123,13 @@ Connected U.FL connector J5 to EXT_PPS mux for EXT_PPS_IN/EXT_PPS_OUT.
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_changes_PPS.png
   :width: 600
 
-  Figure 8: PPS circuit
+  Figure 9: PPS circuit
 
 Added ESD (NF) for ADF_REF_IN.
 
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_changes_ADF.png
 
-  Figure 9: PPS circuit
+  Figure 10: ADF_REF_IN ESD
 
 Miscellaneous
 =============
@@ -139,7 +139,7 @@ X3 (RX AUX) circuit removed.
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_changes_AUX.png
   :width: 600
 
-  Figure 10: RF connectors
+  Figure 11: RF connectors
 
 Changed HW_VER from 0 to 1.
 
@@ -148,7 +148,7 @@ Renamed TX_SW to EXT_PPS_SEL and connected to EXT_PPS mux control.
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_changes_IO.png
   :width: 600
 
-  Figure 11: I2C expander
+  Figure 12: I2C expander
 
 Connected LA_I2C to FPC connector instead GND pins via 0R resistors.
 
@@ -162,20 +162,20 @@ LA_CFG_PCIE_GEN line connected via 0R (LNA2_EN_LS) and via 1.8 -> 3.3V conversio
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_changes_FPC2.png
   :width: 600
 
-  Figure 12: FPC connector and mPCIe
+  Figure 13: FPC connector and mPCIe
 
 Changed GNSS power rail from VCC3P3_CLK to VCC3P3 to minimize GNSS module spurs in RF TX. ESD fitted.
 
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_changes_GNSS.png
   :width: 600
 
-  Figure 13: GNSS receiver
+  Figure 14: GNSS receiver
 
 Added secure key option (NF due to I2C address conflict with switching regulator).
 
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_changes_SECKEY.png
 
-  Figure 14: 2C secure key storage
+  Figure 15: I2C secure key storage
 
 Fitted ESDs (TXA, RXA, RXB, GNSS_ANT).
 
@@ -187,7 +187,7 @@ Fitted ESDs (TXA, RXA, RXB, GNSS_ANT).
 
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_changes_ESD4.png
 
-  Figure 15: FPC connector and mPCIe
+  Figure 16: ESD protection (TXA, RXA, RXB, GNSS_ANT)
 
 PCB Changes
 ===========
@@ -199,12 +199,12 @@ PCB updated with schematic changes.
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_3D_top.png
   :width: 600
 
-  Figure 16: LimeSDR Micro mPCIe v1.3 3D view (top)
+  Figure 17: LimeSDR Micro mPCIe v1.3 3D view (top)
 
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_3D_bot.png
   :width: 600
 
-  Figure 17: LimeSDR Micro mPCIe v1.3 3D view (bottom)
+  Figure 18: LimeSDR Micro mPCIe v1.3 3D view (bottom)
 
 v1.2
 ****
@@ -219,46 +219,46 @@ Board size and main components positions remained the same.
 RF Transceiver
 ==============
 
-Replaced single LMS_CLK by two separate LMS_TxPLL_CLK and LMS_RxPLL_CLK clocks as shown in Figure 1. 
+Replaced single LMS_CLK by two separate LMS_TxPLL_CLK and LMS_RxPLL_CLK clocks as shown in Figure 19. 
 
 .. figure:: /images/LimeSDR-Micro_v1.2_changes_RF.png
   :width: 600
   
-  Figure 18: LMS7002M clock changes
+  Figure 19: LMS7002M clock changes
 
 Baseband Processor
 ==================
 
-Changed reset circuit as shown in Figure 2.
+Changed reset circuit as shown in Figure 20.
 
 .. figure:: /images/LimeSDR-Micro_v1.2_changes_BB_reset.png
   :width: 600
   
-  Figure 19: Baseband processor reset circuit changes
+  Figure 20: Baseband processor reset circuit changes
 
-Disconnected LA_GPIO_05, LA_GPIO_06 and LA_CFG_BOOT_SRC1 from TDD control signals and connected to testpoints as shown in Figure 3.
+Disconnected LA_GPIO_05, LA_GPIO_06 and LA_CFG_BOOT_SRC1 from TDD control signals and connected to testpoints as shown in Figure 21.
 
 .. figure:: /images/LimeSDR-Micro_v1.2_changes_BB_signal.png
   :width: 600
   
-  Figure 20: Baseband processor signal changes
+  Figure 21: Baseband processor signal changes
 
 Clock
 =====
 
-Clock buffers were changed to single LMK00105 resulting in new clock diagram given in Figure 4.
+Clock buffers were changed to single LMK00105 resulting in new clock diagram given in Figure 22.
 
 .. figure:: /images/LimeSDR-Micro_v1.2_diagrams_r0_clock.png
   :width: 600
   
-  Figure 21: LimeSDR Micro v1.2 board clock distribution block diagram
+  Figure 22: LimeSDR Micro v1.2 board clock distribution block diagram
 
-Added LMK buffer with 1.8V and 3.3V outputs as shown in Figure 4.
+Added LMK buffer with 1.8V and 3.3V outputs as shown in Figure 23.
 
 .. figure:: /images/LimeSDR-Micro_v1.2_changes_LMK.png
   :width: 600
   
-  Figure 22: New clock buffer LMK00105
+  Figure 23: New clock buffer LMK00105
 
 Changed XO DAC from AD5693RACPZ-1RL7 (A grade, INL +-8LSB, internal reference, VLOGIC) to AD5693BCPZ-RL7 (B grade, INL +-3LSB, no internal reference, LDAC).
 
@@ -266,48 +266,48 @@ Changed R162 to NF, R161 to fit to tie LDAC pin low and DAC updates when new dat
 
 Connected XO DAC VREF directly to external 2.5V reference source (R164 changed to 0R, R166 to NF).
 
-all XO DAC changes are shown in figure 5.
+all XO DAC changes are shown in figure 24.
 
 .. figure:: /images/LimeSDR-Micro_v1.2_changes_XODAC.png
   :width: 600
   
-  Figure 23: XO DAC changes 
+  Figure 24: XO DAC changes 
 
 Power
 =====
 
-Renamed switching regulators outputs nets VCC3P3 and VCC_CLK to VCC3P3_SW and VCC_CLK_SW accordingly as shown in Figure 6.
+Renamed switching regulators outputs nets VCC3P3 and VCC_CLK to VCC3P3_SW and VCC_CLK_SW accordingly as shown in Figure 25.
 
 .. figure:: /images/LimeSDR-Micro_v1.2_changes_SWREG.png
   :width: 600
   
-  Figure 24: Switching regulator changes 
+  Figure 25: Switching regulator changes 
 
 Removed VCC1P8_CLK and VCCIO_CLK power nets and LC filters.
 
-Added power rails selection for VCC3P3 and VCC_CLK (directly connection option to VCC_EXT) as shown in Figure 7.
+Added power rails selection for VCC3P3 and VCC_CLK (directly connection option to VCC_EXT) as shown in Figure 26.
 
 .. figure:: /images/LimeSDR-Micro_v1.2_changes_VSEL.png
   :width: 600
   
-  Figure 25: voltage selection changes
+  Figure 26: voltage selection changes
 
-Changed Voltage reference from LM4040C30FTADICT-ND (3.0V) to AS431ANTR-G1DICT-ND (2.5V). Also changed resistors accordingly as shown in Figure 8.
+Changed Voltage reference from LM4040C30FTADICT-ND (3.0V) to AS431ANTR-G1DICT-ND (2.5V). Also changed resistors accordingly as shown in Figure 27.
 
 .. figure:: /images/LimeSDR-Micro_v1.2_changes_VREF.png
   :width: 600
   
-  Figure 26: voltage reference changes
+  Figure 27: voltage reference changes
 
 Miscellaneous
 =============
 
-Renamed I2C expanders (IC15) GPB7 pin PCIE_RESERVED to EXP_GPB7 as shown in Figure 9 and connected it to RFCLT/GPIO connector (X8) pin 8.
+Renamed I2C expanders (IC15) GPB7 pin PCIE_RESERVED to EXP_GPB7 as shown in Figure 28 and connected it to RFCLT/GPIO connector (X8) pin 8.
 
 .. figure:: /images/LimeSDR-Micro_v1.2_changes_I2Cexp.png
   :width: 600
   
-  Figure 27: I2C expander changes
+  Figure 28: I2C expander changes
 
 Removed I2C connector (X6) and added RFCTL/GPIO 8-pin FPC connector (X8) in its place with signals listed below:
 
@@ -316,43 +316,43 @@ Removed I2C connector (X6) and added RFCTL/GPIO 8-pin FPC connector (X8) in its 
 * LNA1_EN_LS connected to LA_CFG_TEST_PORT_DIS (LNA1_EN).
 * EXP_GPB7 connected to I2C expander.
 
-New RFCTL/GPIO connector is shown in Figure 10.
+New RFCTL/GPIO connector is shown in Figure 29.
 
 .. figure:: /images/LimeSDR-Micro_v1.2_changes_RFCTL.png
   :width: 600
   
-  Figure 28: New FRCTL/GPIO connector
+  Figure 29: New FRCTL/GPIO connector
 
-Connected LNA1_EN_LS to level converter (1.8V to 3.3V) as shown in Figure 11.
+Connected LNA1_EN_LS to level converter (1.8V to 3.3V) as shown in Figure 30.
 
 .. figure:: /images/LimeSDR-Micro_v1.2_changes_LNA1_EN_LS.png
   :width: 600
   
-  Figure 29: LNA1_EN_LS signal changes
+  Figure 30: LNA1_EN_LS signal changes
 
-Changed mPCIe pin 45 PCIE_RESERVED to LNA1_EN as shown in Figure 12.
+Changed mPCIe pin 45 PCIE_RESERVED to LNA1_EN as shown in Figure 31.
 
 .. figure:: /images/LimeSDR-Micro_v1.2_changes_mPCIe.png
   :width: 600
   
-  Figure 30: mPCIe connector changes
+  Figure 31: mPCIe connector changes
 
 PCB
 ===
 
 LimeSDR Micro v1.2 is based on LimeSDR Micro v1.1 layout.
 
-New resulting PCB top side is shown in Figure 14 and bottom side is shown in Figure 15.
+New resulting PCB top side is shown in Figure 32 and bottom side is shown in Figure 33.
 
 .. figure:: /images/LimeSDR-Micro_v1.2_3D_top.png
       :width: 600
 
-      Figure 31: LimeSDR Micro mPCIe v1.2 top
+      Figure 32: LimeSDR Micro mPCIe v1.2 top
 
 .. figure:: /images/LimeSDR-Micro_v1.2_3D_bot.png
       :width: 600
 
-      Figure 32: LimeSDR Micro mPCIe v1.2 bottom
+      Figure 33: LimeSDR Micro mPCIe v1.2 bottom
 
 v1.1
 ****

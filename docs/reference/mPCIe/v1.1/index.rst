@@ -6,7 +6,7 @@ v1.1
    :hidden:
    
    overview
-   digital
+   rf_transceiver
    rfcontrol
    BB_CON
    clock

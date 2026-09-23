@@ -2,29 +2,29 @@ Hardware Setup
 ##############
 
 Host Interface
-**************
+==============
 
 LimeSDR Micro mPCIe should be plugged into a Mini PCIe slot on the host device. 
 
 The host must provide a PCIe Gen3 x1 interface and supply power via the Mini PCIe connector.
 
 Cooling
-*******
+=======
 
 Depending on the application, host system and ambient temperature, additional cooling may be required to ensure reliable operation of the LimeSDR Micro board. This may be in the form of airflow through the host system, or a dedicated heatsink fitted to the board.
 
-When designing a cooling solution for a LimeSDR Mico mPCIe–based system, power dissipation should be evaluated based on the specific user configuration and use case. In general, the LimeSDR Micro mPCIe cooling solution should be designed to dissipate at least 4 W of power, providing sufficient thermal margin to ensure safe and reliable operation during peak loads.
+When designing a cooling solution for a LimeSDR Micro mPCIe–based system, power dissipation should be evaluated based on the specific user configuration and use case. In general, the LimeSDR Micro mPCIe cooling solution should be designed to dissipate at least 4 W of power, providing sufficient thermal margin to ensure safe and reliable operation during peak loads.
 
 .. note::
    In the event of errors, instability or reduced performance, check the board temperature to ensure that it is within the specified operating range.
 
 RF Connections
-**************
+==============
 
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_components_RFCON.png
   :width: 600
   
-  Figure 5: LimeSDR Micro mPCIe v1.x board top with RF connector positions
+  Figure 4: LimeSDR Micro mPCIe v1.x board top with RF connector positions
 
 .. table:: Table 1. RF Connectors
 
@@ -49,7 +49,7 @@ RF Connections
   +--------------+----------------+---------+--------------------+-----------------------------------------+
 
 .. note::
-  TDD control signal (PA_EN) output (J2) is only availabe in LimeSDR Micro mPCIe v1.3.
+  TDD control signal (PA_EN) output (J2) is only available in LimeSDR Micro mPCIe v1.3.
 
 .. warning::
    Care should be taken when connecting external RF signals to the RX inputs, to ensure that the maximum safe input power of +10 dBm is not exceeded, as this may cause permanent damage to the device.
