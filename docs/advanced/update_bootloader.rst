@@ -15,7 +15,7 @@ Updating the Bootloader
 =======================
 
 1. Ensure that the host computer is powered off.
-2. Set the board's boot source to PCIe. See :doc:`/advanced/boot_source/index` for instructions specific to your board's form factor and version.
+2. Set the board's boot source to ROM. See :doc:`/advanced/boot_source/index` for instructions specific to your board's form factor and version.
 3. Install the DUT into the host computer's M.2 connector and secure it with the retaining screw.
 
    .. warning::
@@ -61,4 +61,4 @@ Updating the Bootloader
 
 .. note::
 
-   The boot source should only be set to PCIe for the duration of the bootloader programming procedure.
+   The boot source should only be set to ROM for the duration of the bootloader programming procedure.

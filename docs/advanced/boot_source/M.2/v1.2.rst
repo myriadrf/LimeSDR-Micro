@@ -4,7 +4,7 @@ v1.2
 The LimeSDR Micro M.2 v1.2 board has a jumper, JP1, that lets you choose how the LA9310 boots.
 
 - **Leave JP1 unplaced (default):** the LA9310 boots from the I\ :sup:`2`\ C EEPROM.
-- **Place JP1:** the LA9310 boots from PCIe instead.
+- **Place JP1:** the LA9310 boots from ROM instead.
 
 .. note::
 
@@ -17,7 +17,7 @@ The jumper's location on the board is shown below.
 
    Figure 1: JP1 jumper location
 
-By default, the JP1 header is not fitted. To select PCIe boot, the header must be shorted using a suitable method, such as a small metal clip or by press-fitting solid-core wire, as shown in the figure. Soldering is not recommended.
+By default, the JP1 header is not fitted. To select boot from ROM, the header must be shorted using a suitable method, such as a small metal clip or by press-fitting solid-core wire, as shown in the figure. Soldering is not recommended.
 
 .. warning::
 

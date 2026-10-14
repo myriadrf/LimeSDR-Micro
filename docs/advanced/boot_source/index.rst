@@ -7,10 +7,11 @@ Boot Source
 
 This guide describes how to select the boot source for the onboard `NXP LA9310`_ baseband processor. The LA9310 supports two boot sources:
 
-- I\ :sup:`2`\ C EEPROM
-- PCIe host memory, supplied by an external host
+- ROM. Default option for classic LA9310 use cases.
+- I\ :sup:`2`\ C EEPROM. This option is better suited for general purpose SDR that can be plugged into any system.
 
-I\ :sup:`2`\ C EEPROM boot is typically used for standalone operation, where the LA9310 boots independently. PCIe host-memory boot is used when an external host controls or downloads the LA9310 firmware.
+.. warning::
+  LimeSDR Micro boards in boot from ROM configuration may not be detected or experience boot issues on some systems.
 
 Boot Source Selection
 =====================
@@ -29,15 +30,15 @@ Boot source selection is controlled by the ``CFG_BOOT_SRC[1:0]`` POR configurati
    * - 10
      - I\ :sup:`2`\ C EEPROM
    * - 11
-     - PCIe Host Memory
+     - ROM
 
-I\ :sup:`2`\ C Boot
--------------------
+I\ :sup:`2`\ C EEPROM Boot
+--------------------------
 
 On selecting this mode, the BootROM reads the boot header and image from an EEPROM at I\ :sup:`2`\ C address ``0x50``. This selection requires a pull-down on ``TXRX[0]``.
 
-PCIe Boot
----------
+ROM Boot
+--------
 
 On selecting this mode, the LA9310 initializes its PCIe interface and waits for the host to enumerate and configure it. The host then supplies the boot header and boot-loader data via host memory.
 
@@ -55,15 +56,15 @@ The default boot source depends on the board's form factor and version. Default 
    * - M.2 v1.2
      - I\ :sup:`2`\ C EEPROM
    * - M.2 v1.1
-     - PCIe
+     - ROM
    * - M.2 v1.0
-     - PCIe
+     - ROM
    * - mPCIe v1.3
-     - PCIe
+     - ROM
    * - mPCIe v1.2
-     - PCIe
+     - ROM
    * - mPCIe v1.1
-     - PCIe
+     - ROM
 
 Changing the Boot Source
 ========================
