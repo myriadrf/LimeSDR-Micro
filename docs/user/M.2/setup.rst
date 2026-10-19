@@ -8,6 +8,9 @@ LimeSDR Micro can be plugged into a M.2 slot with B or M key on the host device.
 
 The host must provide a PCIe Gen3 x1 interface and supply power (3.3 V) via the M.2 connector.
 
+.. note::
+   LimeSDR Micro M.2 v1.0 boards are configured for PCIe Gen2 (5 GT/s) by default. v1.1 and v1.2 boards support PCIe Gen3 (8 GT/s).
+
 Cooling
 =======
 

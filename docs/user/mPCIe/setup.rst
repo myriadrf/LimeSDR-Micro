@@ -8,6 +8,9 @@ LimeSDR Micro mPCIe should be plugged into a Mini PCIe slot on the host device.
 
 The host must provide a PCIe Gen3 x1 interface and supply power via the Mini PCIe connector.
 
+.. note::
+   LimeSDR Micro mPCIe v1.2 and older boards are configured for PCIe Gen2 (5 GT/s) by default.
+
 Cooling
 =======
 
@@ -31,17 +34,17 @@ RF Connections
   +--------------+----------------+---------+--------------------+-----------------------------------------+
   | Connector ID | Connector type | RF band |   Frequency range  |                   Note                  |
   +==============+================+=========+====================+=========================================+
-  | X1           | MHF4           | TX low  | 0.03 GHz - 1.9 GHz | Channel A transmit low frequency range  |
+  | X1           | U.FL           | TX low  | 0.03 GHz - 1.9 GHz | Channel A transmit low frequency range  |
   |              |                +---------+--------------------+-----------------------------------------+
   |              |                | TX high | 3.3 GHz - 3.8 GHz  | Channel A transmit high frequency range |
   +--------------+----------------+---------+--------------------+-----------------------------------------+
-  | X2           | MHF4           | RX low  | 0.3 GHz - 2.2 GHz  | Channel A receive low frequency range   |
+  | X2           | U.FL           | RX low  | 0.3 GHz - 2.2 GHz  | Channel A receive low frequency range   |
   |              |                +---------+--------------------+-----------------------------------------+
   |              |                | RX wide | 0.7 GHz - 2.6 GHz  | Channel A receive wide frequency range  |
   |              |                +---------+--------------------+-----------------------------------------+
   |              |                | RX high | 3.3 GHz - 3.8 GHz  | Channel A receive high frequency range  |
   +--------------+----------------+---------+--------------------+-----------------------------------------+
-  | X3           | MHF4           | RX low  | 0.3 GHz - 2.2 GHz  | Channel B receive low frequency range   |
+  | X4           | U.FL           | RX low  | 0.3 GHz - 2.2 GHz  | Channel B receive low frequency range   |
   |              |                +---------+--------------------+-----------------------------------------+
   |              |                | RX wide | 0.7 GHz - 2.6 GHz  | Channel B receive wide frequency range  |
   |              |                +---------+--------------------+-----------------------------------------+
