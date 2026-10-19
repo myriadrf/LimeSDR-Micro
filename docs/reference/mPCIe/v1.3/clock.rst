@@ -1,26 +1,26 @@
 Clock Distribution
 ##################
 
-Clock distribution block diagram is as shown in Figure 7.
+The LimeSDR Micro mPCIe v1.3 board clock distribution block diagram is shown in Figure 7.
 
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_diagrams_r0_clock.png
   :width: 600
 
   Figure 7. LimeSDR Micro mPCIe v1.3 board clock distribution block diagram
 
-The board features a 30.72 MHz VCTCXO as the reference clock for 
-LMS7002M RF transceiver.
+The LimeSDR Micro mPCIe v1.3 board features an on-board 30.72 MHz VCTCXO as the reference clock for 
+the LMS7002M RF transceiver.
 
 Rakon E6245LF 30.72 MHz voltage controlled temperature compensated crystal oscillator (VCTCXO) 
-is the clock source for the board. VCTCXO frequency may be tuned by using 16 bit DAC (IC19). 
-Main VCTCXO parameters are listed in Table 7.
+is the clock source for the board. The VCTCXO frequency may be tuned using a 16-bit DAC (IC19). 
+Main VCTCXO parameters are listed in Table 12.
 
-.. list-table:: Table 7. Rakon E7355LF VCTCXO main parameters
+.. list-table:: Table 12. Rakon E6245LF VCTCXO main parameters
    :header-rows: 1
 
    * - Frequency parameter
      - Value
-   * - Calibration (25°C ± 1°C)
+   * - Calibration (25 °C ± 1 °C)
      - ± 1 ppm max
    * - Stability (-40 to 85 °C)
      - ± 50 ppb max
@@ -33,45 +33,56 @@ Main VCTCXO parameters are listed in Table 7.
    * - Slope
      - +7.5 ppm/V
 
+Clock buffer IC17 selects the clock source: the on-board VCTCXO XO1 (CLK_XO) or an external clock (CLK_IN) 
+from U.FL connector J4, or from the mPCIe connector (X8) when R151 is fitted. The source is selected by I/O expander 
+output EXT_CLK_CTRL. The buffered clock signals (LMK_CLKOUT1 and LMK_CLKOUT4) can also be fed to other boards 
+through U.FL connector J3 and the mPCIe connector (X8). LMK_CLKOUT4 reaches the mPCIe connector through analogue 
+switch IC18, controlled by I/O expander output SMB_CLK_CTRL.
 
-Clock buffer (IC17) gives option to select clock source from 
-onboard VCTCXO clock XO1 (CLK_XO) and external U.FL (J4)/M.2 (X8) sources (CLK_IN). Buffered clock signal 
-(LMK_CLKOUT1 and LMK_CLKOUT4) can also be fed to other board using U.FL (J3)/mPCIe (X8) connectors.
+The board clock lines and related signals are listed in Table 13.
 
-The board clock lines and other related signals/information are listed in Table 8.
+.. table:: Table 13. Main clock lines
 
-.. table:: Table 8. Main clock lines
+    +----------------------+---------------------------+------------------+-----------------------------------------------------+
+    | **Source**           | **Schematic signal name** | **I/O standard** | **Description**                                     |
+    +======================+===========================+==================+=====================================================+
+    | External (J4)        | CLK_IN_EXT                | 3.3 V            | External reference clock input (U.FL)               |
+    +----------------------+---------------------------+------------------+-----------------------------------------------------+
+    | External (X8)        | PCIE_CLK_IN               | 3.3 V            | External reference clock input (mPCIe, R151 NF)     |
+    +----------------------+---------------------------+------------------+-----------------------------------------------------+
+    | External (J6)        | ADF_REF_IN                | 3.3 V            | External phase detector input (U.FL)                |
+    +----------------------+---------------------------+------------------+-----------------------------------------------------+
+    | Clock buffer (IC17)  | LMK_CLKOUT1               | 3.3 V            | Reference clock output (J3) (U.FL)                  |
+    |                      +---------------------------+------------------+-----------------------------------------------------+
+    |                      | LMK_CLKOUT4               | 3.3 V            | Reference clock output (mPCIe) via IC18             |
+    |                      +---------------------------+------------------+-----------------------------------------------------+
+    |                      | LMS_TxPLL_CLK             | 1.8 V            | Reference clock connected to LMS (TX)               |
+    |                      +---------------------------+------------------+-----------------------------------------------------+
+    |                      | LMS_RxPLL_CLK             | 1.8 V            | Reference clock connected to LMS (RX)               |
+    |                      +---------------------------+------------------+-----------------------------------------------------+
+    |                      | ADF_RF_IN                 | 3.3 V            | Reference clock connected to ADF (phase detector)   |
+    +----------------------+---------------------------+------------------+-----------------------------------------------------+
+    | VCTCXO (XO1)         | CLK_XO                    | 3.3 V            | On-board reference clock                            |
+    +----------------------+---------------------------+------------------+-----------------------------------------------------+
+    |                      | PCIE_REF_CLK_P            |                  |                                                     |
+    | External (X8)        +---------------------------+ 1.8 V (diff)     | PCIe (mPCIe) reference clock                        |
+    |                      | PCIE_REF_CLK_N            |                  |                                                     |
+    +----------------------+---------------------------+------------------+-----------------------------------------------------+
+    | RF transceiver (IC1) | LMS_MCLK1                 | 3.3 V            | Reference clock connected to BB processor           |
+    +----------------------+---------------------------+------------------+-----------------------------------------------------+
+    | GNSS Receiver (IC11) | GNSS_1PPS                 | 3.3 V            | PPS output from GNSS receiver for BB processor      |
+    +----------------------+---------------------------+------------------+-----------------------------------------------------+
+    | External (J5)        | EXT_PPS_IN                | 3.3 V            | External PPS input (U.FL, R172 NF)                  |
+    +----------------------+---------------------------+------------------+-----------------------------------------------------+
+    | External (X8)        | PCIE_PPS_IN               | 3.3 V            | External PPS input (mPCIe, R167 NF)                 |
+    +----------------------+---------------------------+------------------+-----------------------------------------------------+
+    | BB processor (IC6)   | PCIE_PPS_OUT              | 3.3 V            | PPS output (mPCIe, R181 NF)                         |
+    |                      +---------------------------+------------------+-----------------------------------------------------+
+    |                      | EXT_PPS_OUT               | 3.3 V            | External PPS output (J5)                            |
+    +----------------------+---------------------------+------------------+-----------------------------------------------------+
 
-  +------------------------+---------------------------+------------------+-----------------------------------------------------+
-  | **Source**             | **Schematic signal name** | **I/O standard** | **Description**                                     |
-  +========================+===========================+==================+=====================================================+
-  | External   (J2)        | CLK_EXT                   | 3.3V             | External reference clock   input/ouput (U.FL)       |
-  +------------------------+---------------------------+------------------+-----------------------------------------------------+
-  |                        | LMK_CLKOUT3               | 3.3V             | Reference clock output (U.FL)                       |
-  |                        +---------------------------+------------------+-----------------------------------------------------+
-  |                        | LMK_CLKOUT4               | 3.3V             | Reference clock output (mPCIe)                      |
-  |                        +---------------------------+------------------+-----------------------------------------------------+
-  | Clock buffer (IC15)    | LMS_TxPLL_CLK             | 1.8V             | Reference clock connected to LMS   (TX)             |
-  |                        +---------------------------+------------------+-----------------------------------------------------+
-  |                        | LMS_RxPLL_CLK             | 1.8V             | Reference clock connected to LMS   (RX)             |
-  |                        +---------------------------+------------------+-----------------------------------------------------+
-  |                        | ADF_RF_IN                 | 3.3V             | Reference clock connected to ADF   (phase detector) |
-  +------------------------+---------------------------+------------------+-----------------------------------------------------+
-  | VCTCXO   (XO1)         | CLK_XO                    | 3.3V             | Onboard reference clock                             |
-  +------------------------+---------------------------+------------------+-----------------------------------------------------+
-  |                        | PCIE_REF_CLK_P            |                  |                                                     |
-  | External (mPCIe)       +---------------------------+ 1.8V (diff)      | PCIe reference clock                                |
-  |                        | PCIE_REF_CLK_N            |                  |                                                     |
-  +------------------------+---------------------------+------------------+-----------------------------------------------------+
-  | RF   tranceiver (IC1)  | LMS_MCLK1                 | 3.3V             | Reference clock connected to BB   processor         |
-  +------------------------+---------------------------+------------------+-----------------------------------------------------+
-  | GNSS   Receiver (IC11) | GNSS_1PPS                 | 3.3V             | PPS output from GNSS receiver   for BB processor    |
-  +------------------------+---------------------------+------------------+-----------------------------------------------------+
-  | External  (J3)         | EXT_PPS_IN                | 3.3V             | External PPS input (U.FL)                           |
-  +------------------------+---------------------------+------------------+-----------------------------------------------------+
-  | External   (MPCIe)     | PCIE_PPS_IN               | 3.3V             | External PPS input (mPCIe)                          |
-  +------------------------+---------------------------+------------------+-----------------------------------------------------+
-  |                        | PCIE_PPS_OUT              | 3.3V             | PPS output (mPCIe)                                  |
-  | BB processor (IC6)     +---------------------------+------------------+-----------------------------------------------------+
-  |                        | EXT_PPS_OUT               | 3.3V             | PPS output (U.FL J5)                                |
-  +------------------------+---------------------------+------------------+-----------------------------------------------------+
+.. note::
+   U.FL connector J5 is shared between PPS input and output. Analogue switch IC20, controlled by I/O expander output EXT_PPS_SEL, 
+   connects J5 to EXT_PPS_OUT (low) or EXT_PPS_IN (high). By default, the BB processor PPS input (LA_PPS_IN) is driven 
+   by the GNSS receiver (GNSS_1PPS) through R169; the external and mPCIe PPS inputs require fitting R172 or R167.
+

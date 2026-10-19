@@ -1,37 +1,37 @@
 Overview
 ########
 
-One of the key elements of LimeSDR Micro M.2 2280 board is NXP (`LA9310S7S11AA`_) base band processor. 
-It’s main function is to transfer digital data between LMS7002M RF transceiver and PC through a M.2 edge connector. 
-The block diagram for LimeSDR Micro M.2 2280 board is presented in the Figure 3.
+One of the key elements of the LimeSDR Micro M.2 2280 board is the NXP `LA9310S7S11AA`_ baseband processor. 
+Its main function is to transfer digital data between the LMS7002M RF transceiver and the host computer through the M.2 edge connector. 
+The block diagram of the LimeSDR Micro M.2 2280 board is presented in Figure 3.
 
 .. figure:: /images/LimeSDR-Micro_M.2_v1.1_diagrams_r0_BD.png
   :width: 600
 
-  Figure 3: LimeSDR Micro M.2 2280 v1.1 board block diagram
+  Figure 3. LimeSDR Micro M.2 2280 v1.1 board block diagram
 
-LimeSDR Micro M.2 2280 v1.1 board picture with highlighted connectors and main components are presented in Figure 4 and Figure 5, respectively. 
+The LimeSDR Micro M.2 2280 v1.1 board top and bottom sides, with the connectors and main components highlighted, are presented in Figure 4 and Figure 5. 
 
 .. _target-LimeSDR-Micro_M.2_2280_v1.1_components_top.png:
 
 .. figure:: /images/LimeSDR-Micro_M.2_2280_v1.1_components_top.png
   :width: 600
 
-  Figure 4: LimeSDR Micro M.2 2280 v1.1 board top connectors and main components
+  Figure 4. LimeSDR Micro M.2 2280 v1.1 board top connectors and main components
 
 .. figure:: /images/LimeSDR-Micro_M.2_2280_v1.1_components_bot.png
   :width: 600
 
-  Figure 5: LimeSDR Micro M.2 2280 v1.1 board bottom connectors and main components
+  Figure 5. LimeSDR Micro M.2 2280 v1.1 board bottom connectors and main components
 
-Description of board components is given in the Table 1.
+Board components are described in Table 1.
 
 .. table:: Table 1. Board components
 
   +----------------------------------------------------------------------------------------------------------------------------+
   | **Featured Devices**                                                                                                       |
   +=======================+================+===================================================================================+
-  | **Board   Reference** | **Type**       | **Description**                                                                   |
+  | **Board Reference**   | **Type**       | **Description**                                                                   |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
   | IC1                   | RF transceiver | Lime Microsystems LMS7002M                                                        |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
@@ -41,15 +41,15 @@ Description of board components is given in the Table 1.
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
   | IC10                  | IC             | Temperature sensor TMP1075NDRLR                                                   |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
-  | IC14                  | IC             | I2C I/O expander MCP23017-E/ML                                                    |
+  | IC14                  | IC             | I²C I/O expander MCP23017-E/ML                                                    |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
   | **Configuration, Status and Setup Elements**                                                                               |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
-  | J1                    | JTAG   header  | BB   processor programming ARM 10 pin 0.05" pitch header (not populated)          |
+  | J1                    | JTAG header    | BB processor programming Arm 10-pin 0.05" pitch header (not populated)            |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
-  | LED1,   LED2          | Green LEDs     | User defined BB processor   indication green LEDs                                 |
+  | LED1, LED2            | Green LEDs     | User-defined BB processor indication green LEDs                                   |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
-  | X8                    |  FPC connector | BB processor GPIOs/ RF controls                                                   |
+  | X8                    | FPC connector  | BB processor GPIOs / RF controls connector                                        |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
   | **RF Circuitry**                                                                                                           |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
@@ -61,37 +61,35 @@ Description of board components is given in the Table 1.
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
   | J2                    | MHF4 connector | RF control signal output (LA_PA_EN)                                               |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
-  | X6                    |  FPC connector | LMS7002 base band TX DAC BB   15-pin FPC connector                                |
+  | X6                    | FPC connector  | LMS7002M TX2 baseband 15-pin FPC connector                                        |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
-  | X7                    |  FPC connector | RX obeservation externa BB   15-pin FPC connector                                 |
+  | X7                    | FPC connector  | LA9310 RX observation 15-pin FPC connector                                        |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
-  | X8                    | FPC connector  | RF control connector                                                              |
-  +-----------------------+----------------+-----------------------------------------------------------------------------------+ 
   | **Memory Devices**                                                                                                         |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
-  | IC2                   | IC             | I²C EEPROM Memory 128Kb (16K x   8), connected to LMS7002M RF transceiver I2C bus |
+  | IC2                   | IC             | I²C EEPROM 128 Kb (16K x 8), LMS7002M I²C bus (not populated)                     |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
-  | IC13                  | IC             | I²C EEPROM Memory 512Kb (64K x   8), connected to BB processor I2C bus            |
+  | IC13                  | IC             | I²C EEPROM 512 Kb (64K x 8), BB processor I²C bus                                 |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
   | **Communication Ports**                                                                                                    |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
-  | X9                    | M.2 connector  | M.2 B+M key Edge connector (1x   PCIe lane)                                       |
+  | X9                    | M.2 connector  | M.2 B+M key edge connector (1x PCIe lane)                                         |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
   | **Clock Circuitry**                                                                                                        |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
-  | XO1                   | VCTCXO         | 30.72 MHz Voltage Controlled   Temperature Compensated Crystal Oscillator         |
+  | XO1                   | VCTCXO         | 30.72 MHz voltage controlled temperature compensated crystal oscillator           |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
   | IC21                  | IC             | Phase detector                                                                    |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
   | IC16                  | IC             | Clock buffer                                                                      |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
-  | IC18                  | IC             | 16 bit DAC for VCTCXO (XO1)   frequency tuning (default)                          |
+  | IC18                  | IC             | 16-bit DAC for VCTCXO (XO1) frequency tuning (default)                            |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
   | IC11                  | IC             | GNSS Receiver module                                                              |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
-  | IC20,   IC22          | IC             | Logic level converters                                                            |
+  | IC20, IC22            | IC             | Logic level converters                                                            |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
-  | IC17,   IC19          | IC             | Analogue switches                                                                 |
+  | IC17, IC19            | IC             | Analogue switches                                                                 |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
   | J4                    | MHF4 connector | Reference clock input                                                             |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
@@ -105,14 +103,14 @@ Description of board components is given in the Table 1.
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
   | **Power Supply**                                                                                                           |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
-  | IC26,   IC30          | IC             | Four-output switching regulator   LP8758A1E0YFFR                                  |
+  | IC26, IC30            | IC             | Four-output switching regulator LP8758A1E0YFFR                                    |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
-  | IC23, IC27, IC28, IC29| IC             | Linear regulator LD39100PUR                                                       |
+  | IC23, IC27, IC28      | IC             | Linear regulator LD39100PUR (IC29 not populated)                                  |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+
   | IC31                  | IC             | Linear regulator AP7330                                                           |
   +-----------------------+----------------+-----------------------------------------------------------------------------------+  
 
-A more detailed description is provided in the following sections.
+More detailed descriptions are provided in the following sections.
 
 
 

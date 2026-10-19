@@ -1,17 +1,17 @@
 RF Network Control
 ##################
 
-LimeSDR Micro M.2 2280 v1.0 RF network contains matching networks, RF switches and MHF4 connectors 
-(X1 - TX and X2, X4 - RX) as shown in Figure 6.
+The RF network contains matching networks, RF switches and MHF4 connectors 
+(X1 - TX and X2, X4 - RX), as shown in Figure 6. Connector X3 (RX AUX) is a placeholder and is not connected.
 
 .. figure:: /images/LimeSDR-Micro_M.2_v1.0_diagrams_r1_RF.png
   :width: 600
 
   Figure 6. LimeSDR Micro M.2 2280 v1.0 RF diagram
 
-LMS7002M RF transceiver TX and RX ports has dedicated matching network which determines the working frequency range. More detailed information on LMS7002M RF transceiver ports and matching network frequency ranges is listed in the Table 3.
+Each LMS7002M RF transceiver TX and RX port has a dedicated matching network that determines its operating frequency range. The LMS7002M RF transceiver ports and matching network frequency ranges are listed in Table 10.
 
-.. list-table:: Table 3. LMS7002M RF transceiver ports and matching networks frequency ranges
+.. list-table:: Table 10. LMS7002M RF transceiver ports and matching networks frequency ranges
    :header-rows: 1
 
    * - RF transceiver port
@@ -27,19 +27,31 @@ LMS7002M RF transceiver TX and RX ports has dedicated matching network which det
    * - RX1_L, RX2_L
      - 0.3 GHz - 2.2 GHz
 
-RF network switches are controlled via 2.4V logic signals. 
-This is achieved by resistor dividers connected between I2C GPIO expander (TX_SW, RX_SW2, RX_SW3) and switch 
-control pin (TX_SW_DIV, RX_SW2_DIV, RX_S3_DIV). RF network control signals are described in the Table 4.
+The on-board RF switches are controlled by 2.4 V logic signals, derived from 3.3 V control signals by resistor dividers. 
+The switch controls (TX_SW_DIV, RX_SW2_DIV, RX_SW3_DIV) are derived from I/O expander outputs 
+TX_SW, RX_SW2 and RX_SW3.
+
+Connector X8 provides 3.3 V logic control signals for an external RF front end.
+
+RF network control signals are described in Table 11.
 
 
-.. table:: Table 4. RF path control signals
+.. table:: Table 11. RF network control signals
  
-    +-----------------------------+-----------------------------+------------------+----------------------------+--------------------------------------------------------+
-    | **Component**               | **Schematic signal   name** | **I/O standard** | **I2C I/O expander   pin** | **Description**                                        |
-    +=============================+=============================+==================+============================+========================================================+
-    | SKY13330-397LF(IC5)         | TX_SW/TX_SW_DIV             | 3.3V             | GPB1                       | 3.3V logic level   signal divided to 2.4V logic level. |
-    +-----------------------------+-----------------------------+------------------+----------------------------+--------------------------------------------------------+
-    | SKY13414-485LF(IC3 and IC4) | RX_SW2/RX_SW2_DIV           | 3.3V             | GPB0                       | 3.3V logic level   signal divided to 2.4V logic level. |
-    |                             +-----------------------------+------------------+----------------------------+--------------------------------------------------------+
-    |                             | RX_SW3/RX_SW3_DIV           | 3.3V             | GPB2                       | 3.3V logic level   signal divided to 2.4V logic level. |
-    +-----------------------------+-----------------------------+------------------+----------------------------+--------------------------------------------------------+
+    +-----------------------------+-----------------------------+------------------+-----------------+--------------------------------------------------------+
+    | **Component**               | **Schematic signal name**   | **I/O standard** | **Pin**         | **Description**                                        |
+    +=============================+=============================+==================+=================+========================================================+
+    | SKY13330-397LF (IC5)        | TX_SW/TX_SW_DIV             | 3.3 V            | GPB1 (expander) | 3.3 V logic level signal divided to 2.4 V logic level. |
+    +-----------------------------+-----------------------------+------------------+-----------------+--------------------------------------------------------+
+    | SKY13414-485LF (IC3, IC4)   | RX_SW2/RX_SW2_DIV           | 3.3 V            | GPB0 (expander) | 3.3 V logic level signal divided to 2.4 V logic level. |
+    |                             +-----------------------------+------------------+-----------------+--------------------------------------------------------+
+    |                             | RX_SW3/RX_SW3_DIV           | 3.3 V            | GPB2 (expander) | 3.3 V logic level signal divided to 2.4 V logic level. |
+    +-----------------------------+-----------------------------+------------------+-----------------+--------------------------------------------------------+
+    | X8                          | LA_TRX0                     | 3.3 V            | M14 (LA)        | RF control signal output                               |
+    |                             +-----------------------------+------------------+-----------------+                                                        |
+    |                             | LA_PA_EN                    | 3.3 V            | P14 (LA)        |                                                        |
+    |                             +-----------------------------+------------------+-----------------+                                                        |
+    |                             | LA_LNA1_EN                  | 3.3 V            | M15 (LA)        |                                                        |
+    |                             +-----------------------------+------------------+-----------------+                                                        |
+    |                             | EXP_GPA2                    | 3.3 V            | GPA2 (expander) |                                                        |
+    +-----------------------------+-----------------------------+------------------+-----------------+--------------------------------------------------------+

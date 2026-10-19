@@ -1,19 +1,17 @@
 RF Network Control
 ##################
 
-RF network contains matching networks, RF switches and U.FL connectors 
-(X1 - TX and X2, X4 - RX) as shown in Figure 6.
+The RF network contains matching networks, RF switches and U.FL connectors 
+(X1 - TX and X2, X4 - RX), as shown in Figure 6. U.FL connector X3 (RX_AUX) is a placeholder for future use and is not connected.
 
 .. figure:: /images/LimeSDR-Micro_v1.1_diagrams_r0_RF.png
   :width: 600
 
   Figure 6. LimeSDR Micro mPCIe v1.1 RF diagram
 
-LMS7002M RF transceiver TX and RX ports has dedicated matching network which determines the 
-working frequency range. More detailed information on LMS7002M RF transceiver ports and matching 
-network frequency ranges is listed in the Table 3.
+Each LMS7002M RF transceiver TX and RX port has a dedicated matching network that determines its operating frequency range. The LMS7002M RF transceiver ports and matching network frequency ranges are listed in Table 10.
 
-.. list-table:: Table 3. LMS7002M RF transceiver ports and matching networks frequency ranges
+.. list-table:: Table 10. LMS7002M RF transceiver ports and matching networks frequency ranges
    :header-rows: 1
 
    * - RF transceiver port
@@ -29,20 +27,23 @@ network frequency ranges is listed in the Table 3.
    * - RX1_L, RX2_L
      - 0.3 GHz - 2.2 GHz
 
-Onboard RF network switches are controlled via 2.4V logic signals. 
-This is achieved by resistor dividers connected between I2C GPIO expander (TX_SW, RX_SW2, RX_SW3) and switch 
-control pin (TX_SW_DIV, RX_SW2_DIV, RX_S3_DIV).
+The on-board RF switches are controlled by 2.4 V logic signals, derived from 3.3 V I/O expander outputs 
+(TX_SW, RX_SW2, RX_SW3) by resistor dividers (TX_SW_DIV, RX_SW2_DIV, RX_SW3_DIV).
 
-RF network control signals are described in the Table 4.
+RF network control signals are described in Table 11.
 
-.. table:: Table 4. RF network control signals
+.. table:: Table 11. RF network control signals
  
-    +-----------------------------+-----------------------------+------------------+----------------------------+--------------------------------------------------------+
-    | **Component**               | **Schematic signal   name** | **I/O standard** | **I2C I/O expander   pin** | **Description**                                        |
-    +=============================+=============================+==================+============================+========================================================+
-    | SKY13330-397LF(IC5)         | TX_SW/TX_SW_DIV             | 3.3V             | GPB1                       | 3.3V logic level   signal divided to 2.4V logic level. |
-    +-----------------------------+-----------------------------+------------------+----------------------------+--------------------------------------------------------+
-    | SKY13414-485LF(IC3 and IC4) | RX_SW2/RX_SW2_DIV           | 3.3V             | GPB0                       | 3.3V logic level   signal divided to 2.4V logic level. |
-    |                             +-----------------------------+------------------+----------------------------+--------------------------------------------------------+
-    |                             | RX_SW3/RX_SW3_DIV           | 3.3V             | GPB2                       | 3.3V logic level   signal divided to 2.4V logic level. |
-    +-----------------------------+-----------------------------+------------------+----------------------------+--------------------------------------------------------+
+    +-----------------------------+-----------------------------+------------------+-----------------+--------------------------------------------------------+
+    | **Component**               | **Schematic signal name**   | **I/O standard** | **Pin**         | **Description**                                        |
+    +=============================+=============================+==================+=================+========================================================+
+    | SKY13330-397LF (IC5)        | TX_SW/TX_SW_DIV             | 3.3 V            | GPB1 (expander) | 3.3 V logic level signal divided to 2.4 V logic level. |
+    +-----------------------------+-----------------------------+------------------+-----------------+--------------------------------------------------------+
+    | SKY13414-485LF (IC3, IC4)   | RX_SW2/RX_SW2_DIV           | 3.3 V            | GPB0 (expander) | 3.3 V logic level signal divided to 2.4 V logic level. |
+    |                             +-----------------------------+------------------+-----------------+--------------------------------------------------------+
+    |                             | RX_SW3/RX_SW3_DIV           | 3.3 V            | GPB2 (expander) | 3.3 V logic level signal divided to 2.4 V logic level. |
+    +-----------------------------+-----------------------------+------------------+-----------------+--------------------------------------------------------+
+
+.. note::
+   The board has no RF control connector. TDD control signals TDD0_GPIO and TDD1_GPIO are available on the mPCIe edge connector (pins 17 and 20). See :doc:`bb_processor` and :doc:`mpcie`.
+

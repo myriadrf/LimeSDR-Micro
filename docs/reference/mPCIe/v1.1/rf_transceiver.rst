@@ -1,35 +1,102 @@
 RF Transceiver
 ##############
 
-The `LMS7002M`_ digital interface and control signals are described below.
+The `LMS7002M`_ analog baseband interface and control signals are described below.
 
 Analog Baseband Interface
 =========================
 
-LMS7002M is using differential analog baseband IQ signals to transfer data to/from the NXP Baseband processor, rather than the digital LimeLight interface. The LMS7002M's internal DACs/ADCs and digital Transceiver Signal Processor (TSP) are bypassed, since the LA9310 baseband processor performs its own data conversion and digital signal processing.
+The LMS7002M uses differential analog baseband I/Q signals to transfer data to and from the NXP baseband processor, rather than the digital LimeLight interface. The LMS7002M's internal DACs/ADCs and digital Transceiver Signal Processor (TSP) are bypassed, since the LA9310 baseband processor performs its own data conversion and digital signal processing.
 
 * TX signals LMS_TX1_BB_I/Q_P/N where I/Q indicates in-phase and quadrature signals and P/N indicates differential positive and negative pairs. 
 * RX signals LMS_RX1/2_BB_I/Q_P/N where RX1/2 indicates RF channel 1 or 2, I/Q indicates I and Q signals and P/N indicates differential positive and negative pairs. 
 
-.. note::
-   Only one TX channel (TX1) is connected to BB processor; the second LMS7002M TX channel (TX2) baseband pins are connected to 15-pin FPC connector (X8) described in :doc:`BB_CON`.
+Only one TX channel (TX1) is connected to the BB processor; the baseband pins of the second LMS7002M TX channel (TX2) are connected to the 15-pin FPC connector (X8) described in Table 8.
+
+.. list-table:: Table 8. LMS7002M TX2 baseband 15-pin FPC connector (X8)
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - Pin
+     - Schematic signal name
+     - Description
+
+   * - 1
+     - GND
+     - Ground
+
+   * - 2
+     - LMS_TX2_BB_I_P
+     - Channel 2 in-phase signal differential positive
+
+   * - 3
+     - LMS_TX2_BB_I_N
+     - Channel 2 in-phase signal differential negative
+
+   * - 4
+     - GND
+     - Ground
+
+   * - 5
+     - LMS_TX2_BB_Q_P
+     - Channel 2 quadrature signal differential positive
+
+   * - 6
+     - LMS_TX2_BB_Q_N
+     - Channel 2 quadrature signal differential negative
+
+   * - 7
+     - GND
+     - Ground
+
+   * - 8
+     - VCC3P3
+     - Power (3.3 V)
+
+   * - 9
+     - GND
+     - Ground
+
+   * - 10
+     - NC
+     - No connection
+
+   * - 11
+     - NC
+     - No connection
+
+   * - 12
+     - GND
+     - Ground
+
+   * - 13
+     - NC
+     - No connection
+
+   * - 14
+     - NC
+     - No connection
+
+   * - 15
+     - GND
+     - Ground
 
 Control
 =======
 
-These signals are used for the following functions within the LMS7002 RFIC:
+These signals control the following LMS7002M functions:
 
-* LMS_RXEN, LMS_TXEN – receiver and transmitter enable/disable signals are not controlled and connected to VDIO_LMS (3.3V) power rail.
-* LMS_RESET – LMS7002M reset is connected to I2C I/O expander GPA0.
-* SPI Interface: LMS7002M transceiver is configured via 4-wire SPI interface: LA_SPI_SCLK, LA_SPI_MOSI, LA_SPI_MISO, LA_SPI_LMS_SS. The SPI interface is connected to BB processor via level converter IC8.
-* LMS I2C Interface: can be used for LMS EEPROM content modification or debug purposes. The signals LMS_I2C_SCL and LMS_I2C_DATA are connected to EEPROM. They can be also connected to BB processors LA_I2C_SCL and LA_I2C_SDA.
+* ``LMS_RXEN`` and ``LMS_TXEN``: receiver and transmitter enable. Not controlled; pulled up to the VDIO_LMS power rail by R12 and R11.
+* ``LMS_RESET``: LMS7002M reset. Connected to I/O expander (IC15) pin GPA0.
+* SPI interface: the LMS7002M is configured through a 4-wire SPI interface (``LA_SPI_SCLK``, ``LA_SPI_MOSI``, ``LA_SPI_MISO``, ``LA_SPI_LMS_SS``), connected to the BB processor through level converters IC8 and IC12.
+* LMS I\ :sup:`2`\ C interface: ``LMS_I2C_SCL`` and ``LMS_I2C_SDA`` connect to the LMS EEPROM footprint (IC2, not populated). They can also be connected to the BB processor ``LA_I2C_SCL`` and ``LA_I2C_SDA`` bus by fitting R26 and R30.
 
 LMS7002M Pins
 =============
 
-All signals connected to LMS7002 are listed in table 2.
+All signals connected to the LMS7002M are listed in Table 9.
 
-.. table:: Table 2. LMS7002M RF transceiver signals
+.. table:: Table 9. LMS7002M RF transceiver signals
 
   +--------------------+--------------------------+---------------------------+-----------------------+--------------------------+--------------------------------------------+
   |                    |                          |                           |                       |                          |                                            |
@@ -47,12 +114,12 @@ All signals connected to LMS7002 are listed in table 2.
   +--------------------+--------------------------+---------------------------+-----------------------+--------------------------+ SPI signals connected via level translator |
   | F30                | SDIO                     | LA_SPI_MOSI               | R9                    | SPI_MOSI                 |                                            |
   +--------------------+--------------------------+---------------------------+-----------------------+--------------------------+                                            |
-  | F28                | SDO                      | LA_SPI_MISO               | P8                    | SPI_MISO                 |                                            |
+  | F28                | SDO                      | LA_SPI_MISO               | R8                    | SPI_MISO                 |                                            |
   +--------------------+--------------------------+---------------------------+-----------------------+--------------------------+--------------------------------------------+
-  | D26                | SDA                      | LMS_I2C_SDA               | P6 (NC)               | IIC1_SDA                 |                                            |
+  | D26                | SDA                      | LMS_I2C_SDA               | R6 (NC)               | IIC1_SDA                 |                                            |
   |                    |                          |                           |                       |                          |      BB processor and LMS7002M I2C signals |
   +--------------------+--------------------------+---------------------------+-----------------------+--------------------------+                                            |
-  | C27                | SCL                      | LMS_I2C_SCL               | R6 (NC)               | IIC1_SCL                 |      are not connected by default          |
+  | C27                | SCL                      | LMS_I2C_SCL               | P6 (NC)               | IIC1_SCL                 |      are not connected by default          |
   +--------------------+--------------------------+---------------------------+-----------------------+--------------------------+--------------------------------------------+
   | T4                 | tbbip_pad_1              | LMS_TX1_BB_I_P            | A7                    | TX_I_P                   |                                            |
   +--------------------+--------------------------+---------------------------+-----------------------+--------------------------+ RF channel 1 TX baseband I data            |
@@ -62,13 +129,13 @@ All signals connected to LMS7002 are listed in table 2.
   +--------------------+--------------------------+---------------------------+-----------------------+--------------------------+ RF channel 1 TX baseband Q data            |
   | P2                 | tbbqn_pad_1              | LMS_TX1_BB_Q_N            | B9                    | TX_Q_N                   |                                            |
   +--------------------+--------------------------+---------------------------+-----------------------+--------------------------+--------------------------------------------+
-  | V2                 | tbbip_pad_2              | LMS_TX2_BB_I_P            |                       |                          | Connected toX6 pin 2 (RF2 TX NC)           |
+  | V2                 | tbbip_pad_2              | LMS_TX2_BB_I_P            |                       |                          | Connected to X8 pin 2 (RF2 TX NC)          |
   +--------------------+--------------------------+---------------------------+-----------------------+--------------------------+--------------------------------------------+
-  | T6                 | tbbin_pad_2              | LMS_TX2_BB_I_N            |                       |                          | Connected to X6 pin 3 (RF2 TX   NC)        |
+  | T6                 | tbbin_pad_2              | LMS_TX2_BB_I_N            |                       |                          | Connected to X8 pin 3 (RF2 TX NC)          |
   +--------------------+--------------------------+---------------------------+-----------------------+--------------------------+--------------------------------------------+
-  | U3                 | tbbqp_pad_2              | LMS_TX2_BB_Q_P            |                       |                          | Connected to X6 pin 5 (RF2 TX   NC)        |
+  | U3                 | tbbqp_pad_2              | LMS_TX2_BB_Q_P            |                       |                          | Connected to X8 pin 5 (RF2 TX NC)          |
   +--------------------+--------------------------+---------------------------+-----------------------+--------------------------+--------------------------------------------+
-  | U1                 | tbbqn_pad_2              | LMS_TX2_BB_Q_N            |                       |                          | Connected to X6 pin 6 (RF2 TX   NC)        |
+  | U1                 | tbbqn_pad_2              | LMS_TX2_BB_Q_N            |                       |                          | Connected to X8 pin 6 (RF2 TX NC)          |
   +--------------------+--------------------------+---------------------------+-----------------------+--------------------------+--------------------------------------------+
   | Y6                 | rbbip_pad_1              | LMS_RX1_BB_I_P            | B4                    | RX0_I_P                  |                                            |
   +--------------------+--------------------------+---------------------------+-----------------------+--------------------------+ RF channel 1 RX baseband I data            |

@@ -2,19 +2,15 @@ v1.3
 ####
 
 .. toctree::
-   :maxdepth: 3
    :hidden:
    
    overview
+   bb_processor
    rf_transceiver
    rfcontrol
-   BB_CON
    clock
    leds
-   peripheralinterfaces
-   jtag
-   gpio
-   mPCIe
+   mpcie
    power
 
 This is the Reference Manual for LimeSDR Micro mPCIe v1.3 hardware.
@@ -22,9 +18,9 @@ This is the Reference Manual for LimeSDR Micro mPCIe v1.3 hardware.
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_3D_top.png
   :width: 600
 
-  Figure 1: LimeSDR Micro mPCIe v1.3 board top view
+  Figure 1. LimeSDR Micro mPCIe v1.3 board top view
 
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_3D_bot.png
   :width: 600
 
-  Figure 2: LimeSDR Micro mPCIe v1.3 board bottom view
+  Figure 2. LimeSDR Micro mPCIe v1.3 board bottom view
