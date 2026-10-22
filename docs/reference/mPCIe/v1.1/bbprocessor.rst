@@ -34,7 +34,7 @@ Main
 
 The LA9310's main I/Q channels interface with the LMS7002M RF transceiver, which provides RF upconversion and downconversion between the I/Q baseband signals and the RF domain.
 
-For more information about the LMS7002M, see :doc:`rf_transceiver`. The RF front end is described in :doc:`rfcontrol`.
+For more information about the LMS7002M, see :doc:`rftransceiver`. The RF front end is described in :doc:`rfcontrol`.
 
 Observation
 -----------

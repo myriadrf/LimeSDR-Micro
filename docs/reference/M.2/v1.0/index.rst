@@ -5,8 +5,8 @@ v1.0
    :hidden:
    
    overview
-   bb_processor
-   rf_transceiver
+   bbprocessor
+   rftransceiver
    rfcontrol
    clock
    leds

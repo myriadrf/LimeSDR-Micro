@@ -1,7 +1,7 @@
 Baseband Processor
 ##################
 
-The LimeSDR Micro mPCIe v1.3 board is built around the `NXP LA9310`_ baseband processor (IC6). The LA9310 contains an Arm Cortex-M4 core and a VSPA (Vector Signal Processing Accelerator) DSP. It connects the LMS7002M RF transceiver to the host over PCIe and controls the other devices on the board.
+The LimeSDR Micro M.2 v1.2 board is built around the `NXP LA9310`_ baseband processor (IC6). The LA9310 contains an Arm Cortex-M4 core and a VSPA (Vector Signal Processing Accelerator) DSP. It connects the LMS7002M RF transceiver to the host over PCIe and controls the other devices on the board.
 
 This section describes the LA9310 boot configuration, its baseband RF channels, and the digital interfaces used on the board.
 
@@ -12,17 +12,17 @@ The LA9310 reads its boot configuration from several multi-function pins when it
 
 The default configuration is:
 
-- ``CFG_BOOT_SRC[1:0]`` (pins P15 and M14): ``11``, ROM boot. ``CFG_BOOT_SRC1`` is pulled up by R113 and ``CFG_BOOT_SRC0`` is pulled up by R112. To boot from the I\ :sup:`2`\ C EEPROM (``10``), remove R112 and fit R122. See :doc:`/advanced/boot_source/index`.
-- ``CFG_BOOT_HO`` (pin R14): ``1``, the M4 core starts booting as soon as the reset state machine reaches SYSREADY. Pulled up by R114.
-- ``CFG_RST_HNDSHK`` (pin P14): ``1``, the reset state machine pauses so that software can perform the necessary configuration. Pulled up by R115.
-- ``CFG_TEST_PORT_DIS`` (pin M15): ``1``, the test port is disabled. Pulled up by R116.
-- ``CFG_WRM_RSTB`` (pin M8): ``0``, warm reset; memory initialization steps may be skipped. Pulled down by R127.
-- ``CFG_SYSRDY_EVT`` (pin R9): ``0``, the boot sequence determines the SYSREADY state through an event that wakes the M4 core from WFE. Pulled down by R128.
-- ``CFG_PCIE_GEN`` (pin P13): ``1``, the PCIe interface can negotiate up to Gen3 (8 GT/s). Pulled up by R119.
+- ``CFG_BOOT_SRC[1:0]`` (pins P15 and M14): ``10``, boot from the I\ :sup:`2`\ C EEPROM. ``CFG_BOOT_SRC1`` is pulled up by R122 and ``CFG_BOOT_SRC0`` is pulled down by R130. Fitting jumper JP1 pulls ``CFG_BOOT_SRC0`` high and selects ROM boot (``11``). See :doc:`/advanced/boot_source/index`.
+- ``CFG_BOOT_HO`` (pin R14): ``1``, the M4 core starts booting as soon as the reset state machine reaches SYSREADY. Pulled up by R123.
+- ``CFG_RST_HNDSHK`` (pin P14): ``1``, the reset state machine pauses so that software can perform the necessary configuration. Pulled up by R124.
+- ``CFG_TEST_PORT_DIS`` (pin M15): ``1``, the test port is disabled. Pulled up by R125.
+- ``CFG_WRM_RSTB`` (pin M8): ``0``, warm reset; memory initialization steps may be skipped. Pulled down by R135.
+- ``CFG_SYSRDY_EVT`` (pin R9): ``0``, the boot sequence determines the SYSREADY state through an event that wakes the M4 core from WFE. Pulled down by R136.
+- ``CFG_PCIE_GEN`` (pin P13): ``1``, the PCIe interface can negotiate up to Gen3 (8 GT/s). Pulled up by R128.
 
 .. note::
 
-   Some configuration pins also drive other circuits through level converters: pin M15 drives the LMS7002M ``TXEN`` input (IC10), pin P15 drives ``TDD0_GPIO`` (IC13) on X7 and mPCIe pin 17 and controls the TX RF switch, pin P14 drives ``TDD1_GPIO`` (IC13) on J2, X7 and mPCIe pin 20, and pin P13 drives ``LNA2_EN`` (IC10) on X7 and mPCIe pin 45. While the LA9310 is in reset, these signals follow the configuration pin levels.
+   Some configuration pins also drive other circuits through level converters: pin M15 drives the LMS7002M ``TXEN`` input (IC9), pin P14 drives ``LA_PA_EN`` on J2 and X8 (IC9), and pin P15 drives ``LA_TRX1`` on X8 (IC8). While the LA9310 is in reset, these signals follow the configuration pin levels.
 
 RF
 ==
@@ -34,16 +34,16 @@ Main
 
 The LA9310's main I/Q channels interface with the LMS7002M RF transceiver, which provides RF upconversion and downconversion between the I/Q baseband signals and the RF domain.
 
-For more information about the LMS7002M, see :doc:`rf_transceiver`. The RF front end is described in :doc:`rfcontrol`.
+For more information about the LMS7002M, see :doc:`rftransceiver`. The RF front end is described in :doc:`rfcontrol`.
 
 Observation
 -----------
 
 The NXP LA9310 provides two additional I/Q baseband input channels (RO0 and RO1) for signal observation purposes. These channels have their own ADCs and are independent of the main receive channels (RX0 and RX1).
 
-The baseband observation channels are accessible through the 15-pin, 0.3 mm-pitch FPC connector (X6). The connector pinout and corresponding signal descriptions are provided in Table 2.
+The baseband observation channels are accessible through the 15-pin, 0.3 mm-pitch FPC connector (X7). The connector pinout and corresponding signal descriptions are provided in Table 2.
 
-.. list-table:: Table 2. LA9310 RX observation 15-pin FPC connector (X6)
+.. list-table:: Table 2. LA9310 RX observation 15-pin FPC connector (X7)
    :header-rows: 1
    :stub-columns: 1
 
@@ -113,13 +113,13 @@ The baseband observation channels are accessible through the 15-pin, 0.3 mm-pitc
 
 .. note::
 
-   Each observation input is connected to the LA9310 through a 47 |Omega| series resistor (R91–R98). By default, all observation inputs are tied to ground through 0 |Omega| resistors R100–R107. Remove R100–R107 before connecting an external signal source to X6. There are no AC coupling capacitors or bias components on the board, so the external signal source must provide a suitable common-mode voltage, or the LA9310 observation ADCs must be configured to match the input.
+   Each observation input is connected directly to the LA9310 through a 47 |Omega| series resistor (R96–R103). There are no AC coupling capacitors or bias components on the board, so the external signal source must provide a suitable common-mode voltage, or the LA9310 observation ADCs must be configured to match the input.
 
 
 Interfaces
 ==========
 
-The LA9310 digital interfaces used on the board are described below: the SPI, UART and I\ :sup:`2`\ C peripheral buses, the PCIe host connection, the JTAG debug connector and the GPIO connector.
+The LA9310 digital interfaces used on the board are described below: the SPI, UART and I\ :sup:`2`\ C peripheral buses, the PCIe host connection, the JTAG debug header and the GPIO connector.
 
 SPI
 ---
@@ -194,53 +194,53 @@ The LA9310 I\ :sup:`2`\ C interface (``IIC1``) is used to manage the on-board pe
      - Device
      - I2C address
 
-   * - IC9
+   * - IC10
      - Temperature sensor
      - 1 0 0 1 0 1 1 RW
 
-   * - IC14
+   * - IC13
      - EEPROM
      - 1 0 1 0 0 0 0 RW
 
-   * - IC15
+   * - IC14
      - I/O expander
      - 0 1 0 0 0 0 0 RW
 
-   * - IC19
+   * - IC18
      - XO DAC
      - 1 0 0 1 1 0 0 RW
 
-   * - IC25
+   * - IC26
      - Switching regulator
      - 1 1 0 0 0 0 0 RW (I2C_SDA_SEL = 0)
 
-   * - IC29
+   * - IC30
      - Switching regulator
      - 1 1 0 0 0 0 0 RW (I2C_SDA_SEL = 1)
 
-   * - IC16 (not populated)
+   * - IC15 (not populated)
      - I2C secure key storage
      - 1 1 0 0 0 0 0 RW
 
-Switching regulators IC25 and IC29 share the same I\ :sup:`2`\ C address. Analog switch IC23 routes ``LA_I2C_SDA`` to one regulator at a time, as selected by the ``I2C_SDA_SEL`` signal from I/O expander IC15 (pin GPB3).
+Switching regulators IC26 and IC30 share the same I\ :sup:`2`\ C address. Analog switch IC24 routes ``LA_I2C_SDA`` to one regulator at a time, as selected by the ``I2C_SDA_SEL`` signal from I/O expander IC14 (pin GPB3).
 
-Before fitting the I\ :sup:`2`\ C secure key storage (IC16), make sure its address does not conflict with the switching regulators.
+Before fitting the I\ :sup:`2`\ C secure key storage (IC15), make sure its address does not conflict with the switching regulators.
 
 PCIe
 ----
 
-The LA9310 connects to the host over a single PCIe lane through the :doc:`mpcie` (X8). By default, the link can negotiate up to PCIe Gen3 (8 GT/s), as set by ``CFG_PCIE_GEN`` (see `Configuration`_).
+The LA9310 connects to the host over a single PCIe lane through the :doc:`m2` (X9). By default, the link can negotiate up to PCIe Gen3 (8 GT/s), as set by ``CFG_PCIE_GEN`` (see `Configuration`_).
 
-The LA9310 hard reset input ``HRESET_B`` (pin K13, net ``LA_HRESET``) is pulled up to 1.8 V by R73. It is pulled low through diode D1 when the host asserts ``PCIE_PERST#``, or through diode D3 when ``JTAG_RST`` is pulled low. While ``LA_HRESET`` is low, diode D2 also holds the JTAG reset ``LA_TRST`` low. R74 and C113 hold ``LA_TRST`` low for a short time at power-up.
+The LA9310 hard reset input ``HRESET_B`` (pin K13, net ``LA_HRESET``) is pulled up to 1.8 V by R72. It is pulled low through diode D1 when the host asserts ``PCIE_PERST#``, or through diode D3 when ``JTAG_RST`` is pulled low on the JTAG header. While ``LA_HRESET`` is low, diode D2 also holds the JTAG reset ``LA_TRST`` low. R73 and C115 hold ``LA_TRST`` low for a short time at power-up.
 
-``GPIO_19/ASLEEP`` (pin R12) receives the mPCIe ``PCIE_W_DISABLE2#`` signal (pin 51) through level converter IC8 and R76 (0 |Omega|). R145 pulls ``PCIE_W_DISABLE2#`` up to 3.3 V.
+``GPIO_19/ASLEEP`` (pin R12) is connected to the M.2 ``PCIE_W_DISABLE2#`` signal through R76 (0 |Omega|).
 
 .. _NXP LA9310: https://www.nxp.com/part/LA9310S7S11AA
 
 JTAG
 ----
 
-The LA9310 can be accessed for debugging through a 6-pin compression connector footprint (J1) on the bottom side of the board, compatible with the `Molex 788641001`_ connector. J1 is not fitted by default. The JTAG connector pinout, LA9310 pins and I/O standards are listed in Table 6.
+The LA9310 can be accessed for debugging through a 10-pin, 0.05" pitch Arm JTAG header (J1), which is not fitted by default. The TMS, TCK, TDO and TDI lines include 47 |Omega| series resistors (R91–R94). The JTAG header pinout, LA9310 pins and I/O standards are listed in Table 6.
 
 .. list-table:: Table 6. JTAG connector (J1) pins
    :header-rows: 1
@@ -253,51 +253,71 @@ The LA9310 can be accessed for debugging through a 6-pin compression connector f
      - Comment
 
    * - 1
-     - LA_TDO
-     - N12
+     - VCC1P8
+     -
      - 1.8 V
-     - Test Data Output
+     - Reference voltage (via R90)
 
    * - 2
-     - LA_TDI
-     - M10
-     - 1.8 V
-     - Test Data Input
-
-   * - 3
      - LA_TMS
      - M12
      - 1.8 V
      - Test Mode Select
 
-   * - 4
-     - VCC1P8
+   * - 3
+     - GND
      -
-     - 1.8 V
-     - Reference voltage
+     -
+     - Ground
 
-   * - 5
+   * - 4
      - LA_TCK
      - N10
      - 1.8 V
      - Test Clock
 
+   * - 5
+     - GND
+     -
+     -
+     - Ground
+
    * - 6
+     - LA_TDO
+     - N12
+     - 1.8 V
+     - Test Data Output
+
+   * - 7
+     - NC
+     -
+     -
+     - No Connection
+
+   * - 8
+     - LA_TDI
+     - M10
+     - 1.8 V
+     - Test Data Input
+
+   * - 9
+     - GND
+     -
+     -
+     - Ground
+
+   * - 10
      - JTAG_RST
      - K13
      - 1.8 V
-     - Reset, pulls HRESET_B low via D3 (R90 not fitted)
-
-.. note::
-
-   Pin 6 of J1 (``JTAG_RST``) is disconnected by default (R90 not fitted) for compatibility with the LimeFEA mPCIe board, where this pin is connected to ground.
+     - Reset, pulls HRESET_B low via D3
 
 GPIOs
 -----
 
-The 8-pin FPC connector (X7) provides LA9310 control signals for external RF front-end hardware. It carries three RF control signals (``TDD0_GPIO``, ``TDD1_GPIO`` and ``LNA2_EN``), the LA9310 I\ :sup:`2`\ C bus (through R132 and R133) and one I/O expander GPIO, together with a 3.3 V supply (pin 1) and ground (pin 7). ``TDD1_GPIO`` is also available on U.FL connector J2. The connector pinout is listed in Table 7.
+The 8-pin FPC connector (X8) provides LA9310 control signals for external RF front-end hardware. It carries two RF control signals (``LA_TRX1`` and ``LA_PA_EN``), the LA9310 I\ :sup:`2`\ C bus (through R225 and R226) and two I/O expander GPIOs, together with a 3.3 V supply (pin 1) and ground (pin 7). The connector pinout is listed in Table 7.
 
-.. list-table:: Table 7. RFCTL/GPIO connector (X7) pins
+.. list-table:: Table 7. RFCTL/GPIO connector (X8) pins
    :header-rows: 1
    :stub-columns: 1
 
@@ -314,10 +334,10 @@ The 8-pin FPC connector (X7) provides LA9310 control signals for external RF fro
      - Power (3.3 V)
 
    * - 2
-     - TDD0_GPIO
+     - LA_TRX1
      - P15
      - 3.3 V
-     - TXRX1/GPIO_08 (via IC13)
+     - TXRX1/GPIO_08 (via IC8)
 
    * - 3
      - RF_I2C_SCL
@@ -326,10 +346,10 @@ The 8-pin FPC connector (X7) provides LA9310 control signals for external RF fro
      - IIC1_SCL/GPIO_02
 
    * - 4
-     - TDD1_GPIO
+     - LA_PA_EN
      - P14
      - 3.3 V
-     - PA_EN/GPIO_12 (via IC13)
+     - PA_EN/GPIO_12 (via IC9)
 
    * - 5
      - RF_I2C_SDA
@@ -338,10 +358,10 @@ The 8-pin FPC connector (X7) provides LA9310 control signals for external RF fro
      - IIC1_SDA/GPIO_01
 
    * - 6
-     - LNA2_EN
-     - P13
+     - EXP_GPA1
+     - GPIO EXP (GPA1)
      - 3.3 V
-     - LNA2_EN/GPIO_10 (via IC10)
+     - I2C GPIO expander
 
    * - 7
      - GND
@@ -350,11 +370,9 @@ The 8-pin FPC connector (X7) provides LA9310 control signals for external RF fro
      - Ground
 
    * - 8
-     - EXP_GPB7
-     - GPIO EXP (GPB7)
+     - EXP_GPA2
+     - GPIO EXP (GPA2)
      - 3.3 V
      - I2C GPIO expander
 
 The two user LEDs are also driven by LA9310 GPIOs, as described in :doc:`leds`.
-
-.. _Molex 788641001: https://www.molex.com/en-us/products/part-detail/788641001

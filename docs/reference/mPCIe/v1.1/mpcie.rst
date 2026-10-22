@@ -226,7 +226,7 @@ The connector pinout and signals, compared with the Mini PCIe specification, are
 
    - Pins in brackets in the Description column are LA9310 (IC6) pins. NF marks resistors that are not populated by default.
    - Pin 19 is connected to the clock input (CLK_IN) through R133, together with U.FL connector J1 (through R163). Connect only one external clock source at a time.
-   - Pin 22 (``PCIE_PERST#``) does not reset the LA9310 by default. Fit R89 to connect it to the LA9310 reset circuit (see :doc:`bb_processor`).
+   - Pin 22 (``PCIE_PERST#``) does not reset the LA9310 by default. Fit R89 to connect it to the LA9310 reset circuit (see :doc:`bbprocessor`).
    - Pin 30 carries ``CLK_OUT`` through analogue switch IC22 and R136. Pins 30 and 32 can instead carry the LA9310 I\ :sup:`2`\ C bus by fitting R142 and R139 (and removing R136).
    - Pin 45 is connected to I/O expander IC15 output GPB7 through R147.
    - Pin 51 is connected to LA9310 ``GPIO_19`` through level converter IC8 and is pulled up to 3.3 V by R150.

@@ -11,4 +11,4 @@ This section covers advanced topics for users who need to go beyond the standard
    :maxdepth: 1
 
    boot_source/index
-   update_bootloader
+   updatebootloader

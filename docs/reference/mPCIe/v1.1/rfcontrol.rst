@@ -45,5 +45,5 @@ RF network control signals are described in Table 11.
     +-----------------------------+-----------------------------+------------------+-----------------+--------------------------------------------------------+
 
 .. note::
-   The board has no RF control connector. TDD control signals TDD0_GPIO and TDD1_GPIO are available on the mPCIe edge connector (pins 17 and 20). See :doc:`bb_processor` and :doc:`mpcie`.
+   The board has no RF control connector. TDD control signals TDD0_GPIO and TDD1_GPIO are available on the mPCIe edge connector (pins 17 and 20). See :doc:`bbprocessor` and :doc:`mpcie`.
 

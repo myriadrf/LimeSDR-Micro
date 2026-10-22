@@ -1,7 +1,7 @@
 Baseband Processor
 ##################
 
-The LimeSDR Micro M.2 v1.2 board is built around the `NXP LA9310`_ baseband processor (IC6). The LA9310 contains an Arm Cortex-M4 core and a VSPA (Vector Signal Processing Accelerator) DSP. It connects the LMS7002M RF transceiver to the host over PCIe and controls the other devices on the board.
+The LimeSDR Micro M.2 v1.1 board is built around the `NXP LA9310`_ baseband processor (IC6). The LA9310 contains an Arm Cortex-M4 core and a VSPA (Vector Signal Processing Accelerator) DSP. It connects the LMS7002M RF transceiver to the host over PCIe and controls the other devices on the board.
 
 This section describes the LA9310 boot configuration, its baseband RF channels, and the digital interfaces used on the board.
 
@@ -12,7 +12,7 @@ The LA9310 reads its boot configuration from several multi-function pins when it
 
 The default configuration is:
 
-- ``CFG_BOOT_SRC[1:0]`` (pins P15 and M14): ``10``, boot from the I\ :sup:`2`\ C EEPROM. ``CFG_BOOT_SRC1`` is pulled up by R122 and ``CFG_BOOT_SRC0`` is pulled down by R130. Fitting jumper JP1 pulls ``CFG_BOOT_SRC0`` high and selects ROM boot (``11``). See :doc:`/advanced/boot_source/index`.
+- ``CFG_BOOT_SRC[1:0]`` (pins P15 and M14): ``11``, ROM boot. ``CFG_BOOT_SRC1`` is pulled up by R122 and ``CFG_BOOT_SRC0`` is pulled up by R121. To boot from the I\ :sup:`2`\ C EEPROM (``10``), remove R121 and fit R130. See :doc:`/advanced/boot_source/index`.
 - ``CFG_BOOT_HO`` (pin R14): ``1``, the M4 core starts booting as soon as the reset state machine reaches SYSREADY. Pulled up by R123.
 - ``CFG_RST_HNDSHK`` (pin P14): ``1``, the reset state machine pauses so that software can perform the necessary configuration. Pulled up by R124.
 - ``CFG_TEST_PORT_DIS`` (pin M15): ``1``, the test port is disabled. Pulled up by R125.
@@ -34,7 +34,7 @@ Main
 
 The LA9310's main I/Q channels interface with the LMS7002M RF transceiver, which provides RF upconversion and downconversion between the I/Q baseband signals and the RF domain.
 
-For more information about the LMS7002M, see :doc:`rf_transceiver`. The RF front end is described in :doc:`rfcontrol`.
+For more information about the LMS7002M, see :doc:`rftransceiver`. The RF front end is described in :doc:`rfcontrol`.
 
 Observation
 -----------
