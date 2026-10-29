@@ -61,8 +61,8 @@ Digital Interface
 
 LimeSDR Micro options:
 
-* M.2 2280 B+M key edge connector with PCIe Gen 3 x1.
-* Mini PCIe edge connector with PCIe Gen 3 x1.
+* M.2 2280 B+M key edge connector with PCIe x1 (Gen 3 on v1.1 and v1.2, Gen 2 on v1.0).
+* Mini PCIe edge connector with PCIe x1 (Gen 3 on v1.3, Gen 2 on v1.1 and v1.2).
 
 Power Supply
 ============
@@ -145,7 +145,7 @@ General user inputs/outputs:
 ============================
 
 * 2x Green LEDs
-* 4x GPIOs in GPIO connector
+* 4x GPIOs in GPIO connector (not available on mPCIe v1.1)
 
 Connections
 ===========

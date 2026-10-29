@@ -6,7 +6,7 @@ Host Interface
 
 LimeSDR Micro mPCIe should be plugged into a Mini PCIe slot on the host device. 
 
-The host must provide a PCIe Gen3 x1 interface and supply power via the Mini PCIe connector.
+The host must provide a PCIe x1 interface (Gen 3 recommended) and supply power (3.3 V) via the Mini PCIe connector.
 
 .. note::
    LimeSDR Micro mPCIe v1.2 and older boards are configured for PCIe Gen2 (5 GT/s) by default.
@@ -27,9 +27,11 @@ RF Connections
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_components_RFCON.png
   :width: 600
   
-  Figure 4: LimeSDR Micro mPCIe v1.x board top with RF connector positions
+  Figure 4. LimeSDR Micro mPCIe v1.x board top with RF connector positions
 
-.. table:: Table 1. RF Connectors
+Figure 4 shows the LimeSDR Micro mPCIe v1.3 board. On LimeSDR Micro mPCIe v1.1 and v1.2, the J2 position is occupied by connector X3 (RX AUX), which is not connected.
+
+.. table:: Table 2. RF Connectors
 
   +--------------+----------------+---------+--------------------+-----------------------------------------+
   | Connector ID | Connector type | RF band | Recommended range  |                   Note                  |

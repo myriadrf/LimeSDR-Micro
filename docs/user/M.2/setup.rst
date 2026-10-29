@@ -6,7 +6,7 @@ Host Interface
 
 LimeSDR Micro can be plugged into a M.2 slot with B or M key on the host device. 
 
-The host must provide a PCIe Gen3 x1 interface and supply power (3.3 V) via the M.2 connector.
+The host must provide a PCIe x1 interface (Gen 3 recommended) and supply power (3.3 V) via the M.2 connector.
 
 .. note::
    LimeSDR Micro M.2 v1.0 boards are configured for PCIe Gen2 (5 GT/s) by default. v1.1 and v1.2 boards support PCIe Gen3 (8 GT/s).
@@ -27,9 +27,11 @@ RF Connections
 .. figure:: /images/LimeSDR-Micro_M.2_2280_v1.1_components_rfcon.png
   :width: 600
   
-  Figure 4: LimeSDR Micro M.2 2280 v1.x board top with RF connector positions
+  Figure 4. LimeSDR Micro M.2 2280 v1.x board top with RF connector positions
 
-.. table:: Table 1. RF Connectors
+Figure 4 shows the LimeSDR Micro M.2 v1.1 and v1.2 board. On LimeSDR Micro M.2 v1.0, the J2 position is occupied by connector X3 (RX AUX), which is not connected.
+
+.. table:: Table 2. RF Connectors
 
   +--------------+----------------+---------+--------------------+-----------------------------------------+
   | Connector ID | Connector type | RF band | Recommended range  |                   Note                  |
