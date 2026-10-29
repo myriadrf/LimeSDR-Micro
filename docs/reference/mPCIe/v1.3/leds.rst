@@ -1,17 +1,17 @@
 LEDs
 ####
 
-The board comes with two green indicator LEDs. These LEDs are soldered on the top of the board near RF shield (left edge). 
+The LimeSDR Micro mPCIe v1.3 board has two green indicator LEDs, located on the top side of the board near the RF shield (left edge). 
 
 .. figure:: /images/LimeSDR-Micro_mPCIe_v1.3_components_LEDs.png
   :width: 600
 
   Figure 8. LimeSDR Micro mPCIe v1.3 indication LEDs (top)
 
-LEDs are connected to baseband processors GPIOs hence their function may be programmed according to the user requirements. 
-Default LEDs configuration and description are shown in Table 9.
+The LEDs are connected to baseband processor GPIOs, so their function can be programmed to suit user requirements. 
+The default LED configuration is shown in Table 14.
 
-.. list-table:: Table 9. Default LEDs configuration
+.. list-table:: Table 14. Default LED configuration
   :header-rows: 1
 
   * - Board Reference
@@ -29,3 +29,4 @@ Default LEDs configuration and description are shown in Table 9.
     - LED2
     - P12 (GPIO_18)
     - User defined
+

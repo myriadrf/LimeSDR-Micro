@@ -2,51 +2,59 @@ Hardware Setup
 ##############
 
 Host Interface
-**************
+==============
 
 LimeSDR Micro can be plugged into a M.2 slot with B or M key on the host device. 
 
-The host must provide a PCIe Gen3 x1 interface and supply power (3.3 V) via the M.2 connector.
+The host must provide a PCIe x1 interface (Gen 3 recommended) and supply power (3.3 V) via the M.2 connector.
+
+.. note::
+   LimeSDR Micro M.2 v1.0 boards are configured for PCIe Gen2 (5 GT/s) by default. v1.1 and v1.2 boards support PCIe Gen3 (8 GT/s).
 
 Cooling
-*******
+=======
 
 Depending on the application, host system and ambient temperature, additional cooling may be required to ensure reliable operation of the LimeSDR Micro board. This may be in the form of airflow through the host system, or a dedicated heatsink fitted to the board.
 
-When designing a cooling solution for a LimeSDR Mico M.2–based system, power dissipation should be evaluated based on the specific user configuration and use case. In general, the LimeSDR Micro M.2 cooling solution should be designed to dissipate at least 10 W of power, providing sufficient thermal margin to ensure safe and reliable operation during peak loads.
+When designing a cooling solution for a LimeSDR Micro M.2–based system, power dissipation should be evaluated based on the specific user configuration and use case. In general, the LimeSDR Micro M.2 cooling solution should be designed to dissipate at least 10 W of power, providing sufficient thermal margin to ensure safe and reliable operation during peak loads.
 
 .. note::
    In the event of errors, instability or reduced performance, check the board temperature to ensure that it is within the specified operating range.
 
 RF Connections
-**************
+==============
 
 .. figure:: /images/LimeSDR-Micro_M.2_2280_v1.1_components_rfcon.png
   :width: 600
   
-  Figure 4: LimeSDR Micro M.2 2280 v1.x board top with RF connector positions
+  Figure 4. LimeSDR Micro M.2 2280 v1.x board top with RF connector positions
 
-.. table:: Table 1. RF Connectors
+Figure 4 shows the LimeSDR Micro M.2 v1.1 and v1.2 board. On LimeSDR Micro M.2 v1.0, the J2 position is occupied by connector X3 (RX AUX), which is not connected.
+
+.. table:: Table 2. RF Connectors
 
   +--------------+----------------+---------+--------------------+-----------------------------------------+
-  | Connector ID | Connector type | RF band |   Frequency range  |                   Note                  |
+  | Connector ID | Connector type | RF band | Recommended range  |                   Note                  |
   +==============+================+=========+====================+=========================================+
-  | X1           | MHF4           | TX low  | 0.03 GHz - 1.9 GHz | Channel A transmit low frequency range  |
+  | X1           | MHF4           | TX low  | Below 2.6 GHz      | Channel A transmit low frequency range  |
   |              |                +---------+--------------------+-----------------------------------------+
-  |              |                | TX high | 3.3 GHz - 3.8 GHz  | Channel A transmit high frequency range |
+  |              |                | TX high | 2.6 GHz and above  | Channel A transmit high frequency range |
   +--------------+----------------+---------+--------------------+-----------------------------------------+
-  | X2           | MHF4           | RX low  | 0.3 GHz - 2.2 GHz  | Channel A receive low frequency range   |
+  | X2           | MHF4           | RX low  | Below 1.5 GHz      | Channel A receive low frequency range   |
   |              |                +---------+--------------------+-----------------------------------------+
-  |              |                | RX wide | 0.7 GHz - 2.6 GHz  | Channel A receive wide frequency range  |
+  |              |                | RX wide | 1.5 GHz to 2.2 GHz | Channel A receive wide frequency range  |
   |              |                +---------+--------------------+-----------------------------------------+
-  |              |                | RX high | 3.3 GHz - 3.8 GHz  | Channel A receive high frequency range  |
+  |              |                | RX high | 2.2 GHz and above  | Channel A receive high frequency range  |
   +--------------+----------------+---------+--------------------+-----------------------------------------+
-  | X3           | MHF4           | RX low  | 0.3 GHz - 2.2 GHz  | Channel B receive low frequency range   |
+  | X4           | MHF4           | RX low  | Below 1.5 GHz      | Channel B receive low frequency range   |
   |              |                +---------+--------------------+-----------------------------------------+
-  |              |                | RX wide | 0.7 GHz - 2.6 GHz  | Channel B receive wide frequency range  |
+  |              |                | RX wide | 1.5 GHz to 2.2 GHz | Channel B receive wide frequency range  |
   |              |                +---------+--------------------+-----------------------------------------+
-  |              |                | RX high | 3.3 GHz - 3.8 GHz  | Channel B receive high frequency range  |
+  |              |                | RX high | 2.2 GHz and above  | Channel B receive high frequency range  |
   +--------------+----------------+---------+--------------------+-----------------------------------------+
+
+.. note::
+  The recommended frequency ranges are approximate values that cover most use cases, not hard limits of the RF paths. The optimum path may vary depending on other factors, such as the antenna and RF front-end parameters.
 
 .. note::
   TDD control signal (PA_EN) output (J2) is only available in LimeSDR Micro M.2 v1.1 and v1.2.

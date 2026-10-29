@@ -1,59 +1,74 @@
-RF Network Control
-##################
+RF Network
+##########
 
-RF network contains matching networks, RF switches and MHF4 connectors 
-(X1 - TX and X2, X4 - RX) as shown in Figure 6.
+The RF network contains matching networks, RF switches and MHF4 connectors 
+(X1 - TX and X2, X4 - RX), as shown in Figure 6.
 
 .. figure:: /images/LimeSDR-Micro_M.2_v1.1_diagrams_r0_RF.png
   :width: 600
 
   Figure 6. LimeSDR Micro M.2 2280 v1.2 RF diagram
 
-LMS7002M RF transceiver TX and RX ports has dedicated matching network which determines the working frequency range. More detailed information on LMS7002M RF transceiver ports and matching network frequency ranges is listed in the Table 3.
+Frequency Range
+===============
 
-.. list-table:: Table 3. LMS7002M RF transceiver ports and matching networks frequency ranges
+Each LMS7002M RF transceiver TX and RX port is connected to a dedicated RF path, and the appropriate path should be selected according to the operating frequency. On the receive side, the low-band path (RX_L) is recommended for frequencies below 1.5 GHz, the high-band path (RX_H) for frequencies of 2.2 GHz and above, and the wideband path (RX_W) for frequencies in between. On the transmit side, the TX1_2 path is recommended for frequencies below 2.6 GHz and the TX1_1 path for frequencies of 2.6 GHz and above. The recommended frequency ranges for all ports are summarised in Table 10.
+
+.. note::
+   The recommended frequency ranges are approximate values that cover most use cases, not hard limits of the RF paths. The optimum path may vary depending on other factors, such as the antenna and RF front-end parameters.
+
+.. list-table:: Table 10. LMS7002M RF transceiver ports and recommended frequency ranges
    :header-rows: 1
 
    * - RF transceiver port
-     - Frequency range
+     - Recommended frequency range
    * - TX1_1
-     - 3.3 GHz - 3.8 GHz
+     - 2.6 GHz and above
    * - TX1_2
-     - 0.03 GHz - 1.9 GHz
+     - Below 2.6 GHz
    * - RX1_H, RX2_H
-     - 3.3 GHz - 3.8 GHz 
+     - 2.2 GHz and above
    * - RX1_W, RX2_W
-     - 0.7 GHz - 2.6 GHz
+     - 1.5 GHz to 2.2 GHz
    * - RX1_L, RX2_L
-     - 0.3 GHz - 2.2 GHz
+     - Below 1.5 GHz
 
-Onboard RF network switches are controlled via 2.4V logic signals. 
-This is achieved by resistor dividers connected between I2C GPIO expander (TX_SW, RX_SW2, RX_SW3) and switch 
-control pin (TX_SW_DIV, RX_SW2_DIV, RX_S3_DIV).
+.. note::
+   For applications requiring reception at frequencies of 30 MHz and below, the `LimeFEA HF Micro`_ companion board is recommended.
 
-Connectors X8 and J2 offers 3.3V logic control signals for external RF front end control.
+Control
+=======
 
-RF network control signals are described in the Table 4.
+The on-board RF switches are controlled by 2.4 V logic signals, derived from 3.3 V control signals by resistor dividers. 
+The TX switch control (TX_SW_DIV) is derived from LA_TRX1 (LA9310 pin P15), and the RX switch controls 
+(RX_SW2_DIV, RX_SW3_DIV) are derived from I/O expander outputs RX_SW2 and RX_SW3.
+
+Connectors X8 and J2 provide 3.3 V logic control signals for an external RF front end.
+
+RF network control signals are described in Table 11.
 
 
-.. table:: Table 4. RF network control signals
+.. table:: Table 11. RF network control signals
  
     +-----------------------------+-----------------------------+------------------+-----------------+--------------------------------------------------------+
-    | **Component**               | **Schematic signal   name** | **I/O standard** | **Pin**         | **Description**                                        |
+    | **Component**               | **Schematic signal name**   | **I/O standard** | **Pin**         | **Description**                                        |
     +=============================+=============================+==================+=================+========================================================+
-    | SKY13330-397LF(IC5)         | TX_SW/TX_SW_DIV             | 3.3V             | P15 (LA)        | 3.3V logic level   signal divided to 2.4V logic level. |
+    | SKY13330-397LF (IC5)        | LA_TRX1/TX_SW_DIV           | 3.3 V            | P15 (LA)        | 3.3 V logic level signal divided to 2.4 V logic level. |
     +-----------------------------+-----------------------------+------------------+-----------------+--------------------------------------------------------+
-    | SKY13414-485LF(IC3 and IC4) | RX_SW2/RX_SW2_DIV           | 3.3V             | GPB0 (expander) | 3.3V logic level   signal divided to 2.4V logic level. |
+    | SKY13414-485LF (IC3, IC4)   | RX_SW2/RX_SW2_DIV           | 3.3 V            | GPB0 (expander) | 3.3 V logic level signal divided to 2.4 V logic level. |
     |                             +-----------------------------+------------------+-----------------+--------------------------------------------------------+
-    |                             | RX_SW3/RX_SW3_DIV           | 3.3V             | GPB2 (expander) | 3.3V logic level   signal divided to 2.4V logic level. |
+    |                             | RX_SW3/RX_SW3_DIV           | 3.3 V            | GPB2 (expander) | 3.3 V logic level signal divided to 2.4 V logic level. |
     +-----------------------------+-----------------------------+------------------+-----------------+--------------------------------------------------------+
-    | J2                          | LA_PA_EN                    | 3.3V             | P14 (LA)        | RF control signal output                               |
+    | J2                          | LA_PA_EN                    | 3.3 V            | P14 (LA)        | RF control signal output                               |
     +-----------------------------+-----------------------------+------------------+-----------------+--------------------------------------------------------+
-    | X8                          | LA_TRX1                     | 3.3V             | P15 (LA)        | RF control signal output                               |
+    | X8                          | LA_TRX1                     | 3.3 V            | P15 (LA)        | RF control signal output                               |
     |                             +-----------------------------+------------------+-----------------+                                                        |
-    |                             | LA_PA_EN                    | 3.3V             | P14 (LA)        |                                                        |
+    |                             | LA_PA_EN                    | 3.3 V            | P14 (LA)        |                                                        |
     |                             +-----------------------------+------------------+-----------------+                                                        |
-    |                             | EXP_GPA1                    | 3.3V             | GPA1 (expander) |                                                        |
+    |                             | EXP_GPA1                    | 3.3 V            | GPA1 (expander) |                                                        |
     |                             +-----------------------------+------------------+-----------------+                                                        |
-    |                             | EXP_GPA2                    | 3.3V             | GPA2 (expander) |                                                        |
+    |                             | EXP_GPA2                    | 3.3 V            | GPA2 (expander) |                                                        |
     +-----------------------------+-----------------------------+------------------+-----------------+--------------------------------------------------------+
+
+.. _LimeFEA HF Micro: https://www.crowdsupply.com/lime-micro/limesdr-micro
+

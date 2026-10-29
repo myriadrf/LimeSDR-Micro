@@ -1,0 +1,168 @@
+RF Transceiver
+##############
+
+The `LMS7002M`_ analog baseband interface and control signals are described below.
+
+Analog Baseband Interface
+==========================
+
+The LMS7002M uses differential analog baseband I/Q signals to transfer data to and from the NXP baseband processor, rather than the digital LimeLight interface. The LMS7002M's internal DACs/ADCs and digital Transceiver Signal Processor (TSP) are bypassed, since the LA9310 baseband processor performs its own data conversion and digital signal processing.
+
+* TX signals LMS_TX1_BB_I/Q_P/N where I/Q indicates in-phase and quadrature signals and P/N indicates differential positive and negative pairs. 
+* RX signals LMS_RX1/2_BB_I/Q_P/N where RX1/2 indicates RF channel 1 or 2, I/Q indicates I and Q signals and P/N indicates differential positive and negative pairs. 
+
+Only one TX channel (TX1) is connected to the BB processor; the baseband pins of the second LMS7002M TX channel (TX2) are connected to the 15-pin FPC connector (X6) described in Table 8.
+
+.. list-table:: Table 8. LMS7002M TX2 baseband 15-pin FPC connector (X6)
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - Pin
+     - Schematic signal name
+     - Description
+
+   * - 1
+     - GND
+     - Ground
+
+   * - 2
+     - LMS_TX2_BB_I_P
+     - Channel 2 in-phase signal differential positive
+
+   * - 3
+     - LMS_TX2_BB_I_N
+     - Channel 2 in-phase signal differential negative
+
+   * - 4
+     - GND
+     - Ground
+
+   * - 5
+     - LMS_TX2_BB_Q_P
+     - Channel 2 quadrature signal differential positive
+
+   * - 6
+     - LMS_TX2_BB_Q_N
+     - Channel 2 quadrature signal differential negative
+
+   * - 7
+     - GND
+     - Ground
+
+   * - 8
+     - VCC3P3
+     - Power (3.3 V)
+
+   * - 9
+     - GND
+     - Ground
+
+   * - 10
+     - NC
+     - No connection
+
+   * - 11
+     - NC
+     - No connection
+
+   * - 12
+     - GND
+     - Ground
+
+   * - 13
+     - NC
+     - No connection
+
+   * - 14
+     - NC
+     - No connection
+
+   * - 15
+     - GND
+     - Ground
+
+Control
+=======
+
+These signals control the following LMS7002M functions:
+
+* ``LMS_RXEN``: receiver enable. Not controlled; pulled up to the VDIO_LMS power rail by R12.
+* ``LMS_TXEN``: transmitter enable. Driven from BB processor pin M15 through level converter IC9; pulled up by R11.
+* ``LMS_RESET``: LMS7002M reset. Connected to I/O expander (IC14) pin GPA0.
+* SPI interface: the LMS7002M is configured through a 4-wire SPI interface (``LA_SPI_SCLK``, ``LA_SPI_MOSI``, ``LA_SPI_MISO``, ``LA_SPI_LMS_SS``), connected to the BB processor through level converters IC8 and IC12.
+* LMS I\ :sup:`2`\ C interface: ``LMS_I2C_SCL`` and ``LMS_I2C_SDA`` connect to the LMS EEPROM footprint (IC2, not populated). They can also be connected to the BB processor ``LA_I2C_SCL`` and ``LA_I2C_SDA`` bus by fitting R26 and R30.
+
+LMS7002M Pins
+=============
+
+.. table:: Table 9. LMS7002M RF transceiver signals
+
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | **Chip   pin (IC1)** | **Chip   reference (IC1)** | **Schematic   signal name** |                       |                          | **Comment**                                  |
+    |                      |                            |                             |      **BB processor** |      **BB processor**    |                                              |
+    |                      |                            |                             |                       |                          |                                              |
+    |                      |                            |                             |      **pin (IC6)**    |      **reference (IC6)** |                                              |
+    +======================+============================+=============================+=======================+==========================+==============================================+
+    | AB34                 | MCLK1                      | LMS_MCLK1                   | F1                    | DCS_CLK_P                | DCS_CLK_P                                    |
+    |                      |                            |                             +-----------------------+--------------------------+----------------------------------------------+
+    |                      |                            |                             | F2                    | DCS_CLK_N                | DCS_CLK_N                                    |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | D28                  | SEN                        | LA_SPI_LMS_SS               | P7                    | SPI_CS0_B                | SPI   signals connected via level translator |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+                                              |
+    | C29                  | SCLK                       | LA_SPI_SCLK                 | P8                    | SPI_CLK                  |                                              |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+                                              |
+    | F30                  | SDIO                       | LA_SPI_MOSI                 | R9                    | SPI_MOSI                 |                                              |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+                                              |
+    | F28                  | SDO                        | LA_SPI_MISO                 | R8                    | SPI_MISO                 |                                              |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | D26                  | SDA                        | LMS_I2C_SDA                 | R6   (NC)             | IIC1_SDA                 |                                              |
+    |                      |                            |                             |                       |                          |      BB processor and LMS7002M I2C signals   |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+                                              |
+    | C27                  | SCL                        | LMS_I2C_SCL                 | P6   (NC)             | IIC1_SCL                 |      are not connected by default            |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | T4                   | tbbip_pad_1                | LMS_TX1_BB_I_P              | A7                    | TX_I_P                   | RF   channel 1 TX baseband I data            |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+                                              |
+    | R5                   | tbbin_pad_1                | LMS_TX1_BB_I_N              | B7                    | TX_I_N                   |                                              |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | R3                   | tbbqp_pad_1                | LMS_TX1_BB_Q_P              | A9                    | TX_Q_P                   | RF   channel 1 TX baseband Q data            |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+                                              |
+    | P2                   | tbbqn_pad_1                | LMS_TX1_BB_Q_N              | B9                    | TX_Q_N                   |                                              |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | V2                   | tbbip_pad_2                | LMS_TX2_BB_I_P              |                       |                          | Connected to X6 pin 2 (RF2 TX NC)            |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | T6                   | tbbin_pad_2                | LMS_TX2_BB_I_N              |                       |                          | Connected to X6 pin 3 (RF2 TX NC)            |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | U3                   | tbbqp_pad_2                | LMS_TX2_BB_Q_P              |                       |                          | Connected to X6 pin 5 (RF2 TX NC)            |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | U1                   | tbbqn_pad_2                | LMS_TX2_BB_Q_N              |                       |                          | Connected to X6 pin 6 (RF2 TX NC)            |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | Y6                   | rbbip_pad_1                | LMS_RX1_BB_I_P              | B4                    | RX0_I_P                  | RF   channel 1 RX baseband I data            |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+                                              |
+    | AB2                  | rbbin_pad_1                | LMS_RX1_BB_I_N              | A4                    | RX0_I_N                  |                                              |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | AB4                  | rbbqp_pad_1                | LMS_RX1_BB_Q_P              | A6                    | RX0_Q_P                  | RF   channel 1 RX baseband Q data            |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+                                              |
+    | AA5                  | rbbqn_pad_1                | LMS_RX1_BB_Q_N              | B6                    | RX0_Q_N                  |                                              |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | AD2                  | rbbip_pad_2                | LMS_RX2_BB_I_P              | A10                   | RX1_I_P                  | RF   channel 2 RX baseband I data            |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+                                              |
+    | AC3                  | rbbin_pad_2                | LMS_RX2_BB_I_N              | B10                   | RX1_I_N                  |                                              |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | AC5                  | rbbqp_pad_2                | LMS_RX2_BB_Q_P              | B12                   | RX1_Q_P                  | RF   channel 2 RX baseband Q data            |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+                                              |
+    | AB6                  | rbbqn_pad_2                | LMS_RX2_BB_Q_N              | A12                   | RX1_Q_N                  |                                              |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | E5                   | xoscin_tx                  | LMS_TxPLL_CLK               |                       |                          | Connected to 30.72 MHz clock                 |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | AM24                 | xoscin_rx                  | LMS_RxPLL_CLK               |                       |                          | Connected to 30.72 MHz clock                 |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | E27                  | RESET                      | LMS_RESET                   |                       |                          | I/O expander GPA0                            |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | U29                  | TXEN                       | LMS_TXEN                    | M15                   | LNA1_EN/GPIO_11          | Via level converter (IC9); pulled up by R11  |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | V34                  | RXEN                       | LMS_RXEN                    |                       |                          | Pulled-up by R12                             |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | U33                  | CORE_LDO_EN                | LMS_CORE_LDO_EN             |                       |                          | Pulled-up by R13                             |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
+    | V30                  | LOGIC_RESET                |                             |                       |                          | GND                                          |
+    +----------------------+----------------------------+-----------------------------+-----------------------+--------------------------+----------------------------------------------+
