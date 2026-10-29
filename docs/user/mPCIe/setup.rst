@@ -32,24 +32,27 @@ RF Connections
 .. table:: Table 1. RF Connectors
 
   +--------------+----------------+---------+--------------------+-----------------------------------------+
-  | Connector ID | Connector type | RF band |   Frequency range  |                   Note                  |
+  | Connector ID | Connector type | RF band | Recommended range  |                   Note                  |
   +==============+================+=========+====================+=========================================+
-  | X1           | U.FL           | TX low  | 0.03 GHz - 1.9 GHz | Channel A transmit low frequency range  |
+  | X1           | U.FL           | TX low  | Below 2.6 GHz      | Channel A transmit low frequency range  |
   |              |                +---------+--------------------+-----------------------------------------+
-  |              |                | TX high | 3.3 GHz - 3.8 GHz  | Channel A transmit high frequency range |
+  |              |                | TX high | 2.6 GHz and above  | Channel A transmit high frequency range |
   +--------------+----------------+---------+--------------------+-----------------------------------------+
-  | X2           | U.FL           | RX low  | 0.3 GHz - 2.2 GHz  | Channel A receive low frequency range   |
+  | X2           | U.FL           | RX low  | Below 1.5 GHz      | Channel A receive low frequency range   |
   |              |                +---------+--------------------+-----------------------------------------+
-  |              |                | RX wide | 0.7 GHz - 2.6 GHz  | Channel A receive wide frequency range  |
+  |              |                | RX wide | 1.5 GHz to 2.2 GHz | Channel A receive wide frequency range  |
   |              |                +---------+--------------------+-----------------------------------------+
-  |              |                | RX high | 3.3 GHz - 3.8 GHz  | Channel A receive high frequency range  |
+  |              |                | RX high | 2.2 GHz and above  | Channel A receive high frequency range  |
   +--------------+----------------+---------+--------------------+-----------------------------------------+
-  | X4           | U.FL           | RX low  | 0.3 GHz - 2.2 GHz  | Channel B receive low frequency range   |
+  | X4           | U.FL           | RX low  | Below 1.5 GHz      | Channel B receive low frequency range   |
   |              |                +---------+--------------------+-----------------------------------------+
-  |              |                | RX wide | 0.7 GHz - 2.6 GHz  | Channel B receive wide frequency range  |
+  |              |                | RX wide | 1.5 GHz to 2.2 GHz | Channel B receive wide frequency range  |
   |              |                +---------+--------------------+-----------------------------------------+
-  |              |                | RX high | 3.3 GHz - 3.8 GHz  | Channel B receive high frequency range  |
+  |              |                | RX high | 2.2 GHz and above  | Channel B receive high frequency range  |
   +--------------+----------------+---------+--------------------+-----------------------------------------+
+
+.. note::
+  The recommended frequency ranges are approximate values that cover most use cases, not hard limits of the RF paths. The optimum path may vary depending on other factors, such as the antenna and RF front-end parameters.
 
 .. note::
   TDD control signal (PA_EN) output (J2) is only available in LimeSDR Micro mPCIe v1.3.

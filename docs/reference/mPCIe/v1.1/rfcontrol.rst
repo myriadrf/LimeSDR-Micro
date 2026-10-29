@@ -1,5 +1,5 @@
-RF Network Control
-##################
+RF Network
+##########
 
 The RF network contains matching networks, RF switches and U.FL connectors 
 (X1 - TX and X2, X4 - RX), as shown in Figure 6. U.FL connector X3 (RX_AUX) is a placeholder for future use and is not connected.
@@ -9,23 +9,32 @@ The RF network contains matching networks, RF switches and U.FL connectors
 
   Figure 6. LimeSDR Micro mPCIe v1.1 RF diagram
 
-Each LMS7002M RF transceiver TX and RX port has a dedicated matching network that determines its operating frequency range. The LMS7002M RF transceiver ports and matching network frequency ranges are listed in Table 10.
+Frequency Range
+===============
 
-.. list-table:: Table 10. LMS7002M RF transceiver ports and matching networks frequency ranges
+Each LMS7002M RF transceiver TX and RX port is connected to a dedicated RF path, and the appropriate path should be selected according to the operating frequency. On the receive side, the low-band path (RX_L) is recommended for frequencies below 1.5 GHz, the high-band path (RX_H) for frequencies of 2.2 GHz and above, and the wideband path (RX_W) for frequencies in between. On the transmit side, the TX1_2 path is recommended for frequencies below 2.6 GHz and the TX1_1 path for frequencies of 2.6 GHz and above. The recommended frequency ranges for all ports are summarised in Table 10.
+
+.. note::
+   The recommended frequency ranges are approximate values that cover most use cases, not hard limits of the RF paths. The optimum path may vary depending on other factors, such as the antenna and RF front-end parameters.
+
+.. list-table:: Table 10. LMS7002M RF transceiver ports and recommended frequency ranges
    :header-rows: 1
 
    * - RF transceiver port
-     - Frequency range
+     - Recommended frequency range
    * - TX1_1
-     - 3.3 GHz - 3.8 GHz
+     - 2.6 GHz and above
    * - TX1_2
-     - 0.03 GHz - 1.9 GHz
+     - Below 2.6 GHz
    * - RX1_H, RX2_H
-     - 3.3 GHz - 3.8 GHz 
+     - 2.2 GHz and above
    * - RX1_W, RX2_W
-     - 0.7 GHz - 2.6 GHz
+     - 1.5 GHz to 2.2 GHz
    * - RX1_L, RX2_L
-     - 0.3 GHz - 2.2 GHz
+     - Below 1.5 GHz
+
+Control
+=======
 
 The on-board RF switches are controlled by 2.4 V logic signals, derived from 3.3 V I/O expander outputs 
 (TX_SW, RX_SW2, RX_SW3) by resistor dividers (TX_SW_DIV, RX_SW2_DIV, RX_SW3_DIV).
